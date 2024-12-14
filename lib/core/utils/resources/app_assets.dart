@@ -120,7 +120,11 @@ class AppAssets {
 
   static const String imagesSettingsYourOrders = "assets/images/settings/your_orders.svg";
 
+  static const String imagesSplashAppLogo = "assets/images/splash/app_logo.png";
+
   static const String imagesSplashLogo = "assets/images/splash/logo.svg";
+
+  static const String imagesSplashLogoBackground = "assets/images/splash/logo_background.png";
 
   static const String imagesSplashLogoOrange = "assets/images/splash/logo_orange.svg";
 
