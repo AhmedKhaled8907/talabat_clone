@@ -18,6 +18,8 @@ class AppAssets {
 
   static const String imagesAuthGoogle = "assets/images/auth/google.svg";
 
+  static const String imagesAuthStart = "assets/images/auth/start.png";
+
   static const String imagesAuthStartPage = "assets/images/auth/start_page.svg";
 
   static const String imagesFlagsBahrain = "assets/images/flags/bahrain.svg";
