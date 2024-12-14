@@ -108,6 +108,18 @@ class AppAssets {
 
   static const String imagesHomeTalabatMart = "assets/images/home/talabat_mart.svg";
 
+  static const String imagesNavBarAccount = "assets/images/nav_bar/account.svg";
+
+  static const String imagesNavBarAccountSelected = "assets/images/nav_bar/account_selected.svg";
+
+  static const String imagesNavBarHome = "assets/images/nav_bar/home.svg";
+
+  static const String imagesNavBarHomeSelected = "assets/images/nav_bar/home_selected.svg";
+
+  static const String imagesNavBarSearch = "assets/images/nav_bar/search.svg";
+
+  static const String imagesNavBarSearchSelected = "assets/images/nav_bar/search_selected.svg";
+
   static const String imagesSettingsAboutApp = "assets/images/settings/about_app.svg";
 
   static const String imagesSettingsGetHelp = "assets/images/settings/get_help.svg";
