@@ -5,19 +5,28 @@ import 'package:talabat_clone/core/utils/resources/app_fonts.dart';
 
 class AppTheme {
   static final appTheme = ThemeData(
-    
     brightness: Brightness.light,
     scaffoldBackgroundColor: AppColors.white,
+    fontFamily: FontConstants.fontFamily,
+    primaryColor: AppColors.primaryColor,
+    indicatorColor: AppColors.primaryColor,
+    progressIndicatorTheme: ProgressIndicatorThemeData(
+      color: AppColors.primaryColor,
+    ),
+    textSelectionTheme: TextSelectionThemeData(
+      cursorColor: AppColors.primaryColor,
+      selectionColor: AppColors.primaryColor,
+      selectionHandleColor: AppColors.primaryColor,
+    ),
     appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.white, 
+      backgroundColor: AppColors.white,
       systemOverlayStyle: SystemUiOverlayStyle(
         statusBarBrightness: Brightness.light,
         statusBarIconBrightness: Brightness.dark,
         statusBarColor: AppColors.white,
       ),
-      elevation: 0, 
+      elevation: 0,
     ),
-    fontFamily: FontConstants.fontFamily,
-    primaryColor: AppColors.primaryColor,
+    
   );
 }

@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:talabat_clone/core/common/widgets/social_button.dart';
 import 'package:talabat_clone/core/utils/resources/app_assets.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
+import 'package:talabat_clone/core/utils/resources/app_routes.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 
-class SignInOptionsBody extends StatelessWidget {
-  const SignInOptionsBody({super.key});
+class SignInOptionsViewBody extends StatelessWidget {
+  const SignInOptionsViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -68,9 +70,14 @@ class SignInOptionsBody extends StatelessWidget {
           SocialButton(
             icon: AppAssets.imagesAuthBaselineEmail,
             title: AppStrings.continueWithEmail,
-            onTap: () {},
+            onTap: () {
+              GoRouter.of(context).push(
+                AppRoutes.kSignInRoute,
+              );
+            },
           ),
           const SizedBox(height: AppSize.s24),
+          
         ],
       ),
     );

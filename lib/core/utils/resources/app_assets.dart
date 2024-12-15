@@ -22,6 +22,8 @@ class AppAssets {
 
   static const String imagesAuthStartPage = "assets/images/auth/start_page.svg";
 
+  static const String imagesBack = "assets/images/back.svg";
+
   static const String imagesFlagsBahrain = "assets/images/flags/bahrain.svg";
 
   static const String imagesFlagsEgypt = "assets/images/flags/egypt.svg";
