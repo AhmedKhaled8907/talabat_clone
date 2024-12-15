@@ -9,6 +9,7 @@ class AppStrings {
       'Receive rewards and save your details for a faster checkout experience.';
   static const String signIn = 'Sign In';
   static const String signUp = 'Sign Up';
+  static const String welcome = 'Welcome to Talabat';
   static const String continueWithGoogle = 'Continue with Google';
   static const String continueWithApple = 'Continue with Apple';
   static const String continueWithFacebook = 'Continue with Facebook';
@@ -19,6 +20,17 @@ class AppStrings {
   static const String forgotPasswordView = 'Forgot Password';
   static const String createAccount = 'Create an account';
   static const String resetPassword = 'Reset Password';
+  static const String firstName = 'First Name';
+  static const String lastName = 'Last Name';
+  static const String passwordShould =
+      'Passwords should be between 6 and 16 characters.';
+  static const String receiveOffers =
+      'Yes, I want to receive offers and discounts.';
+  static const String byCreating = 'By creating an account you agree to the ';
+  static const String privacyPolicy = ' privacy policy ';
+  static const String and = 'and to the ';
+  static const String termsOfUse = 'terms of use ';
+  static const String createYourAccount = 'Create your account';
 
   // Locale
   static const String locale = 'ar';

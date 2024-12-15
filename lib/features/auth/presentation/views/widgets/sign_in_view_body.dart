@@ -28,6 +28,7 @@ class SignInViewBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               InkWell(
+                borderRadius: BorderRadius.circular(AppSize.s8),
                 onTap: () {
                   GoRouter.of(context).push(AppRoutes.kForgotPasswordRoute);
                 },
@@ -38,10 +39,16 @@ class SignInViewBody extends StatelessWidget {
                   ),
                 ),
               ),
-              Text(
-                AppStrings.createAccount,
-                style: AppStyles.styleBold14(context).copyWith(
-                  color: AppColors.primaryColor,
+              InkWell(
+                borderRadius: BorderRadius.circular(AppSize.s8),
+                onTap: () {
+                  GoRouter.of(context).push(AppRoutes.kSignUpRoute);
+                },
+                child: Text(
+                  AppStrings.createAccount,
+                  style: AppStyles.styleBold14(context).copyWith(
+                    color: AppColors.primaryColor,
+                  ),
                 ),
               ),
             ],
