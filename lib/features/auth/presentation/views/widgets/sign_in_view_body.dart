@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:talabat_clone/core/utils/resources/app_colors.dart';
+import 'package:talabat_clone/core/utils/resources/app_routes.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
@@ -21,6 +24,28 @@ class SignInViewBody extends StatelessWidget {
             style: AppStyles.styleBold20(context),
           ),
           SignInForm(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              InkWell(
+                onTap: () {
+                  GoRouter.of(context).push(AppRoutes.kForgotPasswordRoute);
+                },
+                child: Text(
+                  AppStrings.forgotPassword,
+                  style: AppStyles.styleBold14(context).copyWith(
+                    color: AppColors.primaryColor,
+                  ),
+                ),
+              ),
+              Text(
+                AppStrings.createAccount,
+                style: AppStyles.styleBold14(context).copyWith(
+                  color: AppColors.primaryColor,
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );

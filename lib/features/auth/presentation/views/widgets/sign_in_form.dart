@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/common/widgets/custom_orange_button.dart';
-import 'package:talabat_clone/core/utils/resources/app_colors.dart';
-import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 
 import '../../../../../core/common/widgets/custom_text_field.dart';
 import '../../../../../core/common/widgets/password_field.dart';
@@ -54,23 +52,7 @@ class _SignInFormState extends State<SignInForm> {
             onPressed: () {},
             title: AppStrings.signIn,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                AppStrings.forgotPassword,
-                style: AppStyles.styleBold14(context).copyWith(
-                  color: AppColors.primaryColor,
-                ),
-              ),
-              Text(
-                AppStrings.createAccount,
-                style: AppStyles.styleBold14(context).copyWith(
-                  color: AppColors.primaryColor,
-                ),
-              ),
-            ],
-          ),
+          
         ],
       ),
     );

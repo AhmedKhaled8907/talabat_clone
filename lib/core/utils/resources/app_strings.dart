@@ -16,7 +16,9 @@ class AppStrings {
   static const String email = 'Email';
   static const String password = 'Password';
   static const String forgotPassword = 'Forgot Password?';
+  static const String forgotPasswordView = 'Forgot Password';
   static const String createAccount = 'Create an account';
+  static const String resetPassword = 'Reset Password';
 
   // Locale
   static const String locale = 'ar';
