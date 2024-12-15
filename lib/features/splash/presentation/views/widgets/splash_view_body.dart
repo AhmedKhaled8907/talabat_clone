@@ -23,7 +23,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     Future.delayed(const Duration(seconds: AppDuration.d3), () async {
       if (mounted) {
         await GoRouter.of(context).pushReplacement(
-          AppRoutes.kAccountSettingsRoute,
+          AppRoutes.kSignInOptionsRoute,
         );
       }
     });

@@ -3,6 +3,7 @@ import 'package:talabat_clone/core/utils/resources/app_values.dart';
 
 class AppColors {
   static final Color primaryColor = Color(0xFFFF6100);
+  static final Color primaryColorWithOpacity = Color(0xFFFFEEE6);
   static final Color secondaryColor =
       Color(0xFF000000).withValues(alpha: AppSize.s0_5);
   static final Color thirdColor = Color(0xFFEB0669);

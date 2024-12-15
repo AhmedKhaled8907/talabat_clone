@@ -1,3 +1,10 @@
+import 'package:flutter/material.dart';
+
+extension MediaQuerySize on BuildContext {
+  double get height => MediaQuery.of(this).size.height;
+  double get width => MediaQuery.of(this).size.width;
+}
+
 class AppMargin {
   static const double m4 = 4.0;
   static const double m8 = 8.0;
@@ -41,10 +48,15 @@ class AppPadding {
   static const double p40 = 40.0;
   static const double p42 = 42.0;
   static const double p44 = 44.0;
+  static const double p48 = 48.0;
+  static const double p50 = 50.0;
+  static const double p60 = 60.0; 
+
 }
 
 class AppSize {
   static const double s0 = 0;
+  static const double s1 = 1;
   static const double s0_25 = 0.25;
   static const double s0_5 = 0.5;
   static const double s1_5 = 1.5;

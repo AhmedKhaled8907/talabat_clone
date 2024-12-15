@@ -104,7 +104,7 @@ class AppAssets {
 
   static const String imagesHomePastOrders = "assets/images/home/past_orders.svg";
 
-  static const String imagesHomePhone = "assets/images/home/phone.svg";
+  static const String imagesHomePhone = "assets/images/home/phone.png";
 
   static const String imagesHomeSortBy = "assets/images/home/sort_by.svg";
 

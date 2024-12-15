@@ -49,6 +49,14 @@ class AppStrings {
   static const String english = 'English';
   static const String egypt = 'Egypt';
 
+  // Home View
+  static const String deliveringTo = 'Delivering to';
+  static const String elMahalla = 'El-Mahalla El-Kubra';
+  static const String hiName = 'Hi Ahmed Khaled';
+  static const String hiThere = 'Hey there!';
+  static const String fasterOrdering =
+      'Log in or create an account for a faster ordering experience.';
+
   // Locale
   static const String locale = 'ar';
 }

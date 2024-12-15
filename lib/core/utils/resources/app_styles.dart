@@ -27,6 +27,17 @@ abstract class AppStyles {
     );
   }
 
+  static TextStyle styleRegular16(BuildContext context) {
+    return TextStyle(
+      fontFamily: FontConstants.fontFamily,
+      fontSize: getResponsiveFontSize(
+        context,
+        fontSize: FontSize.s16,
+      ),
+      fontWeight: FontWeights.regular,
+    );
+  }
+
   static TextStyle styleMedium10(BuildContext context) {
     return TextStyle(
       fontFamily: FontConstants.fontFamily,

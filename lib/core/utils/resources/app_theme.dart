@@ -20,18 +20,16 @@ class AppTheme {
       selectionHandleColor: AppColors.primaryColor,
     ),
     appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.white,
       systemOverlayStyle: SystemUiOverlayStyle(
         statusBarBrightness: Brightness.light,
         statusBarIconBrightness: Brightness.dark,
-        statusBarColor: AppColors.white,
+        statusBarColor: AppColors.transparent,
       ),
       elevation: 0,
     ),
     checkboxTheme: CheckboxThemeData(
       side: BorderSide(color: AppColors.primaryColor),
       checkColor: WidgetStateProperty.all(AppColors.white),
-      
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(AppSize.s4),
       ),

@@ -55,17 +55,29 @@ class SignInOptionsViewBody extends StatelessWidget {
           SocialButton(
             icon: AppAssets.imagesAuthGoogle,
             title: AppStrings.continueWithGoogle,
-            onTap: () {},
+            onTap: () {
+              GoRouter.of(context).push(
+                AppRoutes.kHomeRoute,
+              );
+            },
           ),
           SocialButton(
             icon: AppAssets.imagesAuthFacebook,
             title: AppStrings.continueWithFacebook,
-            onTap: () {},
+            onTap: () {
+              GoRouter.of(context).push(
+                AppRoutes.kHomeRoute,
+              );
+            },
           ),
           SocialButton(
             icon: AppAssets.imagesAuthApple,
             title: AppStrings.continueWithApple,
-            onTap: () {},
+            onTap: () {
+              GoRouter.of(context).push(
+                AppRoutes.kHomeRoute,
+              );
+            },
           ),
           SocialButton(
             icon: AppAssets.imagesAuthBaselineEmail,
@@ -77,7 +89,6 @@ class SignInOptionsViewBody extends StatelessWidget {
             },
           ),
           const SizedBox(height: AppSize.s24),
-          
         ],
       ),
     );

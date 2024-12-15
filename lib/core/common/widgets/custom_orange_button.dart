@@ -26,10 +26,13 @@ class CustomOrangeButton extends StatelessWidget {
           ),
         ),
         onPressed: onPressed,
-        child: Text(
-          title,
-          style: AppStyles.styleMedium16(context).copyWith(
-            color: AppColors.white,
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            title,
+            style: AppStyles.styleMedium16(context).copyWith(
+              color: AppColors.white,
+            ),
           ),
         ),
       ),
