@@ -11,7 +11,7 @@ class AccountSettingsEntity {
   });
 }
 
-final List<AccountSettingsEntity> settingsList = [
+final List<AccountSettingsEntity> accountSettingsList = [
   AccountSettingsEntity(
     title: AppStrings.yourOrders,
     icon: AppAssets.imagesSettingsOffers,

@@ -4,6 +4,7 @@ import 'package:talabat_clone/features/auth/presentation/views/sign_in_options_v
 import 'package:talabat_clone/features/auth/presentation/views/sign_in_view.dart';
 import 'package:talabat_clone/features/auth/presentation/views/sign_up_view.dart';
 import 'package:talabat_clone/features/account_settings/presentation/views/account_settings_view.dart';
+import 'package:talabat_clone/features/settings/presentation/views/settings_view.dart';
 import 'package:talabat_clone/features/splash/presentation/views/splash_view.dart';
 
 abstract class AppRoutes {
@@ -13,6 +14,7 @@ abstract class AppRoutes {
   static const kSignInRoute = '/sign_in';
   static const kForgotPasswordRoute = '/forgot_password';
   static const kSignUpRoute = '/sign_up';
+  static const kAccountSettingsRoute = '/account_settings';
   static const kSettingsRoute = '/settings';
 
   static final routes = GoRouter(
@@ -38,8 +40,12 @@ abstract class AppRoutes {
         builder: (context, state) => const SignUpView(),
       ),
       GoRoute(
-        path: kSettingsRoute,
+        path: kAccountSettingsRoute,
         builder: (context, state) => const AccountSettingsView(),
+      ),
+      GoRoute(
+        path: kSettingsRoute,
+        builder: (context, state) => const SettingsView(),
       ),
     ],
   );

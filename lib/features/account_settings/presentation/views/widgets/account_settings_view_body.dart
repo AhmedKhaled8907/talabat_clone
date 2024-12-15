@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:talabat_clone/core/utils/resources/app_colors.dart';
+import 'package:talabat_clone/core/common/widgets/custom_divider.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/account_settings/domain/entities/account_settings_entity.dart';
 import 'package:talabat_clone/features/account_settings/presentation/views/widgets/account_settings_app_bar.dart';
@@ -17,12 +17,9 @@ class AccountSettingsViewBody extends StatelessWidget {
       child: Column(
         children: [
           AccountSettingsAppBar(),
-          Divider(
-            thickness: AppSize.s8,
-            color: AppColors.dividerColor,
-          ),
+          CustomDivider(),
           Column(
-            children: settingsList
+            children: accountSettingsList
                 .map((e) => AccountSettingsItem(
                       settingsEntity: e,
                     ))

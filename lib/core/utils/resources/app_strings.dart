@@ -32,13 +32,22 @@ class AppStrings {
   static const String termsOfUse = 'terms of use ';
   static const String createYourAccount = 'Create your account';
 
-  // Settings View
+  //Account Settings View
   static const String yourOrders = 'Your orders';
   static const String offers = 'Offers';
   static const String notifications = 'Notifications';
   static const String pay = 'talabat pay';
   static const String help = 'Get help';
   static const String about = 'About app';
+
+  //Settings View
+  static const String settings = 'Settings';
+  static const String language = 'Language';
+  static const String country = 'Country';
+  static const String notificationEnabled = 'enabled';
+  static const String notificationDisabled = 'disabled';
+  static const String english = 'English';
+  static const String egypt = 'Egypt';
 
   // Locale
   static const String locale = 'ar';
