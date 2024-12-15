@@ -10,6 +10,7 @@ class AppColors {
   static final Color proColor = Color(0xFF1D299A);
   static final Color deliveredColor = Color(0xFF2AA564);
   static final Color starColor = Color(0xFFFF9F00);
+  static final Color dividerColor = Color(0xFFF5F5F5);
 
   // Normal Colors
   static final Color white = Color(0xFFFFFFFF);

@@ -132,6 +132,8 @@ class AppAssets {
 
   static const String imagesSettingsOffers = "assets/images/settings/offers.svg";
 
+  static const String imagesSettingsSettings = "assets/images/settings/settings.svg";
+
   static const String imagesSettingsTalabatPay = "assets/images/settings/talabat_pay.svg";
 
   static const String imagesSettingsYourOrders = "assets/images/settings/your_orders.svg";
