@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
+import 'package:talabat_clone/features/account_settings/domain/entities/account_settings_entity.dart';
 
-class SettingsListTileItem extends StatelessWidget {
-  const SettingsListTileItem({
+class AccountSettingsItem extends StatelessWidget {
+  const AccountSettingsItem({
     super.key,
-    required this.title,
-    required this.icon,
+    required this.settingsEntity,
   });
 
-  final String title;
-  final String icon;
+  final AccountSettingsEntity settingsEntity;
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +19,11 @@ class SettingsListTileItem extends StatelessWidget {
         horizontal: AppPadding.p24,
       ),
       leading: SvgPicture.asset(
-        icon,
+        settingsEntity.icon,
         fit: BoxFit.fill,
       ),
       title: Text(
-        title,
+        settingsEntity.title,
         style: AppStyles.styleMedium16(context),
       ),
     );

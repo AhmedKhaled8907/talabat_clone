@@ -1,38 +1,38 @@
 import 'package:talabat_clone/core/utils/resources/app_assets.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 
-class SettingsEntity {
+class AccountSettingsEntity {
   final String title;
   final String icon;
 
-  SettingsEntity({
+  AccountSettingsEntity({
     required this.title,
     required this.icon,
   });
 }
 
-final List<SettingsEntity> settingsList = [
-  SettingsEntity(
+final List<AccountSettingsEntity> settingsList = [
+  AccountSettingsEntity(
     title: AppStrings.yourOrders,
     icon: AppAssets.imagesSettingsOffers,
   ),
-  SettingsEntity(
+  AccountSettingsEntity(
     title: AppStrings.offers,
     icon: AppAssets.imagesSettingsOffers,
   ),
-  SettingsEntity(
+  AccountSettingsEntity(
     title: AppStrings.notifications,
     icon: AppAssets.imagesSettingsNotifications,
   ),
-  SettingsEntity(
+  AccountSettingsEntity(
     title: AppStrings.pay,
     icon: AppAssets.imagesSettingsTalabatPay,
   ),
-  SettingsEntity(
+  AccountSettingsEntity(
     title: AppStrings.help,
     icon: AppAssets.imagesSettingsGetHelp,
   ),
-  SettingsEntity(
+  AccountSettingsEntity(
     title: AppStrings.about,
     icon: AppAssets.imagesSettingsAboutApp,
   ),
