@@ -6,7 +6,7 @@ class AppStrings {
   static const String everyday = 'Your everyday,right away';
   static const String loginOrSignUp = 'Log in or create an account';
   static const String receiveRewards =
-      'Receive rewards and save your details for a faster checkout experience.';
+      'Receive rewards and save your details for\n a faster checkout experience.';
   static const String signIn = 'Sign In';
   static const String signUp = 'Sign Up';
   static const String welcome = 'Welcome to Talabat';

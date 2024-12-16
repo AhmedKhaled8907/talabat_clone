@@ -13,6 +13,8 @@ abstract class AuthDataSource {
     required String email,
     required String password,
   });
+
+  Future<UserModel> signInWithGoogle();
 }
 
 class AuthDataSourceImpl implements AuthDataSource {
@@ -51,6 +53,20 @@ class AuthDataSourceImpl implements AuthDataSource {
         email: email,
         password: password,
       );
+      return UserModel.fromFirebaseUser(user);
+    } on CustomExceptions catch (e) {
+      throw CustomExceptions(message: e.message);
+    } on Exception catch (e) {
+      throw CustomExceptions(
+        message: 'An unexpected error occurred: ${e.toString()}',
+      );
+    }
+  }
+
+  @override
+  Future<UserModel> signInWithGoogle() async {
+    try {
+      final user = await firebaseAuthService.signInWithGoogle();
       return UserModel.fromFirebaseUser(user);
     } on CustomExceptions catch (e) {
       throw CustomExceptions(message: e.message);

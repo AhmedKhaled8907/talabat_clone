@@ -10,7 +10,7 @@ plugins {
 
 android {
     namespace = "com.example.talabat_clone"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 35
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -45,3 +45,4 @@ android {
 flutter {
     source = "../.."
 }
+
