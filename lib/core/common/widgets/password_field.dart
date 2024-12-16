@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:talabat_clone/core/common/widgets/custom_text_field.dart';
+import 'package:talabat_clone/core/common/widgets/custom_text_form_field.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 
 class PasswordField extends StatefulWidget {

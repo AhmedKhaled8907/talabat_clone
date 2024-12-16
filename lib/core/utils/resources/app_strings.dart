@@ -20,7 +20,7 @@ class AppStrings {
   static const String forgotPasswordView = 'Forgot Password';
   static const String createAccount = 'Create an account';
   static const String resetPassword = 'Reset Password';
-  static const String firstName = 'First Name';
+  static const String fullName = 'Full Name';
   static const String lastName = 'Last Name';
   static const String passwordShould =
       'Passwords should be between 6 and 16 characters.';

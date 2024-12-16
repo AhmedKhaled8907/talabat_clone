@@ -8,7 +8,10 @@ import '../../../../../core/utils/resources/app_styles.dart';
 class OffersCheckbox extends StatefulWidget {
   const OffersCheckbox({
     super.key,
+    required this.onChanged,
   });
+
+  final ValueChanged<bool> onChanged;
 
   @override
   State<OffersCheckbox> createState() => _OffersCheckboxState();
@@ -30,7 +33,8 @@ class _OffersCheckboxState extends State<OffersCheckbox> {
             value: isChecked,
             onChanged: (value) {
               setState(() {
-                isChecked = value!;
+                widget.onChanged(value!);
+                isChecked = value;
               });
             },
             activeColor: AppColors.primaryColor,

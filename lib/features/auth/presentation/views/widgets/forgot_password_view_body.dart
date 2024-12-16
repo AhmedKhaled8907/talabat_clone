@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/common/widgets/custom_orange_button.dart';
-import '../../../../../core/common/widgets/custom_text_field.dart';
-import '../../../../../core/utils/app_validators.dart';
+import '../../../../../core/common/widgets/custom_text_form_field.dart';
+import '../../../../../core/utils/functions/app_validators.dart';
 import '../../../../../core/utils/resources/app_strings.dart';
 import '../../../../../core/utils/resources/app_values.dart';
 

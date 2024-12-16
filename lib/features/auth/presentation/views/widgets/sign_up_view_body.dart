@@ -14,14 +14,14 @@ class SignUpViewBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(AppPadding.p16),
       child: Column(
-        spacing: AppSize.s12,
         crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: AppSize.s16,
         children: [
           Text(
             AppStrings.createAccount,
             style: AppStyles.styleBold20(context),
           ),
-          SignUpForm(),
+          const SignUpForm(),
           Text.rich(
             TextSpan(
               text: AppStrings.byCreating,

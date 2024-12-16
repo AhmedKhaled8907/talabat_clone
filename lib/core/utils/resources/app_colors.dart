@@ -17,6 +17,7 @@ class AppColors {
   static final Color white = Color(0xFFFFFFFF);
   static final Color black = Color(0xFF000000);
   static final Color red = Colors.red;
+  static final Color grey = Colors.grey;
 
   static final Color transparent = Colors.transparent;
 }

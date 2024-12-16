@@ -30,9 +30,6 @@ class CustomTextFormField extends StatelessWidget {
       style: AppStyles.styleMedium14(context),
       decoration: InputDecoration(
         contentPadding: EdgeInsets.zero,
-        floatingLabelStyle: AppStyles.styleMedium14(context).copyWith(
-          color: AppColors.black,
-        ),
         label: Text(
           hintText,
           textAlign: TextAlign.start,

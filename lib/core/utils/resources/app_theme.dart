@@ -20,12 +20,13 @@ class AppTheme {
       selectionHandleColor: AppColors.primaryColor,
     ),
     appBarTheme: AppBarTheme(
+      elevation: 0,
+      backgroundColor: AppColors.white,
       systemOverlayStyle: SystemUiOverlayStyle(
         statusBarBrightness: Brightness.light,
         statusBarIconBrightness: Brightness.dark,
         statusBarColor: AppColors.transparent,
       ),
-      elevation: 0,
     ),
     checkboxTheme: CheckboxThemeData(
       side: BorderSide(color: AppColors.primaryColor),

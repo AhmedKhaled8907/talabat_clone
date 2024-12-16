@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:talabat_clone/core/common/widgets/custom_orange_button.dart';
+import 'package:talabat_clone/core/utils/functions/show_snack_bar.dart';
+import 'package:talabat_clone/features/auth/presentation/manager/auth_bloc/auth_bloc.dart';
 import 'package:talabat_clone/features/auth/presentation/views/widgets/offers_checkbox.dart';
 
-import '../../../../../core/common/widgets/custom_text_field.dart';
+import '../../../../../core/common/widgets/custom_text_form_field.dart';
 import '../../../../../core/common/widgets/password_field.dart';
-import '../../../../../core/utils/app_validators.dart';
+import '../../../../../core/utils/functions/app_validators.dart';
 import '../../../../../core/utils/resources/app_strings.dart';
 import '../../../../../core/utils/resources/app_values.dart';
 
@@ -19,9 +22,10 @@ class SignUpForm extends StatefulWidget {
 
 class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
-  final _autovalidateMode = AutovalidateMode.disabled;
+  AutovalidateMode _autovalidateMode = AutovalidateMode.disabled;
 
-  late String email, password, firstName, lastName;
+  late String email, password, fullName;
+  bool isChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -32,14 +36,10 @@ class _SignUpFormState extends State<SignUpForm> {
         spacing: AppSize.s16,
         children: [
           CustomTextFormField(
-            hintText: AppStrings.firstName,
-            keyboardType: TextInputType.name,
-            validator: (value) {
-              return AppValidators.displayNameValidator(value);
+            onSaved: (value) {
+              fullName = value!;
             },
-          ),
-          CustomTextFormField(
-            hintText: AppStrings.lastName,
+            hintText: AppStrings.fullName,
             keyboardType: TextInputType.name,
             validator: (value) {
               return AppValidators.displayNameValidator(value);
@@ -60,12 +60,36 @@ class _SignUpFormState extends State<SignUpForm> {
               password = value!;
             },
             validator: (value) {
-              return null;
+              return AppValidators.passwordValidator(value);
             },
           ),
-          OffersCheckbox(),
+          OffersCheckbox(
+            onChanged: (value) {
+              isChecked = value;
+            },
+          ),
           CustomOrangeButton(
-            onPressed: () {},
+            onPressed: () {
+              if (_formKey.currentState!.validate()) {
+                _formKey.currentState!.save();
+                if (isChecked) {
+                  context.read<AuthBloc>().add(
+                        SignUpEvent(
+                          email: email,
+                          password: password,
+                          name: fullName,
+                        ),
+                      );
+                } else {
+                  showSnackbar(
+                    context,
+                    message: 'Please accept the offers first.',
+                  );
+                }
+              } else {
+                _autovalidateMode = AutovalidateMode.always;
+              }
+            },
             title: AppStrings.createYourAccount,
           ),
         ],

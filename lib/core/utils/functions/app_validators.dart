@@ -41,7 +41,7 @@ class AppValidators {
       return 'Password must contain at least one number';
     }
     if (!RegExp(r'[!@#\$&*~]').hasMatch(value)) {
-      return 'Password must contain at least one special character (e.g., !@#\$&*~)';
+      return 'Password must contain at least one special character';
     }
     return null;
   }
