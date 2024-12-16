@@ -24,7 +24,29 @@ class AuthRepoImpl extends AuthRepo {
         name: name,
       );
       return Right(UserModel.fromEntity(user));
-    } on CustomException catch (e) {
+    } on CustomExceptions catch (e) {
+      return Left(ServerFailure(e.message));
+    } on Exception catch (e) {
+      return Left(
+        ServerFailure(
+          'An unexpected error occurred: ${e.toString()}',
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithEmailAndPassword({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      final user = await authDataSource.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return Right(UserModel.fromEntity(user));
+    } on CustomExceptions catch (e) {
       return Left(ServerFailure(e.message));
     } on Exception catch (e) {
       return Left(

@@ -8,6 +8,11 @@ abstract class AuthDataSource {
     required String password,
     required String name,
   });
+
+  Future<UserModel> signInWithEmailAndPassword({
+    required String email,
+    required String password,
+  });
 }
 
 class AuthDataSourceImpl implements AuthDataSource {
@@ -27,10 +32,30 @@ class AuthDataSourceImpl implements AuthDataSource {
         password: password,
       );
       return UserModel.fromFirebaseUser(user);
-    } on CustomException catch (e) {
-      throw CustomException(message: e.message);
+    } on CustomExceptions catch (e) {
+      throw CustomExceptions(message: e.message);
     } on Exception catch (e) {
-      throw CustomException(
+      throw CustomExceptions(
+        message: 'An unexpected error occurred: ${e.toString()}',
+      );
+    }
+  }
+
+  @override
+  Future<UserModel> signInWithEmailAndPassword({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      final user = await firebaseAuthService.signinUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return UserModel.fromFirebaseUser(user);
+    } on CustomExceptions catch (e) {
+      throw CustomExceptions(message: e.message);
+    } on Exception catch (e) {
+      throw CustomExceptions(
         message: 'An unexpected error occurred: ${e.toString()}',
       );
     }

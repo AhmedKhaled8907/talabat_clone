@@ -1,7 +1,7 @@
-class CustomException implements Exception {
+class CustomExceptions implements Exception {
   final String message;
 
-  CustomException({required this.message});
+  CustomExceptions({required this.message});
 
   @override
   String toString() {

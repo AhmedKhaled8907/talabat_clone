@@ -87,7 +87,9 @@ class _SignUpFormState extends State<SignUpForm> {
                   );
                 }
               } else {
-                _autovalidateMode = AutovalidateMode.always;
+                setState(() {
+                  _autovalidateMode = AutovalidateMode.always;
+                });
               }
             },
             title: AppStrings.createYourAccount,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:talabat_clone/core/common/widgets/custom_orange_button.dart';
+import 'package:talabat_clone/features/auth/presentation/manager/auth_bloc/auth_bloc.dart';
 
 import '../../../../../core/common/widgets/custom_text_form_field.dart';
 import '../../../../../core/common/widgets/password_field.dart';
@@ -18,7 +20,7 @@ class SignInForm extends StatefulWidget {
 
 class _SignInFormState extends State<SignInForm> {
   final _formKey = GlobalKey<FormState>();
-  final _autovalidateMode = AutovalidateMode.disabled;
+  AutovalidateMode _autovalidateMode = AutovalidateMode.disabled;
 
   late String email, password;
 
@@ -45,11 +47,25 @@ class _SignInFormState extends State<SignInForm> {
               password = value!;
             },
             validator: (value) {
-              return null;
+              return AppValidators.passwordForSignInValidator(value);
             },
           ),
           CustomOrangeButton(
-            onPressed: () {},
+            onPressed: () {
+              if (_formKey.currentState!.validate()) {
+                _formKey.currentState!.save();
+                BlocProvider.of<AuthBloc>(context).add(
+                  SignInEvent(
+                    email: email,
+                    password: password,
+                  ),
+                );
+              } else {
+                setState(() {
+                  _autovalidateMode = AutovalidateMode.always;
+                });
+              }
+            },
             title: AppStrings.signIn,
           ),
         ],

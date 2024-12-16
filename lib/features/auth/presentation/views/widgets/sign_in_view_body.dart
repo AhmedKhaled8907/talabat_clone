@@ -27,33 +27,41 @@ class SignInViewBody extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              InkWell(
-                borderRadius: BorderRadius.circular(AppSize.s8),
-                onTap: () {
-                  GoRouter.of(context).push(AppRoutes.kForgotPasswordRoute);
-                },
-                child: Text(
-                  AppStrings.forgotPassword,
-                  style: AppStyles.styleBold14(context).copyWith(
-                    color: AppColors.primaryColor,
-                  ),
-                ),
-              ),
-              InkWell(
-                borderRadius: BorderRadius.circular(AppSize.s8),
-                onTap: () {
-                  GoRouter.of(context).push(AppRoutes.kSignUpRoute);
-                },
-                child: Text(
-                  AppStrings.createAccount,
-                  style: AppStyles.styleBold14(context).copyWith(
-                    color: AppColors.primaryColor,
-                  ),
-                ),
-              ),
+              _forgotPassword(context),
+              _createAccount(context),
             ],
           ),
         ],
+      ),
+    );
+  }
+
+  InkWell _createAccount(BuildContext context) {
+    return InkWell(
+      borderRadius: BorderRadius.circular(AppSize.s8),
+      onTap: () {
+        GoRouter.of(context).push(AppRoutes.kSignUpRoute);
+      },
+      child: Text(
+        AppStrings.createAccount,
+        style: AppStyles.styleBold14(context).copyWith(
+          color: AppColors.primaryColor,
+        ),
+      ),
+    );
+  }
+
+  InkWell _forgotPassword(BuildContext context) {
+    return InkWell(
+      borderRadius: BorderRadius.circular(AppSize.s8),
+      onTap: () {
+        GoRouter.of(context).push(AppRoutes.kForgotPasswordRoute);
+      },
+      child: Text(
+        AppStrings.forgotPassword,
+        style: AppStyles.styleBold14(context).copyWith(
+          color: AppColors.primaryColor,
+        ),
       ),
     );
   }

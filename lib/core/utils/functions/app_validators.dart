@@ -46,6 +46,16 @@ class AppValidators {
     return null;
   }
 
+  static String? passwordForSignInValidator(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Password cannot be empty';
+    }
+    if (value.length < 8) {
+      return 'Password must be at least 8 characters long';
+    }
+    return null;
+  }
+
   static String? repeatPasswordValidator({String? value, String? password}) {
     if (value != password) {
       return 'Passwords do not match';

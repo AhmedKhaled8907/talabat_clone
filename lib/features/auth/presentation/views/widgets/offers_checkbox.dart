@@ -22,31 +22,38 @@ class _OffersCheckboxState extends State<OffersCheckbox> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      spacing: AppSize.s12,
-      children: [
-        SizedBox(
-          width: AppSize.s32,
-          height: AppSize.s36,
-          child: Checkbox(
-            value: isChecked,
-            onChanged: (value) {
-              setState(() {
-                widget.onChanged(value!);
-                isChecked = value;
-              });
-            },
-            activeColor: AppColors.primaryColor,
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          isChecked = !isChecked;
+          widget.onChanged(isChecked);
+        });
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: AppSize.s32,
+            height: AppSize.s36,
+            child: Checkbox(
+              value: isChecked,
+              onChanged: (value) {
+                setState(() {
+                  isChecked = value!;
+                  widget.onChanged(isChecked);
+                });
+              },
+              activeColor: AppColors.primaryColor,
+            ),
           ),
-        ),
-        Expanded(
-          child: Text(
-            AppStrings.receiveOffers,
-            style: AppStyles.styleMedium12(context),
+          Expanded(
+            child: Text(
+              AppStrings.receiveOffers,
+              style: AppStyles.styleMedium12(context),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

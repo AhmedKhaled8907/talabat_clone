@@ -21,19 +21,19 @@ class FirebaseAuthService {
         'Exception in FirebaseAuthService.createUserWithEmailAndPassword: ${e.toString()} and code is ${e.code}',
       );
       if (e.code == 'weak-password') {
-        throw CustomException(
+        throw CustomExceptions(
           message: "The password is too weak.",
         );
       } else if (e.code == 'email-already-in-use') {
-        throw CustomException(
+        throw CustomExceptions(
           message: "The email address is already in use.",
         );
       } else if (e.code == 'network-request-failed') {
-        throw CustomException(
+        throw CustomExceptions(
           message: "Please check your internet connection.",
         );
       } else {
-        throw CustomException(
+        throw CustomExceptions(
           message: 'An error occurred. Please try again.',
         );
       }
@@ -41,7 +41,52 @@ class FirebaseAuthService {
       log(
         'Exception in FirebaseAuthService.createUserWithEmailAndPassword: ${e.toString()}',
       );
-      throw CustomException(
+      throw CustomExceptions(
+        message: 'An error occurred. Please try again.',
+      );
+    }
+  }
+
+  Future<User> signinUserWithEmailAndPassword({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      final credential = await auth.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return credential.user!;
+    } on FirebaseAuthException catch (e) {
+      log(
+        'Exception in FirebaseAuthService.loginUserWithEmailAndPassword: ${e.toString()} and code is ${e.code}',
+      );
+      if (e.code == 'invalid-credential') {
+        throw CustomExceptions(
+          message: "Invalid email or password.",
+        );
+      } else if (e.code == 'user-not-found') {
+        throw CustomExceptions(
+          message: "No account found with this email address.",
+        );
+      } else if (e.code == 'wrong-password') {
+        throw CustomExceptions(
+          message: "Incorrect password.",
+        );
+      } else if (e.code == 'network-request-failed') {
+        throw CustomExceptions(
+          message: "Please check your internet connection.",
+        );
+      } else {
+        throw CustomExceptions(
+          message: 'An error occurred. Please try again.',
+        );
+      }
+    } catch (e) {
+      log(
+        'Exception in FirebaseAuthService.loginUserWithEmailAndPassword: ${e.toString()}',
+      );
+      throw CustomExceptions(
         message: 'An error occurred. Please try again.',
       );
     }
