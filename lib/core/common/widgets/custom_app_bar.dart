@@ -16,7 +16,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: isTitleShown
           ? Text(
-              title!,
+              title ?? '',
               style: AppStyles.styleBold16(context),
             )
           : null,

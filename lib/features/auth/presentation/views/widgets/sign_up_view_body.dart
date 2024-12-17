@@ -17,7 +17,7 @@ class SignUpViewBody extends StatelessWidget {
         padding: const EdgeInsets.all(AppPadding.p16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          spacing: AppSize.s16,
+          spacing: AppSize.s24,
           children: [
             Text(
               AppStrings.createAccount,

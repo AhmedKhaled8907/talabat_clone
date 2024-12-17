@@ -5,7 +5,9 @@ import 'package:talabat_clone/features/auth/data/repos/auth_repo_impl.dart';
 import 'package:talabat_clone/features/auth/domain/repos/auth_repo.dart';
 import 'package:talabat_clone/features/auth/domain/usecases/facebook_usecase.dart';
 import 'package:talabat_clone/features/auth/domain/usecases/google_usecase.dart';
+import 'package:talabat_clone/features/auth/domain/usecases/reset_password_usecase.dart';
 import 'package:talabat_clone/features/auth/domain/usecases/sign_in_usecase.dart';
+import 'package:talabat_clone/features/auth/domain/usecases/sign_out_usecase.dart';
 import 'package:talabat_clone/features/auth/domain/usecases/sign_up_usecase.dart';
 import 'package:talabat_clone/features/auth/presentation/manager/auth_bloc/auth_bloc.dart';
 
@@ -38,6 +40,12 @@ void serviceLocator() {
     ..registerFactory<FacebookUsecase>(
       () => FacebookUsecase(sl()),
     )
+    ..registerFactory<ResetPasswordUsecase>(
+      () => ResetPasswordUsecase(sl()),
+    )
+    ..registerFactory<SignOutUsecase>(
+      () => SignOutUsecase(sl()),
+    )
     // Blocs
     ..registerLazySingleton<AuthBloc>(
       () => AuthBloc(
@@ -45,6 +53,8 @@ void serviceLocator() {
         signInUsecase: sl(),
         googleUsecase: sl(),
         facebookUsecase: sl(),
+        resetPasswordUsecase: sl(),
+        signOutUsecase: sl(),
       ),
     );
 }

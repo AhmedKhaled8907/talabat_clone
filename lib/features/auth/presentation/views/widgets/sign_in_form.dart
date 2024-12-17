@@ -30,7 +30,7 @@ class _SignInFormState extends State<SignInForm> {
       autovalidateMode: _autovalidateMode,
       key: _formKey,
       child: Column(
-        spacing: AppSize.s16,
+        spacing: AppSize.s24,
         children: [
           CustomTextFormField(
             onSaved: (value) {

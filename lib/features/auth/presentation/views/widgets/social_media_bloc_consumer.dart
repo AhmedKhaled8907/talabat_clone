@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:talabat_clone/core/utils/functions/show_snack_bar.dart';
+import 'package:talabat_clone/core/utils/resources/app_routes.dart';
 
-import '../../../../../core/common/widgets/custom_loading_indicator.dart';
 import '../../../../../core/common/widgets/social_button.dart';
 import '../../../../../core/utils/resources/app_assets.dart';
 import '../../../../../core/utils/resources/app_strings.dart';
@@ -17,10 +18,7 @@ class SocialMediaBlocConsumer extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<AuthBloc, AuthState>(listener: (context, state) {
       if (state is AuthSuccess) {
-        showSnackbar(
-          context,
-          message: AppStrings.signInSuccessfully,
-        );
+        GoRouter.of(context).pushReplacement(AppRoutes.kHomeRoute);
       } else if (state is AuthFailure) {
         showSnackbar(
           context,
@@ -28,15 +26,12 @@ class SocialMediaBlocConsumer extends StatelessWidget {
         );
       }
     }, builder: (context, state) {
-      return CustomLoadingIndicator(
-        isLoading: state is AuthLoading,
-        child: Column(
-          children: [
-            _google(context),
-            _facebook(context),
-            _apple(context),
-          ],
-        ),
+      return Column(
+        children: [
+          _google(context),
+          _facebook(context),
+          _apple(context),
+        ],
       );
     });
   }

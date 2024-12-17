@@ -28,3 +28,13 @@ final class SignInEvent extends AuthEvent {
 final class GoogleEvent extends AuthEvent {}
 
 final class FacebookEvent extends AuthEvent {}
+
+final class ResetPasswordEvent extends AuthEvent {
+  final String email;
+
+  ResetPasswordEvent({
+    required this.email,
+  });
+}
+
+final class SignOutEvent extends AuthEvent {}

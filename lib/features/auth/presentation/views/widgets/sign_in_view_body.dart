@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:go_router/go_router.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_routes.dart';
@@ -17,7 +18,7 @@ class SignInViewBody extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(AppPadding.p16),
         child: Column(
-          spacing: AppSize.s12,
+          spacing: AppSize.s24,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(

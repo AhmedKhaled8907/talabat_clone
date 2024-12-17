@@ -3,7 +3,7 @@ class AppStrings {
   static const String appName = 'Talabat Clone';
 
   // Auth View
-  static const String everyday = 'Your everyday,right away';
+  static const String everyday = 'Your everyday, right away';
   static const String loginOrSignUp = 'Log in or create an account';
   static const String receiveRewards =
       'Receive rewards and save your details for\n a faster checkout experience.';
@@ -57,10 +57,16 @@ class AppStrings {
   static const String fasterOrdering =
       'Log in or create an account for a faster ordering experience.';
 
-  static const String signInSuccessfully = 'Successfully signed in';
-  static const String signupSuccessfully = 'Successfully signed up';
+  static const String signInSuccessfully = 'Signed in successfully';
+  static const String signupSuccessfully =
+      'Signed up successfully, please Sign in';
   static const String appleComingSoon =
       'Sign up with Apple will be available coming soon';
+
+  static const String resetPasswordSuccessfully =
+      'Check your email to reset your password';
+
+  static const String signOutSuccessfully = 'Signed out successfully';
 
   // Locale
   static const String locale = 'ar';

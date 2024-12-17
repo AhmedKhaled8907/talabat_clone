@@ -88,4 +88,36 @@ class AuthRepoImpl extends AuthRepo {
       );
     }
   }
+
+  @override
+  Future<Either<Failure, void>> resetPassword({required String email}) async {
+    try {
+      var user = await authDataSource.resetPassword(email: email);
+      return Right(user);
+    } on CustomExceptions catch (e) {
+      return Left(ServerFailure(e.message));
+    } on Exception catch (e) {
+      return Left(
+        ServerFailure(
+          'An unexpected error occurred: ${e.toString()}',
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<Either<Failure, void>> signOut() async {
+    try {
+      var user = await authDataSource.signOut();
+      return Right(user);
+    } on CustomExceptions catch (e) {
+      return Left(ServerFailure(e.message));
+    } on Exception catch (e) {
+      return Left(
+        ServerFailure(
+          'An unexpected error occurred: ${e.toString()}',
+        ),
+      );
+    }
+  }
 }
