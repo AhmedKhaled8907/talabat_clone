@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'package:talabat_clone/core/utils/resources/app_assets.dart';
 import 'package:talabat_clone/core/utils/resources/app_routes.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
+import 'package:talabat_clone/core/utils/services/service_locator.dart';
+import 'package:talabat_clone/features/auth/domain/repos/auth_repo.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -21,10 +23,20 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   void _navigateToNextScreen() async {
     Future.delayed(const Duration(seconds: AppDuration.d3), () async {
-      if (mounted) {
-        await GoRouter.of(context).pushReplacement(
-          AppRoutes.kSignInOptionsRoute,
-        );
+      var isSignedIn = sl<AuthRepo>().isSignedIn();
+
+      if (isSignedIn) {
+        if (mounted) {
+          await GoRouter.of(context).pushReplacement(
+            AppRoutes.kHomeRoute,
+          );
+        }
+      } else {
+        if (mounted) {
+          await GoRouter.of(context).pushReplacement(
+            AppRoutes.kSignInOptionsRoute,
+          );
+        }
       }
     });
   }

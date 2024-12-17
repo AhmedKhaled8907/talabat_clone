@@ -120,4 +120,9 @@ class AuthRepoImpl extends AuthRepo {
       );
     }
   }
+
+  @override
+  bool isSignedIn() {
+    return authDataSource.isSignedIn();
+  }
 }

@@ -23,6 +23,8 @@ abstract class AuthDataSource {
   });
 
   Future<void> signOut();
+
+  bool isSignedIn();
 }
 
 class AuthDataSourceImpl implements AuthDataSource {
@@ -123,5 +125,10 @@ class AuthDataSourceImpl implements AuthDataSource {
         message: 'An unexpected error occurred: ${e.toString()}',
       );
     }
+  }
+
+  @override
+  bool isSignedIn() {
+    return firebaseAuthService.isSignedIn();
   }
 }

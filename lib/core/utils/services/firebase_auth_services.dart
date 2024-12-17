@@ -142,11 +142,33 @@ class FirebaseAuthService {
   }
 
   Future<void> resetPassword({required String email}) async {
-    await auth.sendPasswordResetEmail(email: email);
+    try {
+      await auth.sendPasswordResetEmail(email: email);
+    } catch (e) {
+      log(
+        'Exception in FirebaseAuthService.resetPassword: ${e.toString()}',
+      );
+      throw CustomExceptions(
+        message: 'An error occurred. Please try again.',
+      );
+    }
   }
 
   Future<void> signOut() async {
-    await auth.signOut();
+    try {
+      await auth.signOut();
+    } catch (e) {
+      log(
+        'Exception in FirebaseAuthService.signOut: ${e.toString()}',
+      );
+      throw CustomExceptions(
+        message: 'An error occurred. Please try again.',
+      );
+    }
   }
 
+  bool isSignedIn() {
+    final currentUser = auth.currentUser;
+    return currentUser != null;
+  }
 }

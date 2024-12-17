@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:talabat_clone/core/common/widgets/custom_orange_button.dart';
 import 'package:talabat_clone/core/utils/resources/app_assets.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
+import 'package:talabat_clone/core/utils/resources/app_routes.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
@@ -31,7 +33,7 @@ class HomeBanner extends StatelessWidget {
           // Text Section (Left Side)
           Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
@@ -52,13 +54,15 @@ class HomeBanner extends StatelessWidget {
                 ),
                 const SizedBox(height: AppSize.s8),
                 SizedBox(
-                  width: context.width * 0.275,
-                  height: context.height * 0.07,
+                  height: context.height * 0.065,
                   child: CustomOrangeButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      GoRouter.of(context).push(AppRoutes.kSignInOptionsRoute);
+                    },
                     title: AppStrings.signUp,
                   ),
                 ),
+                const SizedBox(height: AppSize.s16),
               ],
             ),
           ),

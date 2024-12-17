@@ -23,4 +23,6 @@ abstract class AuthRepo {
   });
 
   Future<Either<Failure, void>> signOut();
+
+  bool isSignedIn();
 }
