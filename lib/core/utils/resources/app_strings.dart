@@ -57,6 +57,11 @@ class AppStrings {
   static const String fasterOrdering =
       'Log in or create an account for a faster ordering experience.';
 
+  static const String signInSuccessfully = 'Successfully signed in';
+  static const String signupSuccessfully = 'Successfully signed up';
+  static const String appleComingSoon =
+      'Sign up with Apple will be available coming soon';
+
   // Locale
   static const String locale = 'ar';
 }

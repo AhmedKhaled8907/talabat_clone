@@ -12,21 +12,22 @@ class SignUpViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(AppPadding.p16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        spacing: AppSize.s16,
-        children: [
-          Text(
-            AppStrings.createAccount,
-            style: AppStyles.styleBold20(context),
-          ),
-          const SignUpForm(),
-          PrivacyPolicyText(),
-        ],
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(AppPadding.p16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          spacing: AppSize.s16,
+          children: [
+            Text(
+              AppStrings.createAccount,
+              style: AppStyles.styleBold20(context),
+            ),
+            const SignUpForm(),
+            PrivacyPolicyText(),
+          ],
+        ),
       ),
     );
   }
 }
-

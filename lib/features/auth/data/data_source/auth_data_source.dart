@@ -15,6 +15,8 @@ abstract class AuthDataSource {
   });
 
   Future<UserModel> signInWithGoogle();
+
+  Future<UserModel> signInWithFacebook();
 }
 
 class AuthDataSourceImpl implements AuthDataSource {
@@ -67,6 +69,20 @@ class AuthDataSourceImpl implements AuthDataSource {
   Future<UserModel> signInWithGoogle() async {
     try {
       final user = await firebaseAuthService.signInWithGoogle();
+      return UserModel.fromFirebaseUser(user);
+    } on CustomExceptions catch (e) {
+      throw CustomExceptions(message: e.message);
+    } on Exception catch (e) {
+      throw CustomExceptions(
+        message: 'An unexpected error occurred: ${e.toString()}',
+      );
+    }
+  }
+
+  @override
+  Future<UserModel> signInWithFacebook() async {
+    try {
+      final user = await firebaseAuthService.signInWithFacebook();
       return UserModel.fromFirebaseUser(user);
     } on CustomExceptions catch (e) {
       throw CustomExceptions(message: e.message);

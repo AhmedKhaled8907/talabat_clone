@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:talabat_clone/core/utils/errors/custom_exceptions.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -111,5 +112,32 @@ class FirebaseAuthService {
     );
 
     return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
+  }
+
+  Future<User> signInWithFacebook() async {
+    final LoginResult loginResult = await FacebookAuth.instance.login();
+
+    if (loginResult.accessToken == null) {
+      return throw CustomExceptions(
+        message: 'Sign up with Facebook failed.',
+      );
+    }
+
+    final OAuthCredential facebookAuthCredential =
+        FacebookAuthProvider.credential(
+      loginResult.accessToken!.tokenString,
+    );
+
+    final User? user = (await FirebaseAuth.instance
+            .signInWithCredential(facebookAuthCredential))
+        .user;
+
+    if (user == null) {
+      return throw CustomExceptions(
+        message: 'Sign up with Facebook failed.',
+      );
+    }
+
+    return user;
   }
 }

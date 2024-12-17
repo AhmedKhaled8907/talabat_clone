@@ -26,3 +26,5 @@ final class SignInEvent extends AuthEvent {
 }
 
 final class GoogleEvent extends AuthEvent {}
+
+final class FacebookEvent extends AuthEvent {}

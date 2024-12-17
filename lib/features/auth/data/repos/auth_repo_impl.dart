@@ -72,4 +72,20 @@ class AuthRepoImpl extends AuthRepo {
       );
     }
   }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithFacebook() async {
+    try {
+      final user = await authDataSource.signInWithFacebook();
+      return Right(UserModel.fromEntity(user));
+    } on CustomExceptions catch (e) {
+      return Left(ServerFailure(e.message));
+    } on Exception catch (e) {
+      return Left(
+        ServerFailure(
+          'An unexpected error occurred: ${e.toString()}',
+        ),
+      );
+    }
+  }
 }

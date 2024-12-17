@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 
 import '../../../../../core/common/widgets/custom_orange_button.dart';
 import '../../../../../core/common/widgets/custom_text_form_field.dart';
@@ -13,21 +14,27 @@ class ForgotPasswordViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      spacing: AppSize.s24,
-      children: [
-        CustomTextFormField(
-          hintText: AppStrings.email,
-          keyboardType: TextInputType.emailAddress,
-          validator: (value) {
-            return AppValidators.emailValidator(value);
-          },
-        ),
-        CustomOrangeButton(
-          onPressed: () {},
-          title: AppStrings.resetPassword,
-        ),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        spacing: AppSize.s24,
+        children: [
+          Text(
+            AppStrings.forgotPasswordView,
+            style: AppStyles.styleBold20(context),
+          ),
+          CustomTextFormField(
+            hintText: AppStrings.email,
+            keyboardType: TextInputType.emailAddress,
+            validator: (value) {
+              return AppValidators.emailValidator(value);
+            },
+          ),
+          CustomOrangeButton(
+            onPressed: () {},
+            title: AppStrings.resetPassword,
+          ),
+        ],
+      ),
     );
   }
 }

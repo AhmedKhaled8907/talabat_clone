@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">Talabat Clone</string>
+    <string name="facebook_app_id">2633735083489749</string>
+    <string name="fb_login_protocol_scheme">fb2633735083489749</string>
+    <string name="facebook_client_token">1e70ee79496778acfe879efde8caceca</string>
+</resources>

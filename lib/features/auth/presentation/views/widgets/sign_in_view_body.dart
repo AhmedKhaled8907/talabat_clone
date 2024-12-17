@@ -13,25 +13,27 @@ class SignInViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(AppPadding.p16),
-      child: Column(
-        spacing: AppSize.s12,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            AppStrings.continueWithEmail,
-            style: AppStyles.styleBold20(context),
-          ),
-          SignInForm(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              _forgotPassword(context),
-              _createAccount(context),
-            ],
-          ),
-        ],
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(AppPadding.p16),
+        child: Column(
+          spacing: AppSize.s12,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              AppStrings.continueWithEmail,
+              style: AppStyles.styleBold20(context),
+            ),
+            SignInForm(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _forgotPassword(context),
+                _createAccount(context),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
