@@ -7,6 +7,8 @@ import 'package:talabat_clone/core/utils/resources/app_routes.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
+import 'package:talabat_clone/core/utils/services/service_locator.dart';
+import 'package:talabat_clone/features/auth/domain/repos/auth_repo.dart';
 
 class HomeBanner extends StatelessWidget {
   const HomeBanner({
@@ -15,6 +17,26 @@ class HomeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isSignedIn = sl<AuthRepo>().isSignedIn();
+
+    return isSignedIn ? _signedIn(context) : _notSignedIn(context);
+  }
+
+  Widget _signedIn(BuildContext context) {
+    return SafeArea(
+      child: ListTile(
+        contentPadding: const EdgeInsets.all(AppPadding.p16),
+        title: Text(
+          'Hi, Ahmed Khaled',
+          style: AppStyles.styleBold20(context),
+        ),
+        subtitle: _city(context),
+        trailing: _image(context),
+      ),
+    );
+  }
+
+  Widget _notSignedIn(BuildContext context) {
     return Container(
       height: context.height * 0.4,
       width: double.infinity,
@@ -83,13 +105,18 @@ class HomeBanner extends StatelessWidget {
   Row _city(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
+      spacing: AppSize.s8,
       children: [
+        Icon(
+          Icons.location_on_rounded,
+          size: AppSize.s24,
+          color: AppColors.secondaryColor,
+        ),
         Text(
           AppStrings.elMahalla,
           maxLines: 1,
           style: AppStyles.styleRegular16(context),
         ),
-        const SizedBox(width: AppSize.s8),
         Transform.rotate(
           angle: -3.14 / 2,
           child: Icon(
@@ -98,6 +125,23 @@ class HomeBanner extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+
+  CircleAvatar _image(BuildContext context) {
+    return CircleAvatar(
+      radius: AppSize.s36,
+      backgroundColor: AppColors.secondaryColor.withValues(
+        alpha: AppSize.s0_5,
+      ),
+      child: Center(
+        child: Text(
+          'A',
+          style: AppStyles.styleBold16(context).copyWith(
+            color: AppColors.white,
+          ),
+        ),
+      ),
     );
   }
 }
