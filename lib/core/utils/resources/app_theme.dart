@@ -2,38 +2,52 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_fonts.dart';
+import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 
 class AppTheme {
-  static final appTheme = ThemeData(
-    brightness: Brightness.light,
-    scaffoldBackgroundColor: AppColors.white,
-    fontFamily: FontConstants.fontFamily,
-    primaryColor: AppColors.primaryColor,
-    indicatorColor: AppColors.primaryColor,
-    progressIndicatorTheme: ProgressIndicatorThemeData(
-      color: AppColors.primaryColor,
-    ),
-    textSelectionTheme: TextSelectionThemeData(
-      cursorColor: AppColors.primaryColor,
-      selectionColor: AppColors.primaryColor,
-      selectionHandleColor: AppColors.primaryColor,
-    ),
-    appBarTheme: AppBarTheme(
-      elevation: 0,
-      backgroundColor: AppColors.white,
-      systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarBrightness: Brightness.light,
-        statusBarIconBrightness: Brightness.dark,
-        statusBarColor: AppColors.transparent,
+  static ThemeData appTheme(BuildContext context) {
+    return ThemeData(
+      brightness: Brightness.light,
+      scaffoldBackgroundColor: AppColors.white,
+      fontFamily: FontConstants.fontFamily,
+      primaryColor: AppColors.primaryColor,
+      indicatorColor: AppColors.primaryColor,
+      progressIndicatorTheme: ProgressIndicatorThemeData(
+        color: AppColors.primaryColor,
       ),
-    ),
-    checkboxTheme: CheckboxThemeData(
-      side: BorderSide(color: AppColors.primaryColor),
-      checkColor: WidgetStateProperty.all(AppColors.white),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(AppSize.s4),
+      textSelectionTheme: TextSelectionThemeData(
+        cursorColor: AppColors.primaryColor,
+        selectionColor: AppColors.primaryColor,
+        selectionHandleColor: AppColors.primaryColor,
       ),
-    ),
-  );
+      appBarTheme: AppBarTheme(
+        elevation: 0,
+        backgroundColor: AppColors.white,
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarBrightness: Brightness.light,
+          statusBarIconBrightness: Brightness.dark,
+          statusBarColor: AppColors.transparent,
+        ),
+      ),
+      checkboxTheme: CheckboxThemeData(
+        side: BorderSide(color: AppColors.primaryColor),
+        checkColor: WidgetStateProperty.all(AppColors.white),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppSize.s4),
+        ),
+      ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: AppColors.navBarColor,
+        type: BottomNavigationBarType.fixed,
+        elevation: 0,
+        selectedItemColor: AppColors.primaryColor,
+        unselectedItemColor: AppColors.blackWithOpacity,
+        selectedLabelStyle: AppStyles.styleMedium14(context),
+        unselectedLabelStyle: AppStyles.styleMedium14(context).copyWith(
+          color: AppColors.blackWithOpacity,
+        ),
+      ),
+    );
+  }
 }

@@ -2,6 +2,11 @@ class AppStrings {
   // App Name
   static const String appName = 'Talabat Clone';
 
+  // Nav Bar
+  static const String navBarHome = 'Home';
+  static const String navBarSearch = 'Search';
+  static const String navBarAccount = 'Account';
+
   // Auth View
   static const String everyday = 'Your everyday, right away';
   static const String loginOrSignUp = 'Log in or create an account';

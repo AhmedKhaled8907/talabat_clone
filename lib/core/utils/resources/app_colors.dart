@@ -12,10 +12,14 @@ class AppColors {
   static final Color deliveredColor = Color(0xFF2AA564);
   static final Color starColor = Color(0xFFFF9F00);
   static final Color dividerColor = Color(0xFFF5F5F5);
+  static final Color navBarColor = Color(0xFFF7F7F7);
 
   // Normal Colors
   static final Color white = Color(0xFFFFFFFF);
   static final Color black = Color(0xFF000000);
+  static final Color blackWithOpacity = Color(0xFF000000).withValues(
+    alpha: AppSize.s0_5,
+  );
   static final Color red = Colors.red;
   static final Color grey = Colors.grey;
 

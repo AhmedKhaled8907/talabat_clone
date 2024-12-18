@@ -23,15 +23,38 @@ class HomeBanner extends StatelessWidget {
   }
 
   Widget _signedIn(BuildContext context) {
-    return SafeArea(
-      child: ListTile(
-        contentPadding: const EdgeInsets.all(AppPadding.p16),
-        title: Text(
-          'Hi, Ahmed Khaled',
-          style: AppStyles.styleBold20(context),
+    return Container(
+      color: AppColors.primaryColor,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: AppPadding.p16,
+        ).copyWith(
+          top: AppPadding.p32,
+          bottom: AppPadding.p16,
         ),
-        subtitle: _city(context),
-        trailing: _image(context),
+        child: ListTile(
+          contentPadding: EdgeInsets.zero,
+          title: Text(
+            AppStrings.hiName,
+            maxLines: 1,
+            style: AppStyles.styleBold20(context).copyWith(
+              color: AppColors.white,
+            ),
+          ),
+          subtitle: _city(context),
+          trailing: CircleAvatar(
+            radius: AppSize.s48,
+            backgroundColor: AppColors.secondaryColor.withValues(
+              alpha: AppSize.s0_5,
+            ),
+            child: Text(
+              'AK',
+              style: AppStyles.styleBold16(context).copyWith(
+                color: AppColors.white,
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -108,40 +131,26 @@ class HomeBanner extends StatelessWidget {
       spacing: AppSize.s8,
       children: [
         Icon(
-          Icons.location_on_rounded,
-          size: AppSize.s24,
+          Icons.location_on,
+          size: AppSize.s16,
           color: AppColors.secondaryColor,
         ),
         Text(
           AppStrings.elMahalla,
           maxLines: 1,
-          style: AppStyles.styleRegular16(context),
+          style: AppStyles.styleMedium16(context).copyWith(
+            color: AppColors.secondaryColor,
+          ),
         ),
         Transform.rotate(
           angle: -3.14 / 2,
           child: Icon(
             Icons.arrow_back_ios_new_rounded,
             size: AppSize.s16,
+            color: AppColors.secondaryColor,
           ),
         ),
       ],
-    );
-  }
-
-  CircleAvatar _image(BuildContext context) {
-    return CircleAvatar(
-      radius: AppSize.s36,
-      backgroundColor: AppColors.secondaryColor.withValues(
-        alpha: AppSize.s0_5,
-      ),
-      child: Center(
-        child: Text(
-          'A',
-          style: AppStyles.styleBold16(context).copyWith(
-            color: AppColors.white,
-          ),
-        ),
-      ),
     );
   }
 }

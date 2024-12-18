@@ -10,6 +10,7 @@ import 'package:talabat_clone/features/auth/domain/usecases/sign_in_usecase.dart
 import 'package:talabat_clone/features/auth/domain/usecases/sign_out_usecase.dart';
 import 'package:talabat_clone/features/auth/domain/usecases/sign_up_usecase.dart';
 import 'package:talabat_clone/features/auth/presentation/manager/auth_bloc/auth_bloc.dart';
+import 'package:talabat_clone/features/main/presentation/bottom_nav_bar_cubit/bottom_nav_bar_cubit.dart';
 
 final sl = GetIt.instance;
 
@@ -47,6 +48,9 @@ void serviceLocator() {
       () => SignOutUsecase(sl()),
     )
     // Blocs
+    ..registerLazySingleton<BottomNavBarCubit>(
+      () => BottomNavBarCubit(),
+    )
     ..registerLazySingleton<AuthBloc>(
       () => AuthBloc(
         signUpUsecase: sl(),

@@ -11,7 +11,6 @@ class HomeViewBody extends StatelessWidget {
       spacing: AppSize.s16,
       children: [
         HomeBanner(),
-        
       ],
     );
   }

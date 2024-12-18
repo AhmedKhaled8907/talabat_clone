@@ -5,6 +5,7 @@ import 'package:talabat_clone/core/utils/services/service_locator.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_theme.dart';
 import 'package:talabat_clone/features/auth/presentation/manager/auth_bloc/auth_bloc.dart';
+import 'package:talabat_clone/features/main/presentation/bottom_nav_bar_cubit/bottom_nav_bar_cubit.dart';
 import 'core/utils/resources/app_routes.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -27,11 +28,12 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => sl<AuthBloc>()),
+        BlocProvider(create: (context) => sl<BottomNavBarCubit>()),
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         title: AppStrings.appName,
-        theme: AppTheme.appTheme,
+        theme: AppTheme.appTheme(context),
         routerConfig: AppRoutes.routes,
       ),
     );

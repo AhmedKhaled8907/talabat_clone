@@ -28,7 +28,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       if (isSignedIn) {
         if (mounted) {
           await GoRouter.of(context).pushReplacement(
-            AppRoutes.kHomeRoute,
+            AppRoutes.kMainRoute,
           );
         }
       } else {
