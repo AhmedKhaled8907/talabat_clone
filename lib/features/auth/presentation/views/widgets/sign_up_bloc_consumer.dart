@@ -21,7 +21,7 @@ class SignUpBlocConsumer extends StatelessWidget {
             context,
             message: AppStrings.signupSuccessfully,
           );
-          GoRouter.of(context).pushReplacement(AppRoutes.kHomeRoute);
+          GoRouter.of(context).pushReplacement(AppRoutes.kSignUpRoute);
         } else if (state is AuthFailure) {
           showSnackbar(
             context,

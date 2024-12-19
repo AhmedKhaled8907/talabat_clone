@@ -1,5 +1,8 @@
 import 'package:get_it/get_it.dart';
+import 'package:talabat_clone/core/utils/services/database_services.dart';
 import 'package:talabat_clone/core/utils/services/firebase_auth_services.dart';
+import 'package:talabat_clone/core/utils/services/firestore_services.dart';
+import 'package:talabat_clone/features/auth/data/data_source/auth_data_base_source.dart';
 import 'package:talabat_clone/features/auth/data/data_source/auth_data_source.dart';
 import 'package:talabat_clone/features/auth/data/repos/auth_repo_impl.dart';
 import 'package:talabat_clone/features/auth/domain/repos/auth_repo.dart';
@@ -20,13 +23,22 @@ void serviceLocator() {
     ..registerSingleton<FirebaseAuthService>(
       FirebaseAuthService(),
     )
+    ..registerSingleton<DatabaseService>(
+      FirestoreServices(),
+    )
     // Data Sources
     ..registerFactory<AuthDataSource>(
       () => AuthDataSourceImpl(sl()),
     )
+    ..registerFactory<AuthDataBaseSource>(
+      () => AuthDataBaseSourceImpl(sl()),
+    )
     // Repositories
     ..registerFactory<AuthRepo>(
-      () => AuthRepoImpl(sl()),
+      () => AuthRepoImpl(
+        authDataSource: sl(),
+        databaseService: sl(),
+      ),
     )
     // Usecases
     ..registerFactory<SignUpUsecase>(

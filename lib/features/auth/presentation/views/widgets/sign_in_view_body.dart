@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:go_router/go_router.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_routes.dart';

@@ -14,6 +14,7 @@ class AppStrings {
       'Receive rewards and save your details for\n a faster checkout experience.';
   static const String signIn = 'Sign In';
   static const String signUp = 'Sign Up';
+  static const String signOut = 'Sign Out';
   static const String welcome = 'Welcome to Talabat';
   static const String continueWithGoogle = 'Continue with Google';
   static const String continueWithApple = 'Continue with Apple';

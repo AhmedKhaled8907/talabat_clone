@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:talabat_clone/core/utils/errors/custom_exceptions.dart';
 import 'package:talabat_clone/core/utils/errors/failure.dart';
+import 'package:talabat_clone/features/auth/data/data_source/auth_data_base_source.dart';
 import 'package:talabat_clone/features/auth/data/data_source/auth_data_source.dart';
 import 'package:talabat_clone/features/auth/data/models/user_model.dart';
 import 'package:talabat_clone/features/auth/domain/entities/user_entity.dart';
@@ -8,8 +9,12 @@ import 'package:talabat_clone/features/auth/domain/repos/auth_repo.dart';
 
 class AuthRepoImpl extends AuthRepo {
   final AuthDataSource authDataSource;
+  final AuthDataBaseSource databaseService;
 
-  AuthRepoImpl(this.authDataSource);
+  AuthRepoImpl({
+    required this.authDataSource,
+    required this.databaseService,
+  });
 
   @override
   Future<Either<Failure, UserEntity>> signUpWithEmailAndPassword({
@@ -23,6 +28,7 @@ class AuthRepoImpl extends AuthRepo {
         password: password,
         name: name,
       );
+      await addUserData(user: user);
       return Right(UserModel.fromEntity(user));
     } on CustomExceptions catch (e) {
       return Left(ServerFailure(e.message));
@@ -124,5 +130,12 @@ class AuthRepoImpl extends AuthRepo {
   @override
   bool isSignedIn() {
     return authDataSource.isSignedIn();
+  }
+
+  @override
+  Future<void> addUserData({required UserEntity user}) async {
+    await databaseService.addUserData(
+      user: UserModel.fromEntity(user),
+    );
   }
 }

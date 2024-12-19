@@ -40,4 +40,6 @@ class UserModel extends UserEntity {
       AppJson.fullName: fullName,
     };
   }
+
+  
 }

@@ -22,24 +22,23 @@ class SettingsItem extends StatelessWidget {
             horizontal: AppPadding.p16,
             vertical: AppPadding.p16,
           ),
-          child: Row(
-            children: [
-              Text(
-                entity.title,
-                style: AppStyles.styleMedium14(context),
-              ),
-              Spacer(),
-              Text(
-                entity.subtitle ?? '',
-                style: AppStyles.styleMedium14(context).copyWith(
-                  color: AppColors.secondaryColor,
+          child: GestureDetector(
+            onTap: entity.onTap,
+            child: Row(
+              children: [
+                Text(
+                  entity.title,
+                  style: AppStyles.styleMedium14(context),
                 ),
-              ),
-              const SizedBox(width: AppSize.s8),
-              InkWell(
-                borderRadius: BorderRadius.circular(AppSize.s8),
-                onTap: () {},
-                child: Transform.flip(
+                Spacer(),
+                Text(
+                  entity.subtitle ?? '',
+                  style: AppStyles.styleMedium14(context).copyWith(
+                    color: AppColors.secondaryColor,
+                  ),
+                ),
+                const SizedBox(width: AppSize.s8),
+                Transform.flip(
                   flipX: true,
                   child: Icon(
                     Icons.arrow_back_ios_new_rounded,
@@ -47,8 +46,8 @@ class SettingsItem extends StatelessWidget {
                     color: AppColors.primaryColor,
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
         CustomDivider(),

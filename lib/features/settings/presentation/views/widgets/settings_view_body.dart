@@ -8,9 +8,9 @@ class SettingsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: settingsList
+      children: settingsList(context)
           .map(
-            (e) => SettingsItem(entity: e),
+            (e) => SettingsItem(entity: e ),
           )
           .toList(),
     );
