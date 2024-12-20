@@ -10,7 +10,11 @@ class FirestoreService extends DatabaseService {
     required Map<String, dynamic> data,
     String? documentId,
   }) async {
-    await firestore.collection(path).add(data);
+    if (documentId != null) {
+      await firestore.collection(path).doc(documentId).set(data);
+    } else {
+      await firestore.collection(path).add(data);
+    }
   }
 
   @override
@@ -19,16 +23,16 @@ class FirestoreService extends DatabaseService {
     Map<String, dynamic>? query,
     String? documentId,
   }) async {
-    // TODO: implement getData
-    throw UnimplementedError();
+    var data = await firestore.collection(path).doc(documentId).get();
+    return data.data();
   }
 
   @override
   Future<bool> checkIfDataExists({
     required String path,
     required String documentId,
-  }) {
-    // TODO: implement checkIfDataExists
-    throw UnimplementedError();
+  }) async {
+    var data = await firestore.collection(path).doc(documentId).get();
+    return data.exists;
   }
 }

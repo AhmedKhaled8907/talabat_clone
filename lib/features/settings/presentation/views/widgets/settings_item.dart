@@ -17,13 +17,13 @@ class SettingsItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: AppPadding.p16,
-            vertical: AppPadding.p16,
-          ),
-          child: GestureDetector(
-            onTap: entity.onTap,
+        InkWell(
+          onTap: entity.onTap,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppPadding.p16,
+              vertical: AppPadding.p16,
+            ),
             child: Row(
               children: [
                 Text(

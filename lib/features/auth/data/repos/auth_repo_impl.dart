@@ -56,7 +56,10 @@ class AuthRepoImpl extends AuthRepo {
         email: email,
         password: password,
       );
-      return Right(UserModel.fromFirebaseUser(user));
+
+      var userEntity = await getUserData(uid: user.uid);
+
+      return Right(userEntity);
     } on CustomExceptions catch (e) {
       return Left(ServerFailure(e.message));
     } on Exception catch (e) {
@@ -74,7 +77,17 @@ class AuthRepoImpl extends AuthRepo {
       final user = await firebaseAuthService.signInWithGoogle();
 
       UserEntity userEntity = UserModel.fromFirebaseUser(user);
-      await addUserData(user: userEntity);
+
+      bool isUserExists = await databaseService.checkIfDataExists(
+        path: AppEndPoints.ifUserExists,
+        documentId: userEntity.uid,
+      );
+      if (isUserExists) {
+        userEntity = await getUserData(uid: userEntity.uid);
+      } else {
+        await addUserData(user: userEntity);
+      }
+
       return Right(userEntity);
     } on CustomExceptions catch (e) {
       return Left(ServerFailure(e.message));
@@ -93,7 +106,17 @@ class AuthRepoImpl extends AuthRepo {
       final user = await firebaseAuthService.signInWithFacebook();
 
       UserEntity userEntity = UserModel.fromFirebaseUser(user);
-      await addUserData(user: userEntity);
+
+      bool isUserExists = await databaseService.checkIfDataExists(
+        path: AppEndPoints.ifUserExists,
+        documentId: userEntity.uid,
+      );
+      if (isUserExists) {
+        userEntity = await getUserData(uid: userEntity.uid);
+      } else {
+        await addUserData(user: userEntity);
+      }
+
       return Right(userEntity);
     } on CustomExceptions catch (e) {
       return Left(ServerFailure(e.message));
@@ -152,5 +175,14 @@ class AuthRepoImpl extends AuthRepo {
       data: UserModel.fromEntity(user).toJson(),
       documentId: user.uid,
     );
+  }
+
+  @override
+  Future<UserEntity> getUserData({required String uid}) async {
+    var data = await databaseService.getData(
+      path: AppEndPoints.getUserData,
+      documentId: uid,
+    );
+    return UserModel.fromJson(data);
   }
 }

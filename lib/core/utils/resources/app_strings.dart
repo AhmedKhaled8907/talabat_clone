@@ -65,7 +65,7 @@ class AppStrings {
 
   static const String signInSuccessfully = 'Signed in successfully';
   static const String signupSuccessfully =
-      'Signed up successfully, please Sign in';
+      'User created successfully, please Sign in';
   static const String appleComingSoon =
       'Sign up with Apple will be available coming soon';
 
