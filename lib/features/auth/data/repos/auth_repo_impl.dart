@@ -72,7 +72,9 @@ class AuthRepoImpl extends AuthRepo {
   Future<Either<Failure, UserEntity>> signInWithGoogle() async {
     try {
       final user = await authDataSource.signInWithGoogle();
-      return Right(UserModel.fromEntity(user));
+      UserEntity userEntity = UserModel.fromEntity(user);
+      await addUserData(user: userEntity);
+      return Right(userEntity);
     } on CustomExceptions catch (e) {
       return Left(ServerFailure(e.message));
     } on Exception catch (e) {
@@ -88,7 +90,9 @@ class AuthRepoImpl extends AuthRepo {
   Future<Either<Failure, UserEntity>> signInWithFacebook() async {
     try {
       final user = await authDataSource.signInWithFacebook();
-      return Right(UserModel.fromEntity(user));
+      UserEntity userEntity = UserModel.fromEntity(user);
+      await addUserData(user: userEntity);
+      return Right(userEntity);
     } on CustomExceptions catch (e) {
       return Left(ServerFailure(e.message));
     } on Exception catch (e) {

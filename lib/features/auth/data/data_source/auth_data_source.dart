@@ -47,13 +47,13 @@ class AuthDataSourceImpl implements AuthDataSource {
         email: email,
         password: password,
       );
+
       return UserModel.fromFirebaseUser(user);
     } on CustomExceptions catch (e) {
-      if (user != null) {
-        await user.delete();
-      }
+      await _deleteUser(user);
       throw CustomExceptions(message: e.message);
     } on Exception catch (e) {
+      await _deleteUser(user);
       throw CustomExceptions(
         message: 'An unexpected error occurred: ${e.toString()}',
       );
@@ -82,12 +82,14 @@ class AuthDataSourceImpl implements AuthDataSource {
 
   @override
   Future<UserModel> signInWithGoogle() async {
+    User? user;
     try {
-      final user = await firebaseAuthService.signInWithGoogle();
+      user = await firebaseAuthService.signInWithGoogle();
       return UserModel.fromFirebaseUser(user);
     } on CustomExceptions catch (e) {
       throw CustomExceptions(message: e.message);
     } on Exception catch (e) {
+      await _deleteUser(user);
       throw CustomExceptions(
         message: 'An unexpected error occurred: ${e.toString()}',
       );
@@ -96,10 +98,12 @@ class AuthDataSourceImpl implements AuthDataSource {
 
   @override
   Future<UserModel> signInWithFacebook() async {
+    User? user;
     try {
-      final user = await firebaseAuthService.signInWithFacebook();
+      user = await firebaseAuthService.signInWithFacebook();
       return UserModel.fromFirebaseUser(user);
     } on CustomExceptions catch (e) {
+      await _deleteUser(user);
       throw CustomExceptions(message: e.message);
     } on Exception catch (e) {
       throw CustomExceptions(
@@ -142,5 +146,11 @@ class AuthDataSourceImpl implements AuthDataSource {
   @override
   Future<void> deleteUser() async {
     return firebaseAuthService.deleteUser();
+  }
+
+  Future<void> _deleteUser(User? user) async {
+    if (user != null) {
+      await user.delete();
+    }
   }
 }
