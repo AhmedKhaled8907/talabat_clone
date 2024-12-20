@@ -24,7 +24,7 @@ class HomeBanner extends StatelessWidget {
 
   Widget _signedIn(BuildContext context) {
     return Container(
-      color: AppColors.primaryColor,
+      color: AppColors.primaryColorWithOpacity,
       child: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: AppPadding.p16,
@@ -37,9 +37,7 @@ class HomeBanner extends StatelessWidget {
           title: Text(
             AppStrings.hiName,
             maxLines: 1,
-            style: AppStyles.styleBold20(context).copyWith(
-              color: AppColors.white,
-            ),
+            style: AppStyles.styleBold20(context),
           ),
           subtitle: _city(context),
           trailing: CircleAvatar(
