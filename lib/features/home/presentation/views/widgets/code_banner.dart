@@ -10,65 +10,69 @@ class CodeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          padding: EdgeInsets.all(AppSize.s6),
-          decoration: ShapeDecoration(
-            color: Colors.white,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-            shadows: [
-              BoxShadow(
-                color: Color(0x19000000),
-                blurRadius: 4,
-                offset: Offset(2, 2),
-                spreadRadius: 0,
+    return GestureDetector(
+      onTap: () {},
+      child: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.all(AppSize.s6),
+            decoration: ShapeDecoration(
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
               ),
-              BoxShadow(
-                color: Color(0x19000000),
-                blurRadius: 4,
-                offset: Offset(-2, -2),
-                spreadRadius: 0,
-              )
-            ],
-          ),
-          child: Row(
-            spacing: AppSize.s8,
-            children: [
-              Expanded(
-                child: Center(
-                  child: Image.asset(
-                    AppAssets.imagesHomeCode,
-                    height: context.height * 0.1,
-                    fit: BoxFit.contain,
+              shadows: [
+                BoxShadow(
+                  color: Color(0x19000000),
+                  blurRadius: 4,
+                  offset: Offset(2, 2),
+                  spreadRadius: 0,
+                ),
+                BoxShadow(
+                  color: Color(0x19000000),
+                  blurRadius: 4,
+                  offset: Offset(-2, -2),
+                  spreadRadius: 0,
+                )
+              ],
+            ),
+            child: Row(
+              spacing: AppSize.s8,
+              children: [
+                Expanded(
+                  child: Center(
+                    child: Image.asset(
+                      AppAssets.imagesHomeCode,
+                      height: context.height * 0.1,
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
-              ),
-              Expanded(
-                flex: 3,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  spacing: AppSize.s8,
-                  children: [
-                    Text(
-                      AppStrings.gotACode,
-                      style: AppStyles.styleMedium16(context),
-                    ),
-                    Text(
-                      AppStrings.addCode,
-                      style: AppStyles.styleMedium12(context).copyWith(
-                        color: AppColors.black.withValues(alpha: AppSize.s0_5),
+                Expanded(
+                  flex: 3,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    spacing: AppSize.s8,
+                    children: [
+                      Text(
+                        AppStrings.gotACode,
+                        style: AppStyles.styleMedium16(context),
                       ),
-                    ),
-                  ],
-                ),
-              )
-            ],
+                      Text(
+                        AppStrings.addCode,
+                        style: AppStyles.styleMedium12(context).copyWith(
+                          color:
+                              AppColors.black.withValues(alpha: AppSize.s0_5),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

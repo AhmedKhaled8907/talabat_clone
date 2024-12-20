@@ -65,6 +65,14 @@ class AppStrings {
   static const String gotACode = 'Got a code ?';
   static const String addCode = 'Add your code and save on\nyour order';
 
+  // Shortcuts
+  static const String shortcuts = 'Shortcuts';
+  static const String pastOrders = 'Past Orders';
+  static const String superSaver = 'Super Saver';
+  static const String mustTries = 'Must tries';
+  static const String giveBack = 'Give Back';
+  static const String bestSellers = 'Best Sellers';
+
   static const String signInSuccessfully = 'Signed in successfully';
   static const String signupSuccessfully =
       'User created successfully, please Sign in';

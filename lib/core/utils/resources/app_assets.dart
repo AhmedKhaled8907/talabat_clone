@@ -76,7 +76,7 @@ class AppAssets {
 
   static const String imagesHomeBarbar = "assets/images/home/barbar.svg";
 
-  static const String imagesHomeBestSellers = "assets/images/home/best_sellers.svg";
+  static const String imagesHomeBestSellers = "assets/images/home/best_sellers.png";
 
   static const String imagesHomeCasseroleImage = "assets/images/home/casserole_image.svg";
 
@@ -90,7 +90,7 @@ class AppAssets {
 
   static const String imagesHomeFoods = "assets/images/home/foods.png";
 
-  static const String imagesHomeGiveBack = "assets/images/home/give_back.svg";
+  static const String imagesHomeGiveBack = "assets/images/home/give_back.png";
 
   static const String imagesHomeGroceries = "assets/images/home/groceries.png";
 
@@ -100,15 +100,15 @@ class AppAssets {
 
   static const String imagesHomeMoreShops = "assets/images/home/more_shops.png";
 
-  static const String imagesHomeMustTries = "assets/images/home/must_tries.svg";
+  static const String imagesHomeMustTries = "assets/images/home/must_tries.png";
 
-  static const String imagesHomePastOrders = "assets/images/home/past_orders.svg";
+  static const String imagesHomePastOrders = "assets/images/home/past_orders.png";
 
   static const String imagesHomePhone = "assets/images/home/phone.png";
 
   static const String imagesHomeSortBy = "assets/images/home/sort_by.svg";
 
-  static const String imagesHomeSuperSaver = "assets/images/home/super_saver.svg";
+  static const String imagesHomeSuperSaver = "assets/images/home/super_saver.png";
 
   static const String imagesHomeTalabatMarts = "assets/images/home/talabat_marts.png";
 

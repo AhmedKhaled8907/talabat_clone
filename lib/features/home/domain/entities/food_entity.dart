@@ -1,4 +1,5 @@
 import 'package:talabat_clone/core/utils/resources/app_assets.dart';
+import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 
 class FoodEntity {
   final String image;
@@ -41,5 +42,28 @@ List<FoodEntity> get drinksList => [
       FoodEntity(
         image: AppAssets.imagesHomeMoreShops,
         name: 'More shops',
+      ),
+    ];
+
+List<FoodEntity> get shortcutsList => [
+      FoodEntity(
+        image: AppAssets.imagesHomePastOrders,
+        name: AppStrings.pastOrders,
+      ),
+      FoodEntity(
+        image: AppAssets.imagesHomeMustTries,
+        name: AppStrings.mustTries,
+      ),
+      FoodEntity(
+        image: AppAssets.imagesHomeSuperSaver,
+        name: AppStrings.superSaver,
+      ),
+      FoodEntity(
+        image: AppAssets.imagesHomeGiveBack,
+        name: AppStrings.giveBack,
+      ),
+      FoodEntity(
+        image: AppAssets.imagesHomeBestSellers,
+        name: AppStrings.bestSellers,
       ),
     ];

@@ -4,10 +4,10 @@ import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/home/domain/entities/food_entity.dart';
 
-class ProductItem extends StatelessWidget {
-  const ProductItem({
-    required this.foodEntity,
+class ShortcutsWidget extends StatelessWidget {
+  const ShortcutsWidget({
     super.key,
+    required this.foodEntity,
   });
 
   final FoodEntity foodEntity;
@@ -19,31 +19,25 @@ class ProductItem extends StatelessWidget {
         onTap: () {},
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           spacing: AppSize.s8,
           children: [
-            AspectRatio(
-              aspectRatio: 105 / 70,
-              child: Container(
-                margin: const EdgeInsets.only(right: AppSize.s8),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: AppColors.productColor,
-                ),
-                child: Center(
-                  child: Image.asset(
-                    foodEntity.image,
-                    height: context.height * 0.07,
-                    fit: BoxFit.fill,
-                  ),
-                ),
+            Container(
+              padding: EdgeInsets.all(AppSize.s24),
+              decoration: BoxDecoration(
+                color: AppColors.primaryColorWithOpacity,
+                borderRadius: BorderRadius.circular(AppSize.s10),
+              ),
+              child: Image.asset(
+                foodEntity.image,
+                fit: BoxFit.fill,
               ),
             ),
             Text(
               foodEntity.name,
-              textAlign: TextAlign.center,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
               style: AppStyles.styleMedium14(context),
             ),
           ],

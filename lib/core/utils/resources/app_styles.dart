@@ -148,8 +148,20 @@ abstract class AppStyles {
       fontWeight: FontWeights.bold,
     );
   }
-}
 
+
+  static TextStyle styleBold24(BuildContext context) {
+    return TextStyle(
+      fontFamily: FontConstants.fontFamily,
+      fontSize: getResponsiveFontSize(
+        context,
+        fontSize: FontSize.s24,
+      ),
+      fontWeight: FontWeights.bold,
+    );
+  }
+
+}
 double getScaleFactor(BuildContext context) {
   double width = MediaQuery.sizeOf(context).width;
   if (width < 600) {
