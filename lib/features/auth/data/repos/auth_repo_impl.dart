@@ -1,19 +1,20 @@
 import 'package:dartz/dartz.dart';
 import 'package:talabat_clone/core/utils/errors/custom_exceptions.dart';
 import 'package:talabat_clone/core/utils/errors/failure.dart';
-import 'package:talabat_clone/features/auth/data/data_source/auth_data_base_source.dart';
-import 'package:talabat_clone/features/auth/data/data_source/auth_data_source.dart';
+import 'package:talabat_clone/core/utils/resources/app_end_points.dart';
+import 'package:talabat_clone/core/utils/services/firebase_auth_services.dart';
+import 'package:talabat_clone/core/utils/services/firestore_services.dart';
 import 'package:talabat_clone/features/auth/data/models/user_model.dart';
 import 'package:talabat_clone/features/auth/domain/entities/user_entity.dart';
 import 'package:talabat_clone/features/auth/domain/repos/auth_repo.dart';
 
 class AuthRepoImpl extends AuthRepo {
-  final AuthDataSource authDataSource;
-  final AuthDataBaseSource databaseService;
+  final FirebaseAuthService firebaseAuthService;
+  final FirestoreServices fireStoreService;
 
   AuthRepoImpl({
-    required this.authDataSource,
-    required this.databaseService,
+    required this.firebaseAuthService,
+    required this.fireStoreService,
   });
 
   @override
@@ -23,10 +24,9 @@ class AuthRepoImpl extends AuthRepo {
     required String name,
   }) async {
     try {
-      final user = await authDataSource.signUpWithEmailAndPassword(
+      final user = await firebaseAuthService.createUserWithEmailAndPassword(
         email: email,
         password: password,
-        name: name,
       );
       UserEntity userEntity = UserEntity(
         email: email,
@@ -52,11 +52,11 @@ class AuthRepoImpl extends AuthRepo {
     required String password,
   }) async {
     try {
-      final user = await authDataSource.signInWithEmailAndPassword(
+      final user = await firebaseAuthService.signinUserWithEmailAndPassword(
         email: email,
         password: password,
       );
-      return Right(UserModel.fromEntity(user));
+      return Right(UserModel.fromFirebaseUser(user));
     } on CustomExceptions catch (e) {
       return Left(ServerFailure(e.message));
     } on Exception catch (e) {
@@ -71,8 +71,9 @@ class AuthRepoImpl extends AuthRepo {
   @override
   Future<Either<Failure, UserEntity>> signInWithGoogle() async {
     try {
-      final user = await authDataSource.signInWithGoogle();
-      UserEntity userEntity = UserModel.fromEntity(user);
+      final user = await firebaseAuthService.signInWithGoogle();
+
+      UserEntity userEntity = UserModel.fromFirebaseUser(user);
       await addUserData(user: userEntity);
       return Right(userEntity);
     } on CustomExceptions catch (e) {
@@ -89,8 +90,9 @@ class AuthRepoImpl extends AuthRepo {
   @override
   Future<Either<Failure, UserEntity>> signInWithFacebook() async {
     try {
-      final user = await authDataSource.signInWithFacebook();
-      UserEntity userEntity = UserModel.fromEntity(user);
+      final user = await firebaseAuthService.signInWithFacebook();
+
+      UserEntity userEntity = UserModel.fromFirebaseUser(user);
       await addUserData(user: userEntity);
       return Right(userEntity);
     } on CustomExceptions catch (e) {
@@ -105,9 +107,11 @@ class AuthRepoImpl extends AuthRepo {
   }
 
   @override
-  Future<Either<Failure, void>> resetPassword({required String email}) async {
+  Future<Either<Failure, void>> resetPassword({
+    required String email,
+  }) async {
     try {
-      var user = await authDataSource.resetPassword(email: email);
+      var user = await firebaseAuthService.resetPassword(email: email);
       return Right(user);
     } on CustomExceptions catch (e) {
       return Left(ServerFailure(e.message));
@@ -123,7 +127,7 @@ class AuthRepoImpl extends AuthRepo {
   @override
   Future<Either<Failure, void>> signOut() async {
     try {
-      var user = await authDataSource.signOut();
+      var user = await firebaseAuthService.signOut();
       return Right(user);
     } on CustomExceptions catch (e) {
       return Left(ServerFailure(e.message));
@@ -138,13 +142,15 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   bool isSignedIn() {
-    return authDataSource.isSignedIn();
+    return firebaseAuthService.isSignedIn();
   }
 
   @override
   Future<void> addUserData({required UserEntity user}) async {
-    await databaseService.addUserData(
-      user: UserModel.fromEntity(user),
+    await fireStoreService.addData(
+      path: AppEndPoints.addUserData,
+      data: UserModel.fromEntity(user).toJson(),
+      documentId: user.uid,
     );
   }
 }
