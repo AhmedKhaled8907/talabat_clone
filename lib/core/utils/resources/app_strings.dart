@@ -62,6 +62,8 @@ class AppStrings {
   static const String hiThere = 'Hey there!';
   static const String fasterOrdering =
       'Log in or create an account for a faster ordering experience.';
+  static const String gotACode = 'Got a code ?';
+  static const String addCode = 'Add your code and save on\nyour order';
 
   static const String signInSuccessfully = 'Signed in successfully';
   static const String signupSuccessfully =

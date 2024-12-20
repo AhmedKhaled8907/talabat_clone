@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
+import 'package:talabat_clone/features/home/presentation/views/widgets/code_banner.dart';
 import 'package:talabat_clone/features/home/presentation/views/widgets/drink_item_list.dart';
 import 'package:talabat_clone/features/home/presentation/views/widgets/food_item_list.dart';
 import 'package:talabat_clone/features/home/presentation/views/widgets/home_banner.dart';
@@ -22,6 +23,7 @@ class HomeViewBody extends StatelessWidget {
               children: [
                 FoodItemList(),
                 DrinkItemList(),
+                CodeBanner(),
               ],
             ),
           ),

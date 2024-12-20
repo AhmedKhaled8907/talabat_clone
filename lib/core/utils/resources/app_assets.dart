@@ -80,7 +80,7 @@ class AppAssets {
 
   static const String imagesHomeCasseroleImage = "assets/images/home/casserole_image.svg";
 
-  static const String imagesHomeCode = "assets/images/home/code.svg";
+  static const String imagesHomeCode = "assets/images/home/code.png";
 
   static const String imagesHomeCoffee = "assets/images/home/coffee.png";
 
