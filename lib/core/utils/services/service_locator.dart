@@ -22,13 +22,13 @@ void serviceLocator() {
       FirebaseAuthService(),
     )
     ..registerSingleton<DatabaseService>(
-      FirestoreServices(),
+      FirestoreService(),
     )
     // Repositories
     ..registerFactory<AuthRepo>(
       () => AuthRepoImpl(
         firebaseAuthService: sl(),
-        fireStoreService: sl(),
+        databaseService: sl(),
       ),
     )
     // Usecases

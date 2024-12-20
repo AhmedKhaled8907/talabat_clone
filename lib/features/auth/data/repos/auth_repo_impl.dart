@@ -2,19 +2,19 @@ import 'package:dartz/dartz.dart';
 import 'package:talabat_clone/core/utils/errors/custom_exceptions.dart';
 import 'package:talabat_clone/core/utils/errors/failure.dart';
 import 'package:talabat_clone/core/utils/resources/app_end_points.dart';
+import 'package:talabat_clone/core/utils/services/database_services.dart';
 import 'package:talabat_clone/core/utils/services/firebase_auth_services.dart';
-import 'package:talabat_clone/core/utils/services/firestore_services.dart';
 import 'package:talabat_clone/features/auth/data/models/user_model.dart';
 import 'package:talabat_clone/features/auth/domain/entities/user_entity.dart';
 import 'package:talabat_clone/features/auth/domain/repos/auth_repo.dart';
 
 class AuthRepoImpl extends AuthRepo {
   final FirebaseAuthService firebaseAuthService;
-  final FirestoreServices fireStoreService;
+  final DatabaseService databaseService;
 
   AuthRepoImpl({
     required this.firebaseAuthService,
-    required this.fireStoreService,
+    required this.databaseService,
   });
 
   @override
@@ -147,7 +147,7 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<void> addUserData({required UserEntity user}) async {
-    await fireStoreService.addData(
+    await databaseService.addData(
       path: AppEndPoints.addUserData,
       data: UserModel.fromEntity(user).toJson(),
       documentId: user.uid,
