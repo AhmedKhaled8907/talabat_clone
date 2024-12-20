@@ -5,6 +5,7 @@ import 'package:talabat_clone/features/home/presentation/views/widgets/code_bann
 import 'package:talabat_clone/features/home/presentation/views/widgets/drink_item_list.dart';
 import 'package:talabat_clone/features/home/presentation/views/widgets/food_item_list.dart';
 import 'package:talabat_clone/features/home/presentation/views/widgets/home_banner.dart';
+import 'package:talabat_clone/features/home/presentation/views/widgets/popular_restaurants_section.dart';
 import 'package:talabat_clone/features/home/presentation/views/widgets/shortcuts_list_item.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -29,6 +30,7 @@ class HomeViewBody extends StatelessWidget {
                 CodeBanner(),
                 ShortcutsListItem(),
                 CasserolePageView(),
+                PopularRestaurantsSection(),
                 const SizedBox(height: AppSize.s24),
               ],
             ),

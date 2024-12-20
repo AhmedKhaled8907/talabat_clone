@@ -72,9 +72,9 @@ class AppAssets {
 
   static const String imagesFoodTalabatPro = "assets/images/food/talabat_pro.svg";
 
-  static const String imagesHomeAlloBeirut = "assets/images/home/allo_beirut.svg";
+  static const String imagesHomeAlloBeirut = "assets/images/home/allo_beirut.png";
 
-  static const String imagesHomeBarbar = "assets/images/home/barbar.svg";
+  static const String imagesHomeBarbar = "assets/images/home/barbar.png";
 
   static const String imagesHomeBestSellers = "assets/images/home/best_sellers.png";
 
@@ -84,7 +84,7 @@ class AppAssets {
 
   static const String imagesHomeCoffee = "assets/images/home/coffee.png";
 
-  static const String imagesHomeFalafil = "assets/images/home/falafil.svg";
+  static const String imagesHomeFalafil = "assets/images/home/falafil.png";
 
   static const String imagesHomeFlower = "assets/images/home/flower.png";
 
@@ -94,7 +94,7 @@ class AppAssets {
 
   static const String imagesHomeGroceries = "assets/images/home/groceries.png";
 
-  static const String imagesHomeLaffah = "assets/images/home/laffah.svg";
+  static const String imagesHomeLaffah = "assets/images/home/laffah.png";
 
   static const String imagesHomeMedicine = "assets/images/home/medicine.png";
 

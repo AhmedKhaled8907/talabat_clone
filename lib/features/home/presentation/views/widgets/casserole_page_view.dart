@@ -47,12 +47,13 @@ class _CasserolePageViewState extends State<CasserolePageView> {
             (index) => const CasseroleItem(),
           ),
         ),
-        const SizedBox(height: AppSize.s16),
+        const SizedBox(height: AppSize.s8),
         DotsIndicator(
           dotsCount: 6,
           position: currentPageIndex,
           decorator: DotsDecorator(
             activeColor: AppColors.primaryColor,
+            color: AppColors.grey,
             size: const Size.square(12),
             activeSize: const Size(12.0, 12.0),
           ),

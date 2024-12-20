@@ -84,6 +84,12 @@ class AppStrings {
 
   static const String signOutSuccessfully = 'Signed out successfully';
 
+  static const String popularRestaurants = 'Popular restaurants nearby';
+  static const String alloBeirut = 'Allo Beirut';
+  static const String laffah = 'Laffah';
+  static const String falafil = 'Falafil Al Rabiah';
+  static const String barbar = 'Barbar';
+
   // Locale
   static const String locale = 'ar';
 }
