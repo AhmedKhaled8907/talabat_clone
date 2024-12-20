@@ -78,7 +78,7 @@ class AppAssets {
 
   static const String imagesHomeBestSellers = "assets/images/home/best_sellers.png";
 
-  static const String imagesHomeCasseroleImage = "assets/images/home/casserole_image.svg";
+  static const String imagesHomeCasserole = "assets/images/home/casserole.png";
 
   static const String imagesHomeCode = "assets/images/home/code.png";
 
