@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:talabat_clone/core/utils/errors/custom_exceptions.dart';
 import 'package:talabat_clone/core/utils/services/firebase_auth_services.dart';
 import 'package:talabat_clone/features/auth/data/models/user_model.dart';
@@ -25,6 +26,8 @@ abstract class AuthDataSource {
   Future<void> signOut();
 
   bool isSignedIn();
+
+  Future<void> deleteUser();
 }
 
 class AuthDataSourceImpl implements AuthDataSource {
@@ -38,13 +41,17 @@ class AuthDataSourceImpl implements AuthDataSource {
     required String password,
     required String name,
   }) async {
+    User? user;
     try {
-      final user = await firebaseAuthService.createUserWithEmailAndPassword(
+      user = await firebaseAuthService.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
       return UserModel.fromFirebaseUser(user);
     } on CustomExceptions catch (e) {
+      if (user != null) {
+        await user.delete();
+      }
       throw CustomExceptions(message: e.message);
     } on Exception catch (e) {
       throw CustomExceptions(
@@ -130,5 +137,10 @@ class AuthDataSourceImpl implements AuthDataSource {
   @override
   bool isSignedIn() {
     return firebaseAuthService.isSignedIn();
+  }
+
+  @override
+  Future<void> deleteUser() async {
+    return firebaseAuthService.deleteUser();
   }
 }

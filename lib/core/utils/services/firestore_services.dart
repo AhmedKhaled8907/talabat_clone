@@ -18,7 +18,7 @@ class FirestoreServices extends DatabaseService {
     required String path,
     Map<String, dynamic>? query,
     String? documentId,
-  }) async{
+  }) async {
     // TODO: implement getData
     throw UnimplementedError();
   }

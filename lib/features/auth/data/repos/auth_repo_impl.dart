@@ -28,8 +28,13 @@ class AuthRepoImpl extends AuthRepo {
         password: password,
         name: name,
       );
-      await addUserData(user: user);
-      return Right(UserModel.fromEntity(user));
+      UserEntity userEntity = UserEntity(
+        email: email,
+        uid: user.uid,
+        fullName: name,
+      );
+      await addUserData(user: userEntity);
+      return Right(userEntity);
     } on CustomExceptions catch (e) {
       return Left(ServerFailure(e.message));
     } on Exception catch (e) {
