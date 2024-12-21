@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
-import 'package:talabat_clone/features/food/presentation/widgets/food_filter_list__item.dart';
+import 'package:talabat_clone/features/food/presentation/widgets/food_filter_list_item.dart';
+import 'package:talabat_clone/features/food/presentation/widgets/food_offers_list_item.dart';
 
 class FoodViewBody extends StatelessWidget {
   const FoodViewBody({super.key});
@@ -12,8 +13,10 @@ class FoodViewBody extends StatelessWidget {
         horizontal: AppPadding.p16,
       ),
       child: Column(
+        spacing: AppSize.s16,
         children: [
           FoodFilterListItem(),
+          FoodOffersListItem(),
         ],
       ),
     );

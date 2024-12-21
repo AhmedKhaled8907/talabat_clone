@@ -40,7 +40,7 @@ class AppAssets {
 
   static const String imagesFlagsUae = "assets/images/flags/uae.svg";
 
-  static const String imagesFoodBestSellers = "assets/images/food/best_sellers.svg";
+  static const String imagesFood50Off = "assets/images/food/50_off.png";
 
   static const String imagesFoodCuisines = "assets/images/food/cuisines.svg";
 
@@ -52,7 +52,7 @@ class AppAssets {
 
   static const String imagesFoodMalak = "assets/images/food/malak.svg";
 
-  static const String imagesFoodMustTries = "assets/images/food/must_tries.svg";
+  static const String imagesFoodMustTries = "assets/images/food/must_tries.png";
 
   static const String imagesFoodOfferup = "assets/images/food/offerup.svg";
 
@@ -66,11 +66,11 @@ class AppAssets {
 
   static const String imagesFoodSubway = "assets/images/food/subway.svg";
 
-  static const String imagesFoodSuperSaver = "assets/images/food/super_saver.svg";
-
   static const String imagesFoodSushiCounter = "assets/images/food/sushi_counter.svg";
 
-  static const String imagesFoodTalabatPro = "assets/images/food/talabat_pro.svg";
+  static const String imagesFoodTalabatPro = "assets/images/food/talabat_pro.png";
+
+  static const String imagesFoodUp30 = "assets/images/food/up_30.png";
 
   static const String imagesHomeAlloBeirut = "assets/images/home/allo_beirut.png";
 

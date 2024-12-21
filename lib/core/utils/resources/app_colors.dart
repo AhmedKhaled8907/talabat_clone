@@ -13,6 +13,7 @@ class AppColors {
   static final Color starColor = Color(0xFFFF9F00);
   static final Color dividerColor = Color(0xFFF5F5F5);
   static final Color navBarColor = Color(0xFFF7F7F7);
+  static final Color violetColor = Color(0xFFE6E6FF);
 
   // Normal Colors
   static final Color white = Color(0xFFFFFFFF);
