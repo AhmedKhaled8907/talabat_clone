@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:talabat_clone/core/utils/errors/custom_exceptions.dart';
 import 'package:talabat_clone/core/utils/errors/failure.dart';
 import 'package:talabat_clone/core/utils/resources/app_end_points.dart';
@@ -76,17 +77,9 @@ class AuthRepoImpl extends AuthRepo {
     try {
       final user = await firebaseAuthService.signInWithGoogle();
 
-      UserEntity userEntity = UserModel.fromFirebaseUser(user);
+      var userEntity = UserModel.fromFirebaseUser(user);
 
-      bool isUserExists = await databaseService.checkIfDataExists(
-        path: AppEndPoints.ifUserExists,
-        documentId: userEntity.uid,
-      );
-      if (isUserExists) {
-        userEntity = await getUserData(uid: userEntity.uid);
-      } else {
-        await addUserData(user: userEntity);
-      }
+      await checkIfUserExists(user, userEntity);
 
       return Right(userEntity);
     } on CustomExceptions catch (e) {
@@ -105,17 +98,9 @@ class AuthRepoImpl extends AuthRepo {
     try {
       final user = await firebaseAuthService.signInWithFacebook();
 
-      UserEntity userEntity = UserModel.fromFirebaseUser(user);
+      var userEntity = UserModel.fromFirebaseUser(user);
 
-      bool isUserExists = await databaseService.checkIfDataExists(
-        path: AppEndPoints.ifUserExists,
-        documentId: userEntity.uid,
-      );
-      if (isUserExists) {
-        userEntity = await getUserData(uid: userEntity.uid);
-      } else {
-        await addUserData(user: userEntity);
-      }
+      await checkIfUserExists(user, userEntity);
 
       return Right(userEntity);
     } on CustomExceptions catch (e) {
@@ -184,5 +169,18 @@ class AuthRepoImpl extends AuthRepo {
       documentId: uid,
     );
     return UserModel.fromJson(data);
+  }
+
+  Future<void> checkIfUserExists(User user, UserModel userEntity) async {
+    var doesUserExist = await databaseService.checkIfDataExists(
+      path: AppEndPoints.ifUserExists,
+      documentId: user.uid,
+    );
+
+    if (doesUserExist) {
+      await getUserData(uid: user.uid);
+    } else {
+      await addUserData(user: userEntity);
+    }
   }
 }

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/features/home/domain/entities/food_entity.dart';
 import 'package:talabat_clone/features/home/presentation/views/widgets/product_item.dart';
@@ -10,7 +12,14 @@ class DrinkItemList extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: drinksList.map((e) {
-        return ProductItem(foodEntity: e);
+        return Expanded(
+          child: GestureDetector(
+            onTap: () {
+              log('Drink tapped');
+            },
+            child: ProductItem(foodEntity: e),
+          ),
+        );
       }).toList(),
     );
   }

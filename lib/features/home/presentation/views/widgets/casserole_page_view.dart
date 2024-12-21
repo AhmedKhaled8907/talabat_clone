@@ -54,8 +54,6 @@ class _CasserolePageViewState extends State<CasserolePageView> {
           decorator: DotsDecorator(
             activeColor: AppColors.primaryColor,
             color: AppColors.grey,
-            size: const Size.square(12),
-            activeSize: const Size(12.0, 12.0),
           ),
           onTap: (index) {
             pageController.animateToPage(

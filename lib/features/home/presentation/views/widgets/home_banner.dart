@@ -26,25 +26,24 @@ class HomeBanner extends StatelessWidget {
     return Container(
       color: AppColors.primaryColorWithOpacity,
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppPadding.p16,
-        ).copyWith(
+        padding: const EdgeInsets.symmetric().copyWith(
           top: AppPadding.p32,
-          bottom: AppPadding.p16,
+          bottom: AppPadding.p4,
+          right: AppPadding.p8,
+          left: AppPadding.p16,
         ),
         child: ListTile(
           contentPadding: EdgeInsets.zero,
           title: Text(
             AppStrings.hiName,
             maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: AppStyles.styleBold20(context),
           ),
           subtitle: _city(context),
           trailing: CircleAvatar(
             radius: AppSize.s48,
-            backgroundColor: AppColors.secondaryColor.withValues(
-              alpha: AppSize.s0_5,
-            ),
+            backgroundColor: AppColors.grey,
             child: Text(
               'AK',
               style: AppStyles.styleBold16(context).copyWith(
@@ -136,6 +135,7 @@ class HomeBanner extends StatelessWidget {
         Text(
           AppStrings.elMahalla,
           maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: AppStyles.styleMedium16(context).copyWith(
             color: AppColors.secondaryColor,
           ),

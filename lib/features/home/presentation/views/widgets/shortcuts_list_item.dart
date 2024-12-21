@@ -1,9 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/home/domain/entities/food_entity.dart';
-import 'package:talabat_clone/features/home/presentation/views/widgets/shortcuts_widget.dart';
+import 'package:talabat_clone/features/home/presentation/views/widgets/shortcuts_item.dart';
 
 class ShortcutsListItem extends StatelessWidget {
   const ShortcutsListItem({super.key});
@@ -23,7 +25,14 @@ class ShortcutsListItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           spacing: AppSize.s8,
           children: shortcutsList.map((shortcut) {
-            return ShortcutsWidget(foodEntity: shortcut);
+            return Expanded(
+              child: GestureDetector(
+                onTap: () {
+                  log('Shortcut tapped');
+                },
+                child: ShortcutsItem(foodEntity: shortcut),
+              ),
+            );
           }).toList(),
         ),
       ],

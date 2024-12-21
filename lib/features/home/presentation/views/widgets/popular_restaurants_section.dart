@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
@@ -24,7 +26,16 @@ class PopularRestaurantsSection extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: restaurantsList
-              .map((e) => PopularRestaurantsItem(restaurant: e))
+              .map(
+                (e) => Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      log('Restaurant tapped');
+                    },
+                    child: PopularRestaurantsItem(restaurant: e),
+                  ),
+                ),
+              )
               .toList(),
         )
       ],
