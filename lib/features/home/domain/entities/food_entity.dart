@@ -1,20 +1,28 @@
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:talabat_clone/core/utils/resources/app_assets.dart';
+import 'package:talabat_clone/core/utils/resources/app_routes.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 
 class FoodEntity {
   final String image;
   final String name;
+  final VoidCallback? onTap;
 
   FoodEntity({
     required this.image,
     required this.name,
+    this.onTap,
   });
 }
 
-List<FoodEntity> get foodsList => [
+List<FoodEntity> foodsList(BuildContext context) => [
       FoodEntity(
         image: AppAssets.imagesHomeFoods,
         name: 'Food',
+        onTap: () {
+          GoRouter.of(context).push(AppRoutes.kFoodRoute);
+        },
       ),
       FoodEntity(
         image: AppAssets.imagesHomeTalabatMarts,

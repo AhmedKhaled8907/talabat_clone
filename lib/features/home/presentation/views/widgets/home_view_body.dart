@@ -3,7 +3,7 @@ import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/home/presentation/views/widgets/casserole_page_view.dart';
 import 'package:talabat_clone/features/home/presentation/views/widgets/code_banner.dart';
 import 'package:talabat_clone/features/home/presentation/views/widgets/drink_item_list.dart';
-import 'package:talabat_clone/features/home/presentation/views/widgets/food_item_list.dart';
+import 'package:talabat_clone/features/home/presentation/views/widgets/food_list_item.dart';
 import 'package:talabat_clone/features/home/presentation/views/widgets/home_banner.dart';
 import 'package:talabat_clone/features/home/presentation/views/widgets/popular_restaurants_section.dart';
 import 'package:talabat_clone/features/home/presentation/views/widgets/shortcuts_list_item.dart';
@@ -25,7 +25,7 @@ class HomeViewBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               spacing: AppSize.s24,
               children: [
-                FoodItemList(),
+                FoodListItem(),
                 DrinkItemList(),
                 CodeBanner(),
                 ShortcutsListItem(),

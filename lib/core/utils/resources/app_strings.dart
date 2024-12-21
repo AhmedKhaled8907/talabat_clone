@@ -90,6 +90,9 @@ class AppStrings {
   static const String falafil = 'Falafil Al Rabiah';
   static const String barbar = 'Barbar';
 
+  // Food View
+  static const String delivering = 'Delivering to ';
+
   // Locale
   static const String locale = 'ar';
 }

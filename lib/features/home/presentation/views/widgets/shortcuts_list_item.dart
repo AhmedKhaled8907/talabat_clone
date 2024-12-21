@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
@@ -27,9 +26,7 @@ class ShortcutsListItem extends StatelessWidget {
           children: shortcutsList.map((shortcut) {
             return Expanded(
               child: GestureDetector(
-                onTap: () {
-                  log('Shortcut tapped');
-                },
+                onTap: () {},
                 child: ShortcutsItem(foodEntity: shortcut),
               ),
             );

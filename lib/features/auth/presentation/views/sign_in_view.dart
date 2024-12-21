@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:talabat_clone/core/common/widgets/custom_app_bar.dart';
+import 'package:talabat_clone/core/common/widgets/auth_app_bar.dart';
 import 'package:talabat_clone/features/auth/presentation/views/widgets/sign_in_bloc_consumer.dart';
 
 class SignInView extends StatelessWidget {
@@ -8,7 +8,7 @@ class SignInView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: AuthAppBar(
         isTitleShown: false,
       ),
       body: SafeArea(

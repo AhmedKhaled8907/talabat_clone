@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/features/home/domain/entities/food_entity.dart';
@@ -15,7 +14,7 @@ class DrinkItemList extends StatelessWidget {
         return Expanded(
           child: GestureDetector(
             onTap: () {
-              log('Drink tapped');
+             
             },
             child: ProductItem(foodEntity: e),
           ),

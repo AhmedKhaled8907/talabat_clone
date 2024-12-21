@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({
+class AuthAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const AuthAppBar({
     super.key,
     this.isTitleShown = true,
     this.title,
