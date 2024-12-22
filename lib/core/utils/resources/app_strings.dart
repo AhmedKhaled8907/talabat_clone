@@ -91,7 +91,8 @@ class AppStrings {
   static const String barbar = 'Barbar';
 
   // Food View
-  static const String delivering = 'Delivering to ';
+  static const String delivering = 'Delivering to';
+  static const String greatValue = 'Great value deals';
 
   // Locale
   static const String locale = 'ar';

@@ -84,7 +84,6 @@ class SignInOptionsViewBody extends StatelessWidget {
       aspectRatio: 375 / 256,
       child: Image.asset(
         width: double.infinity,
-        // height: MediaQuery.sizeOf(context).height * 0.4,
         AppAssets.imagesAuthStart,
         fit: BoxFit.fill,
       ),
