@@ -9,7 +9,7 @@ class GreatDealsListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: context.height * 0.3,
+      height: context.height * 0.27,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         separatorBuilder: (context, index) =>

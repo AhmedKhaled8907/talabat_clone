@@ -42,33 +42,35 @@ class AppAssets {
 
   static const String imagesFood50Off = "assets/images/food/50_off.png";
 
-  static const String imagesFoodCuisines = "assets/images/food/cuisines.svg";
+  static const String imagesFoodComputer = "assets/images/food/computer.png";
 
-  static const String imagesFoodExceptional = "assets/images/food/Exceptional.svg";
+  static const String imagesFoodExceptional = "assets/images/food/exceptional.png";
 
   static const String imagesFoodHealthy = "assets/images/food/healthy.png";
 
-  static const String imagesFoodJunior = "assets/images/food/junior.svg";
+  static const String imagesFoodJuniorSeafood = "assets/images/food/junior_seafood.png";
+
+  static const String imagesFoodListedItems = "assets/images/food/listed_Items.png";
 
   static const String imagesFoodMalak = "assets/images/food/malak.png";
 
+  static const String imagesFoodMotorcycle = "assets/images/food/motorcycle.png";
+
   static const String imagesFoodMustTries = "assets/images/food/must_tries.png";
 
-  static const String imagesFoodOfferup = "assets/images/food/offerup.svg";
+  static const String imagesFoodPapparoti = "assets/images/food/papparoti.png";
 
-  static const String imagesFoodPapparoti = "assets/images/food/papparoti.svg";
-
-  static const String imagesFoodPizza2Go = "assets/images/food/pizza_2_go.svg";
+  static const String imagesFoodPizza2Go = "assets/images/food/pizza_2_go.png";
 
   static const String imagesFoodPoke = "assets/images/food/poke.png";
 
-  static const String imagesFoodStar = "assets/images/food/star.svg";
+  static const String imagesFoodSubway = "assets/images/food/subway.png";
 
-  static const String imagesFoodSubway = "assets/images/food/subway.svg";
-
-  static const String imagesFoodSushiCounter = "assets/images/food/sushi_counter.svg";
+  static const String imagesFoodSushiCounter = "assets/images/food/sushi_counter.png";
 
   static const String imagesFoodTalabatPro = "assets/images/food/talabat_pro.png";
+
+  static const String imagesFoodTimer = "assets/images/food/timer.png";
 
   static const String imagesFoodUp30 = "assets/images/food/up_30.png";
 

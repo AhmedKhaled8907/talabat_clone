@@ -94,6 +94,12 @@ class AppStrings {
   static const String delivering = 'Delivering to';
   static const String greatValue = 'Great value deals';
 
+  // All Restaurants View
+  static const String allRestaurants = 'All Restaurants';
+  static const String exceptional = 'Exceptional';
+
+
+
   // Locale
   static const String locale = 'ar';
 }
