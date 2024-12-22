@@ -12,7 +12,7 @@ class AllRestaurantHeader extends StatefulWidget {
 }
 
 class _AllRestaurantHeaderState extends State<AllRestaurantHeader> {
-  bool isGridViewSelected = true;
+  bool isGridViewSelected = false;
 
   @override
   Widget build(BuildContext context) {

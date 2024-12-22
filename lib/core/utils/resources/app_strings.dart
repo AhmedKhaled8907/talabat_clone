@@ -97,8 +97,7 @@ class AppStrings {
   // All Restaurants View
   static const String allRestaurants = 'All Restaurants';
   static const String exceptional = 'Exceptional';
-
-
+  static const String offerUp = '15% off selected items';
 
   // Locale
   static const String locale = 'ar';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:talabat_clone/core/common/widgets/ratings_and_numbers.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
@@ -45,37 +46,11 @@ class GreatDealsItem extends StatelessWidget {
             color: AppColors.grey,
           ),
         ),
-        Row(
-          spacing: AppSize.s6,
-          children: [
-            Icon(
-              Icons.star,
-              size: AppSize.s16,
-              color: AppColors.starColor,
-            ),
-            Text(
-              greatDealsEntity.rating.toString(),
-              style: AppStyles.styleMedium10(context).copyWith(
-                color: AppColors.grey,
-              ),
-            ),
-            Text(
-              ratingCounts(greatDealsEntity.numberOfRatings!),
-              style: AppStyles.styleMedium10(context).copyWith(
-                color: AppColors.grey,
-              ),
-            ),
-          ],
+        RatingAndNumbers(
+          rating: greatDealsEntity.rating ?? 0,
+          numberOfRatings: greatDealsEntity.numberOfRatings ?? 0,
         )
       ],
     );
-  }
-
-  String ratingCounts(num rating) {
-    if (rating > 100) {
-      return '(100+)';
-    } else {
-      return '($rating)';
-    }
   }
 }
