@@ -144,14 +144,44 @@ class AppAssets {
 
   static const String imagesSplashLogoT = "assets/images/splash/logo_t.svg";
 
-  static const String imagesTalabatMartArabicTaste = "assets/images/talabat_mart/arabic_taste.svg";
+  static const String imagesTalabatMartAraTaste = "assets/images/talabat_mart/ara_taste.png";
 
-  static const String imagesTalabatMartEverydayDiscounts = "assets/images/talabat_mart/everyday_discounts.svg";
+  static const String imagesTalabatMartBakery = "assets/images/talabat_mart/bakery.png";
 
-  static const String imagesTalabatMartImported = "assets/images/talabat_mart/imported.svg";
+  static const String imagesTalabatMartBestDeals = "assets/images/talabat_mart/best_deals.png";
 
-  static const String imagesTalabatMartTalabatMart = "assets/images/talabat_mart/talabat_mart.svg";
+  static const String imagesTalabatMartBiscuits = "assets/images/talabat_mart/biscuits.png";
 
-  static const String imagesTalabatMartTodayBest = "assets/images/talabat_mart/today_best.svg";
+  static const String imagesTalabatMartChesse = "assets/images/talabat_mart/chesse.png";
+
+  static const String imagesTalabatMartChips = "assets/images/talabat_mart/chips.png";
+
+  static const String imagesTalabatMartDiscounts = "assets/images/talabat_mart/discounts.png";
+
+  static const String imagesTalabatMartFruit = "assets/images/talabat_mart/fruit.png";
+
+  static const String imagesTalabatMartGalaxy = "assets/images/talabat_mart/galaxy.png";
+
+  static const String imagesTalabatMartIceCream = "assets/images/talabat_mart/ice_cream.png";
+
+  static const String imagesTalabatMartImported = "assets/images/talabat_mart/imported.png";
+
+  static const String imagesTalabatMartKiri = "assets/images/talabat_mart/kiri.png";
+
+  static const String imagesTalabatMartMartCasserole = "assets/images/talabat_mart/mart_casserole.png";
+
+  static const String imagesTalabatMartMilk = "assets/images/talabat_mart/milk.png";
+
+  static const String imagesTalabatMartNuts = "assets/images/talabat_mart/nuts.png";
+
+  static const String imagesTalabatMartPoultry = "assets/images/talabat_mart/poultry.png";
+
+  static const String imagesTalabatMartRedBull = "assets/images/talabat_mart/red_bull.png";
+
+  static const String imagesTalabatMartSandwichBiscuts = "assets/images/talabat_mart/sandwich_biscuts.png";
+
+  static const String imagesTalabatMartTwix = "assets/images/talabat_mart/twix.png";
+
+  static const String imagesTalabatMartViewAll = "assets/images/talabat_mart/view_all.png";
 }
 
