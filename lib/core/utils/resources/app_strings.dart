@@ -56,6 +56,8 @@ class AppStrings {
   static const String egypt = 'Egypt';
 
   // Home View
+  static const String searchForRestaurant =
+      'Search for restaurants, groceries and more';
   static const String deliveringTo = 'Delivering to';
   static const String elMahalla = 'El-Mahalla El-Kubra';
   static const String hiName = 'Hi Ahmed Khaled';
@@ -107,8 +109,6 @@ class AppStrings {
   static const String save23 = 'Save 23%';
   static const String shopByCategory = 'Shop by category';
   static const String topSavers = 'Top Savers';
-
-  
 
   // Locale
   static const String locale = 'ar';

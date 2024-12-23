@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:talabat_clone/core/common/widgets/custom_orange_button.dart';
+import 'package:talabat_clone/core/common/widgets/search_text_field.dart';
 import 'package:talabat_clone/core/utils/resources/app_assets.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_routes.dart';
@@ -24,33 +25,33 @@ class HomeBanner extends StatelessWidget {
 
   Widget _signedIn(BuildContext context) {
     return Container(
-      color: AppColors.primaryColorWithOpacity,
-      child: Padding(
-        padding: const EdgeInsets.symmetric().copyWith(
-          top: AppPadding.p32,
-          bottom: AppPadding.p4,
-          right: AppPadding.p8,
-          left: AppPadding.p16,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(AppSize.s20),
+          bottomRight: Radius.circular(AppSize.s20),
         ),
-        child: ListTile(
-          contentPadding: EdgeInsets.zero,
-          title: Text(
-            AppStrings.hiName,
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-            style: AppStyles.styleBold20(context),
-          ),
-          subtitle: _city(context),
-          trailing: CircleAvatar(
-            radius: AppSize.s48,
-            backgroundColor: AppColors.grey,
-            child: Text(
-              'AK',
-              style: AppStyles.styleBold16(context).copyWith(
-                color: AppColors.white,
+        color: AppColors.primaryColor,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: AppPadding.p16,
+        ).copyWith(
+          top: AppPadding.p32,
+          bottom: AppPadding.p6,
+        ),
+        child: Column(
+          spacing: AppSize.s12,
+          children: [
+            _city(context),
+            Padding(
+              padding: const EdgeInsets.symmetric().copyWith(
+                bottom: AppPadding.p16,
+              ),
+              child: SearchTextField(
+                title: AppStrings.searchForRestaurant,
               ),
             ),
-          ),
+          ],
         ),
       ),
     );
@@ -127,25 +128,20 @@ class HomeBanner extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       spacing: AppSize.s8,
       children: [
-        Icon(
-          Icons.location_on,
-          size: AppSize.s16,
-          color: AppColors.secondaryColor,
-        ),
         Text(
           AppStrings.elMahalla,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
-          style: AppStyles.styleMedium16(context).copyWith(
-            color: AppColors.secondaryColor,
+          style: AppStyles.styleMedium14(context).copyWith(
+            color: AppColors.white,
           ),
         ),
         Transform.rotate(
           angle: -3.14 / 2,
           child: Icon(
             Icons.arrow_back_ios_new_rounded,
-            size: AppSize.s16,
-            color: AppColors.secondaryColor,
+            size: AppSize.s14,
+            color: AppColors.white,
           ),
         ),
       ],
