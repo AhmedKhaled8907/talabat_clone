@@ -30,4 +30,3 @@ class TalabatMartHeader extends StatelessWidget {
     );
   }
 }
-

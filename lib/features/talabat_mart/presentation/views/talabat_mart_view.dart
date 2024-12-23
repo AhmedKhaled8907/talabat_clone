@@ -24,7 +24,7 @@ class TalabatMartView extends StatelessWidget {
         spacing: AppSize.s8,
         children: [
           Image.asset(
-            AppAssets.imagesTalabatMarts,
+            AppAssets.imagesTalabatMartTalabat,
             fit: BoxFit.fill,
           ),
           Text(

@@ -24,6 +24,8 @@ class AppAssets {
 
   static const String imagesBack = "assets/images/back.svg";
 
+  static const String imagesFire = "assets/images/fire.png";
+
   static const String imagesFlagsBahrain = "assets/images/flags/bahrain.svg";
 
   static const String imagesFlagsEgypt = "assets/images/flags/egypt.svg";
@@ -176,16 +178,18 @@ class AppAssets {
 
   static const String imagesTalabatMartNuts = "assets/images/talabat_mart/nuts.png";
 
+  static const String imagesTalabatMartOffer = "assets/images/talabat_mart/offer.png";
+
   static const String imagesTalabatMartPoultry = "assets/images/talabat_mart/poultry.png";
 
   static const String imagesTalabatMartRedBull = "assets/images/talabat_mart/red_bull.png";
 
   static const String imagesTalabatMartSandwichBiscuts = "assets/images/talabat_mart/sandwich_biscuts.png";
 
+  static const String imagesTalabatMartTalabat = "assets/images/talabat_mart/talabat.png";
+
   static const String imagesTalabatMartTwix = "assets/images/talabat_mart/twix.png";
 
   static const String imagesTalabatMartViewAll = "assets/images/talabat_mart/view_all.png";
-
-  static const String imagesTalabatMarts = "assets/images/talabat_marts.png";
 }
 
