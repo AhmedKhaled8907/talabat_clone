@@ -4,8 +4,8 @@ import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/talabat_mart/presentation/widgets/trending_now/trending_now_list_view.dart';
 
-class TrendingNowSection extends StatelessWidget {
-  const TrendingNowSection({super.key});
+class TopSaverSection extends StatelessWidget {
+  const TopSaverSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class TrendingNowSection extends StatelessWidget {
       spacing: AppSize.s16,
       children: [
         TitleWithSeeAll(
-          title: AppStrings.trendingNow,
+          title: AppStrings.topSavers,
         ),
         TrendingNowListView(),
       ],

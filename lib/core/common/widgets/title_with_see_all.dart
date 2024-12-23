@@ -3,8 +3,15 @@ import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 
-class TrendingNowText extends StatelessWidget {
-  const TrendingNowText({super.key});
+class TitleWithSeeAll extends StatelessWidget {
+  const TitleWithSeeAll({
+    super.key,
+    required this.title,
+    this.onTap,
+  });
+
+  final String title;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +19,11 @@ class TrendingNowText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          AppStrings.trendingNow,
+          title,
           style: AppStyles.styleBold14(context),
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: onTap,
           child: Text(
             AppStrings.viewAll,
             style: AppStyles.styleMedium12(context).copyWith(
