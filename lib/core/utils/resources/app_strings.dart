@@ -105,6 +105,9 @@ class AppStrings {
   static const String trendingNow = '🔥 Trending Now';
   static const String viewAll = 'View All';
   static const String save23 = 'Save 23%';
+  static const String shopByCategory = 'Shop by category';
+
+  
 
   // Locale
   static const String locale = 'ar';
