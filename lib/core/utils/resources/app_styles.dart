@@ -27,6 +27,18 @@ abstract class AppStyles {
     );
   }
 
+  static TextStyle styleRegular14(BuildContext context) {
+    return TextStyle(
+      fontFamily: FontConstants.fontFamily,
+      color: AppColors.primaryColor,
+      fontSize: getResponsiveFontSize(
+        context,
+        fontSize: FontSize.s14,
+      ),
+      fontWeight: FontWeights.regular,
+    );
+  }
+
   static TextStyle styleRegular16(BuildContext context) {
     return TextStyle(
       fontFamily: FontConstants.fontFamily,
@@ -149,7 +161,6 @@ abstract class AppStyles {
     );
   }
 
-
   static TextStyle styleBold24(BuildContext context) {
     return TextStyle(
       fontFamily: FontConstants.fontFamily,
@@ -160,8 +171,8 @@ abstract class AppStyles {
       fontWeight: FontWeights.bold,
     );
   }
-
 }
+
 double getScaleFactor(BuildContext context) {
   double width = MediaQuery.sizeOf(context).width;
   if (width < 600) {

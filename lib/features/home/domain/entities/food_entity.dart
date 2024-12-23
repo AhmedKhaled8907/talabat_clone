@@ -27,6 +27,9 @@ List<FoodEntity> foodsList(BuildContext context) => [
       FoodEntity(
         image: AppAssets.imagesHomeTalabatMarts,
         name: 'Talabat Mart',
+        onTap: () {
+          GoRouter.of(context).push(AppRoutes.kTalabatMartRoute);
+        },
       ),
       FoodEntity(
         image: AppAssets.imagesHomeGroceries,

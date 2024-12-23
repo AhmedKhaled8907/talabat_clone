@@ -120,6 +120,8 @@ class AppAssets {
 
   static const String imagesNavBarHomeSelected = "assets/images/nav_bar/home_selected.svg";
 
+  static const String imagesSearch = "assets/images/search.png";
+
   static const String imagesSettingsAboutApp = "assets/images/settings/about_app.svg";
 
   static const String imagesSettingsGetHelp = "assets/images/settings/get_help.svg";
@@ -183,5 +185,7 @@ class AppAssets {
   static const String imagesTalabatMartTwix = "assets/images/talabat_mart/twix.png";
 
   static const String imagesTalabatMartViewAll = "assets/images/talabat_mart/view_all.png";
+
+  static const String imagesTalabatMarts = "assets/images/talabat_marts.png";
 }
 

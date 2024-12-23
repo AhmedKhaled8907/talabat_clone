@@ -99,6 +99,10 @@ class AppStrings {
   static const String exceptional = 'Exceptional';
   static const String offerUp = '15% off selected items';
 
+  // Talabat Mart View
+  static const String talabatMart = 'Talabat Mart';
+  static const String searchProduct = 'Search Product';
+
   // Locale
   static const String locale = 'ar';
 }
