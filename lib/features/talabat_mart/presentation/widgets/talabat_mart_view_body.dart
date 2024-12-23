@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:talabat_clone/core/common/widgets/casserole_item.dart';
+import 'package:talabat_clone/core/common/widgets/casserole_page_view.dart';
+import 'package:talabat_clone/core/utils/resources/app_assets.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/talabat_mart/presentation/widgets/shop_by_category/shop_by_category_section.dart';
 import 'package:talabat_clone/features/talabat_mart/presentation/widgets/talabat_mart/talabat_mart_list_view.dart';
@@ -34,6 +37,11 @@ class TalabatMartViewBody extends StatelessWidget {
           TrendingNowSection(),
           ShopByCategorySection(),
           TopSaverSection(),
+          CasserolePageView(
+            child: CasseroleItem(
+              image: AppAssets.imagesTalabatMartMartCasserole,
+            ),
+          ),
         ],
       ),
     );
