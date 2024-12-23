@@ -102,6 +102,9 @@ class AppStrings {
   // Talabat Mart View
   static const String talabatMart = 'Talabat Mart';
   static const String searchProduct = 'Search Product';
+  static const String trendingNow = '🔥 Trending Now';
+  static const String viewAll = 'View All';
+  static const String save23 = 'Save 23%';
 
   // Locale
   static const String locale = 'ar';

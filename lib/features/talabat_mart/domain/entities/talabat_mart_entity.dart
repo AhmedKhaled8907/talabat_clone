@@ -39,9 +39,10 @@ List<TalabatMartEntity> get talabatMartsList => [
 
 List<TalabatMartEntity> get trendingNowList => [
       TalabatMartEntity(
-        image: AppAssets.imagesTalabatMartGalaxy,
-        title: 'Galaxy Smooth Milk Chocolate',
-        price: 10,
+        image: AppAssets.imagesTalabatMartKiri,
+        title: 'Kiri Creamy Tub Cheese',
+        price: 75,
+        discount: 100,
       ),
       TalabatMartEntity(
         image: AppAssets.imagesTalabatMartKiri,
@@ -54,9 +55,16 @@ List<TalabatMartEntity> get trendingNowList => [
         price: 50,
       ),
       TalabatMartEntity(
+        image: AppAssets.imagesTalabatMartSandwichBiscuts,
+        title: 'Prince Sandwich Biscuit with Syrup',
+        price: 50,
+        discount: 75,
+      ),
+      TalabatMartEntity(
         image: AppAssets.imagesTalabatMartKiri,
         title: 'Kiri Creamy Tub Cheese',
         price: 75,
+        discount: 125,
       ),
     ];
 

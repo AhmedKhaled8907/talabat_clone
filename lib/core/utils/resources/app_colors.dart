@@ -14,7 +14,6 @@ class AppColors {
   static final Color dividerColor = Color(0xFFF5F5F5);
   static final Color navBarColor = Color(0xFFF7F7F7);
   static final Color violetColor = Color(0xFFE6E6FF);
-  static final Color offerUpColor = Color(0xFFEB0669);
   static final Color searchColor = Color(0xFFF5F5F5);
 
   // Normal Colors

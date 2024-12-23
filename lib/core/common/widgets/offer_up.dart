@@ -22,7 +22,7 @@ class OfferUp extends StatelessWidget {
           child: Text(
             AppStrings.offerUp,
             style: AppStyles.styleRegular10(context).copyWith(
-              color: AppColors.offerUpColor,
+              color: AppColors.thirdColor,
             ),
           ),
         ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/talabat_mart/presentation/widgets/talabat_mart_List_view.dart';
 import 'package:talabat_clone/features/talabat_mart/presentation/widgets/talabat_mart_header.dart';
+import 'package:talabat_clone/features/talabat_mart/presentation/widgets/trending_now_section.dart';
 
 class TalabatMartViewBody extends StatelessWidget {
   const TalabatMartViewBody({super.key});
@@ -23,8 +24,10 @@ class TalabatMartViewBody extends StatelessWidget {
         vertical: AppPadding.p16,
       ),
       child: Column(
+        spacing: AppSize.s16,
         children: [
           TalabatMartListView(),
+          TrendingNowSection(),
         ],
       ),
     );
