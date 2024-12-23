@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
-import 'package:talabat_clone/features/talabat_mart/presentation/widgets/talabat_mart_List_view.dart';
-import 'package:talabat_clone/features/talabat_mart/presentation/widgets/talabat_mart_header.dart';
-import 'package:talabat_clone/features/talabat_mart/presentation/widgets/trending_now_section.dart';
+import 'package:talabat_clone/features/talabat_mart/presentation/widgets/talabat_mart/talabat_mart_list_view.dart';
+import 'package:talabat_clone/features/talabat_mart/presentation/widgets/talabat_mart/talabat_mart_header.dart';
+import 'package:talabat_clone/features/talabat_mart/presentation/widgets/trending_now/trending_now_section.dart';
 
 class TalabatMartViewBody extends StatelessWidget {
   const TalabatMartViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        TalabatMartHeader(),
-        _body(),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          TalabatMartHeader(),
+          _body(),
+        ],
+      ),
     );
   }
 
