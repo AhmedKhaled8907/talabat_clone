@@ -7,6 +7,7 @@ import 'package:talabat_clone/features/account_settings/presentation/views/accou
 import 'package:talabat_clone/features/food/presentation/views/food_view.dart';
 import 'package:talabat_clone/features/home/presentation/views/home_view.dart';
 import 'package:talabat_clone/features/main/presentation/views/main_view.dart';
+import 'package:talabat_clone/features/search/presentation/views/search_view.dart';
 import 'package:talabat_clone/features/settings/presentation/views/settings_view.dart';
 import 'package:talabat_clone/features/splash/presentation/views/splash_view.dart';
 import 'package:talabat_clone/features/talabat_mart/presentation/views/talabat_mart_view.dart';
@@ -24,6 +25,7 @@ abstract class AppRoutes {
   static const kMainRoute = '/main';
   static const kFoodRoute = '/food';
   static const kTalabatMartRoute = '/talabat_mart';
+  static const kSearchRoute = '/search';
 
   static final routes = GoRouter(
     routes: [
@@ -70,6 +72,10 @@ abstract class AppRoutes {
       GoRoute(
         path: kTalabatMartRoute,
         builder: (context, state) => const TalabatMartView(),
+      ),
+      GoRoute(
+        path: kSearchRoute,
+        builder: (context, state) => const SearchView(),
       ),
     ],
   );

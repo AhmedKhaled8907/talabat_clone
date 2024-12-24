@@ -24,8 +24,6 @@ class AppAssets {
 
   static const String imagesBack = "assets/images/back.svg";
 
-  static const String imagesFire = "assets/images/fire.png";
-
   static const String imagesFlagsBahrain = "assets/images/flags/bahrain.svg";
 
   static const String imagesFlagsEgypt = "assets/images/flags/egypt.svg";
@@ -118,9 +116,13 @@ class AppAssets {
 
   static const String imagesHomeTalabatMarts = "assets/images/home/talabat_marts.png";
 
+  static const String imagesNavBarActiveOrders = "assets/images/nav_bar/active_orders.png";
+
   static const String imagesNavBarHome = "assets/images/nav_bar/home.svg";
 
   static const String imagesNavBarHomeSelected = "assets/images/nav_bar/home_selected.svg";
+
+  static const String imagesNavBarInactiveOrders = "assets/images/nav_bar/inactive_orders.png";
 
   static const String imagesSearch = "assets/images/search.png";
 

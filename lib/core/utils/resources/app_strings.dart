@@ -4,7 +4,7 @@ class AppStrings {
 
   // Nav Bar
   static const String navBarHome = 'Home';
-  static const String navBarSearch = 'Search';
+  static const String navBarOrders = 'Orders';
   static const String navBarAccount = 'Account';
 
   // Auth View

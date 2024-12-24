@@ -8,19 +8,17 @@ class TrendingNowListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: context.height * 0.25,
-      child: ListView.separated(
-        itemCount: trendingNowList.length,
-        scrollDirection: Axis.horizontal,
-        separatorBuilder: (context, index) {
-          return const SizedBox(width: AppSize.s8);
-        },
-        itemBuilder: (context, index) {
-          return TrendingNowItem(
-            entity: trendingNowList[index],
-          );
-        },
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: AppSize.s8,
+        children: trendingNowList
+            .map(
+              (e) => TrendingNowItem(entity: e),
+            )
+            .toList(),
       ),
     );
   }

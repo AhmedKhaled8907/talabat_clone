@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 import 'package:talabat_clone/core/common/widgets/custom_loading_indicator.dart';
 import 'package:talabat_clone/core/utils/functions/show_snack_bar.dart';
 import 'package:talabat_clone/core/utils/resources/app_routes.dart';
-import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/auth/presentation/manager/auth_bloc/auth_bloc.dart';
 import 'package:talabat_clone/features/auth/presentation/views/widgets/sign_in_view_body.dart';
 
@@ -27,10 +26,7 @@ class SignInBlocConsumer extends StatelessWidget {
       builder: (context, state) {
         return CustomLoadingIndicator(
           isLoading: state is AuthLoading ? true : false,
-          child: SizedBox(
-            height: context.height,
-            child: SignInViewBody(),
-          ),
+          child: SignInViewBody(),
         );
       },
     );
