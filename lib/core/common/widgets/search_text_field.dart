@@ -37,7 +37,7 @@ class SearchTextField extends StatelessWidget {
             spacing: AppSize.s8,
             children: [
               Image.asset(
-                AppAssets.imagesSearch,
+                AppAssets.imagesSearchSearch,
                 fit: BoxFit.fill,
                 width: AppSize.s16,
               ),

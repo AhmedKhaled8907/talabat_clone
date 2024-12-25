@@ -49,6 +49,9 @@ class AppTheme {
         ),
       ),
       tabBarTheme: TabBarTheme(
+        overlayColor: WidgetStateProperty.all(AppColors.tabOverlayColor),
+        indicatorSize: TabBarIndicatorSize.label,
+        
         labelColor: AppColors.primaryColor,
         unselectedLabelColor: AppColors.blackWithOpacity,
         labelStyle: AppStyles.styleBold14(context),

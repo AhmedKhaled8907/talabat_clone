@@ -116,15 +116,19 @@ class AppAssets {
 
   static const String imagesHomeTalabatMarts = "assets/images/home/talabat_marts.png";
 
-  static const String imagesNavBarActiveOrders = "assets/images/nav_bar/active_orders.png";
-
   static const String imagesNavBarHome = "assets/images/nav_bar/home.svg";
 
   static const String imagesNavBarHomeSelected = "assets/images/nav_bar/home_selected.svg";
 
-  static const String imagesNavBarInactiveOrders = "assets/images/nav_bar/inactive_orders.png";
+  static const String imagesSearchFlowers = "assets/images/search/flowers.png";
 
-  static const String imagesSearch = "assets/images/search.png";
+  static const String imagesSearchGroceries = "assets/images/search/groceries.png";
+
+  static const String imagesSearchHealth = "assets/images/search/health.png";
+
+  static const String imagesSearchMoreShops = "assets/images/search/more_shops.png";
+
+  static const String imagesSearchSearch = "assets/images/search/search.png";
 
   static const String imagesSettingsAboutApp = "assets/images/settings/about_app.svg";
 

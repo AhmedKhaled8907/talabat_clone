@@ -15,6 +15,9 @@ class AppColors {
   static final Color navBarColor = Color(0xFFF7F7F7);
   static final Color violetColor = Color(0xFFE6E6FF);
   static final Color searchColor = Color(0xFFF5F5F5);
+  static final Color tabOverlayColor = Color(0xFF000000).withValues(
+    alpha: AppSize.s0_1,
+  );
 
   // Normal Colors
   static final Color white = Color(0xFFFFFFFF);
