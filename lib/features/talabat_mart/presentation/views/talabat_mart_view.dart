@@ -35,4 +35,5 @@ class TalabatMartView extends StatelessWidget {
       ),
     );
   }
+
 }

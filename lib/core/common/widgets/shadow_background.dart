@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class ShadowBackground extends StatelessWidget {
@@ -12,6 +11,7 @@ class ShadowBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(

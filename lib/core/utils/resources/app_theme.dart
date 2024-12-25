@@ -48,6 +48,20 @@ class AppTheme {
           color: AppColors.blackWithOpacity,
         ),
       ),
+      tabBarTheme: TabBarTheme(
+        labelColor: AppColors.primaryColor,
+        unselectedLabelColor: AppColors.blackWithOpacity,
+        labelStyle: AppStyles.styleBold14(context),
+        unselectedLabelStyle: AppStyles.styleMedium14(context).copyWith(
+          color: AppColors.blackWithOpacity,
+        ),
+        labelPadding: const EdgeInsets.symmetric(
+          vertical: AppPadding.p8,
+          horizontal: AppPadding.p16,
+        ),
+        indicatorColor: AppColors.primaryColor,
+        tabAlignment: TabAlignment.start,
+      ),
     );
   }
 }

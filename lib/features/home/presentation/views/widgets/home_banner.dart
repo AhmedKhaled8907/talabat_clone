@@ -47,8 +47,11 @@ class HomeBanner extends StatelessWidget {
               padding: const EdgeInsets.symmetric().copyWith(
                 bottom: AppPadding.p16,
               ),
-              child: SearchTextField(
-                title: AppStrings.searchForRestaurant,
+              child: SizedBox(
+                width: context.width,
+                child: SearchTextField(
+                  title: AppStrings.searchForGroceries,
+                ),
               ),
             ),
           ],

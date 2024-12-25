@@ -29,21 +29,28 @@ class SearchTextField extends StatelessWidget {
           color: AppColors.searchColor,
           borderRadius: BorderRadius.circular(AppSize.s50),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          spacing: AppSize.s8,
-          children: [
-            Image.asset(AppAssets.imagesSearch),
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            spacing: AppSize.s8,
+            children: [
+              Image.asset(
+                AppAssets.imagesSearch,
+                fit: BoxFit.fill,
+                width: AppSize.s16,
+              ),
+              Text(
                 title,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: AppStyles.styleMedium14(context).copyWith(
                   color: AppColors.blackWithOpacity,
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

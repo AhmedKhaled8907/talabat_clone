@@ -56,8 +56,7 @@ class AppStrings {
   static const String egypt = 'Egypt';
 
   // Home View
-  static const String searchForRestaurant =
-      'Search for restaurants, groceries and more';
+  static const String searchForGroceries = 'Search food, groceries and more';
   static const String deliveringTo = 'Delivering to';
   static const String elMahalla = 'El-Mahalla El-Kubra';
   static const String hiName = 'Hi Ahmed Khaled';
@@ -109,6 +108,15 @@ class AppStrings {
   static const String save23 = 'Save 23%';
   static const String shopByCategory = 'Shop by category';
   static const String topSavers = 'Top Savers';
+
+  // search View
+  static const String search = 'Search';
+  static const String food = 'Food';
+  static const String groceries = 'Groceries';
+  static const String health = 'Health & wellness';
+  static const String flowers = 'Flowers';
+  static const String moreShops = 'More shops';
+
 
   // Locale
   static const String locale = 'ar';
