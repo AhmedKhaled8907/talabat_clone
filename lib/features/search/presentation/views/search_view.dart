@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/common/widgets/home_app_bar.dart';
 import 'package:talabat_clone/core/common/widgets/search_text_field.dart';
-import 'package:talabat_clone/core/utils/resources/app_strings.dart';
-import 'package:talabat_clone/core/utils/resources/app_styles.dart';
-import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/search/presentation/widgets/search_view_body.dart';
 
 class SearchView extends StatelessWidget {

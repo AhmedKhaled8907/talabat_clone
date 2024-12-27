@@ -116,6 +116,8 @@ class AppStrings {
   static const String health = 'Health & wellness';
   static const String flowers = 'Flowers';
   static const String moreShops = 'More shops';
+  static const String popularSearch = 'Popular searches';
+
 
 
   // Locale
