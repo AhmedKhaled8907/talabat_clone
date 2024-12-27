@@ -117,8 +117,7 @@ class AppStrings {
   static const String flowers = 'Flowers';
   static const String moreShops = 'More shops';
   static const String popularSearch = 'Popular searches';
-
-
+  static const String featuredRestaurants = 'Featured restaurants';
 
   // Locale
   static const String locale = 'ar';

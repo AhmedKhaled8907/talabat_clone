@@ -11,8 +11,12 @@ class AllRestaurantsSliverList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverList.separated(
       itemCount: allRestaurantsList.length,
-      itemBuilder: (context, index) => AllRestaurantsItem(
-        restaurant: allRestaurantsList[index],
+      itemBuilder: (context, index) => InkWell(
+        borderRadius: BorderRadius.circular(AppSize.s8),
+        onTap: () {},
+        child: AllRestaurantsItem(
+          restaurant: allRestaurantsList[index],
+        ),
       ),
       separatorBuilder: (context, index) => Divider(
         height: 32,

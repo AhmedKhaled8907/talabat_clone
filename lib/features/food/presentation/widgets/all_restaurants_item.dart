@@ -18,75 +18,78 @@ class AllRestaurantsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      spacing: AppSize.s16,
-      children: [
-        Expanded(
-          flex: 1,
-          child: AspectRatio(
-            aspectRatio: 70 / 60,
-            child: Container(
-              padding: const EdgeInsets.all(AppSize.s8),
-              decoration: BoxDecoration(
-                color: restaurant.backgroundColor,
-                borderRadius: BorderRadius.circular(AppSize.s10),
-                border: restaurant.backgroundColor == AppColors.white
-                    ? Border.all(
-                        color: AppColors.grey,
-                        width: AppSize.s1,
-                      )
-                    : null,
-              ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(AppSize.s10),
-                child: Image.asset(
-                  restaurant.image,
-                  fit: BoxFit.fill,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: AppPadding.p8),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        spacing: AppSize.s16,
+        children: [
+          Expanded(
+            flex: 1,
+            child: AspectRatio(
+              aspectRatio: 70 / 60,
+              child: Container(
+                padding: const EdgeInsets.all(AppSize.s8),
+                decoration: BoxDecoration(
+                  color: restaurant.backgroundColor,
+                  borderRadius: BorderRadius.circular(AppSize.s10),
+                  border: restaurant.backgroundColor == AppColors.white
+                      ? Border.all(
+                          color: AppColors.grey,
+                          width: AppSize.s1,
+                        )
+                      : null,
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(AppSize.s10),
+                  child: Image.asset(
+                    restaurant.image,
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),
           ),
-        ),
-        Expanded(
-          flex: 3,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            spacing: AppSize.s4,
-            children: [
-              Text(
-                restaurant.name,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: AppStyles.styleBold14(context),
-              ),
-              Text(
-                restaurant.description,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: AppStyles.styleMedium10(context).copyWith(
-                  color: AppColors.grey,
+          Expanded(
+            flex: 3,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              spacing: AppSize.s4,
+              children: [
+                Text(
+                  restaurant.name,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: AppStyles.styleBold14(context),
                 ),
-              ),
-              Row(
-                spacing: AppSize.s8,
-                children: [
-                  RatingAndNumbers(
-                    rating: restaurant.rating,
-                    numberOfRatings: restaurant.numberOfRatings,
+                Text(
+                  restaurant.description,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: AppStyles.styleMedium10(context).copyWith(
+                    color: AppColors.grey,
                   ),
-                  if (restaurant.isExceptional) Exceptional(),
-                ],
-              ),
-              DeliveryAndPrice(
-                deliveryTime: restaurant.deliveryTime,
-                price: restaurant.price,
-              ),
-              if (restaurant.isOffItems) OfferUp(),
-            ],
+                ),
+                Row(
+                  spacing: AppSize.s8,
+                  children: [
+                    RatingAndNumbers(
+                      rating: restaurant.rating,
+                      numberOfRatings: restaurant.numberOfRatings,
+                    ),
+                    if (restaurant.isExceptional) Exceptional(),
+                  ],
+                ),
+                DeliveryAndPrice(
+                  deliveryTime: restaurant.deliveryTime,
+                  price: restaurant.price,
+                ),
+                if (restaurant.isOffItems) OfferUp(),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

@@ -11,12 +11,12 @@ class FoodViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
-      child: CustomScrollView(
-        physics: const BouncingScrollPhysics(),
-        slivers: [
-          SliverToBoxAdapter(
+    return CustomScrollView(
+      physics: const BouncingScrollPhysics(),
+      slivers: [
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               spacing: AppSize.s16,
@@ -25,14 +25,14 @@ class FoodViewBody extends StatelessWidget {
                 FoodOffersListItem(),
                 GreatDealsSection(),
                 AllRestaurantHeader(),
+                const SizedBox(),
               ],
             ),
           ),
-          const SliverToBoxAdapter(child: SizedBox(height: AppSize.s16)),
-          AllRestaurantsSliverList(),
-          const SliverToBoxAdapter(child: SizedBox(height: AppSize.s32)),
-        ],
-      ),
+        ),
+        AllRestaurantsSliverList(),
+        const SliverToBoxAdapter(child: SizedBox(height: AppSize.s32)),
+      ],
     );
   }
 }
