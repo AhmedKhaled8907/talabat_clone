@@ -130,6 +130,8 @@ class AppAssets {
 
   static const String imagesSearchSearch = "assets/images/search/search.png";
 
+  static const String imagesSearchTrendingUp = "assets/images/search/trending_up.png";
+
   static const String imagesSettingsAboutApp = "assets/images/settings/about_app.svg";
 
   static const String imagesSettingsGetHelp = "assets/images/settings/get_help.svg";

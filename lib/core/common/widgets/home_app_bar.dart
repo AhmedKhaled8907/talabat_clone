@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({
@@ -18,6 +19,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
         onTap: () => Navigator.pop(context),
         child: Icon(
           Icons.arrow_back_ios_new_rounded,
+          color: AppColors.black,
         ),
       ),
       actions: actions,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:talabat_clone/core/common/widgets/search_text_field.dart';
+import 'package:talabat_clone/features/home/presentation/views/widgets/home_search.dart';
 import 'package:talabat_clone/core/common/widgets/shadow_background.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
@@ -19,7 +19,7 @@ class TalabatMartHeader extends StatelessWidget {
           top: AppPadding.p8,
           bottom: AppPadding.p16,
         ),
-        child: SearchTextField(
+        child: HomeSearch(
           title: AppStrings.searchProduct,
         ),
       ),

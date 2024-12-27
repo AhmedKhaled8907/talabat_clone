@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:talabat_clone/core/common/widgets/custom_orange_button.dart';
-import 'package:talabat_clone/core/common/widgets/search_text_field.dart';
+import 'package:talabat_clone/features/home/presentation/views/widgets/home_search.dart';
 import 'package:talabat_clone/core/utils/resources/app_assets.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_routes.dart';
@@ -47,10 +47,15 @@ class HomeBanner extends StatelessWidget {
               padding: const EdgeInsets.symmetric().copyWith(
                 bottom: AppPadding.p16,
               ),
-              child: SizedBox(
-                width: context.width,
-                child: SearchTextField(
-                  title: AppStrings.searchForGroceries,
+              child: GestureDetector(
+                onTap: () {
+                  GoRouter.of(context).push(AppRoutes.kSearchRoute);
+                },
+                child: SizedBox(
+                  width: context.width,
+                  child: HomeSearch(
+                    title: AppStrings.searchForGroceries,
+                  ),
                 ),
               ),
             ),
