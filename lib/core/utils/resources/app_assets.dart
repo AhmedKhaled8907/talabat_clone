@@ -148,13 +148,15 @@ class AppAssets {
 
   static const String imagesSplashAppLogo = "assets/images/splash/app_logo.png";
 
-  static const String imagesSplashLogo = "assets/images/splash/logo.svg";
+  static const String imagesSplashLogo = "assets/images/splash/logo.png";
 
   static const String imagesSplashLogoBackground = "assets/images/splash/logo_background.png";
 
   static const String imagesSplashLogoOrange = "assets/images/splash/logo_orange.svg";
 
   static const String imagesSplashLogoT = "assets/images/splash/logo_t.svg";
+
+  static const String imagesSplashSplashLogo = "assets/images/splash/splash_logo.svg";
 
   static const String imagesTalabatMartAraTaste = "assets/images/talabat_mart/ara_taste.png";
 

@@ -45,7 +45,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   Widget build(BuildContext context) {
     return Center(
       child: SvgPicture.asset(
-        AppAssets.imagesSplashLogo,
+        AppAssets.imagesSplashSplashLogo,
         fit: BoxFit.fill,
       ),
     );
