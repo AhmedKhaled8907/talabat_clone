@@ -4,7 +4,7 @@ import 'package:talabat_clone/features/food/presentation/widgets/all_restaurants
 import 'package:talabat_clone/features/search/presentation/views/food_search/featured_restaurants_header.dart';
 import 'package:talabat_clone/features/search/presentation/views/food_search/popular_food.dart';
 
-import '../../../../../core/common/widgets/custom_divider.dart';
+import '../../../../../core/common/widgets/thick_divider.dart';
 
 class FoodSearchView extends StatelessWidget {
   const FoodSearchView({super.key});
@@ -21,7 +21,7 @@ class FoodSearchView extends StatelessWidget {
             spacing: AppSize.s12,
             children: [
               PopularFood(),
-              CustomDivider(),
+              ThickDivider(),
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: AppSize.s16,

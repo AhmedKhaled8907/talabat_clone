@@ -21,7 +21,7 @@ class AllRestaurantsSliverList extends StatelessWidget {
       separatorBuilder: (context, index) => Divider(
         height: 32,
         thickness: AppSize.s0_5,
-        color: AppColors.black.withValues(alpha: AppSize.s0_5),
+        color: AppColors.black.withValues(alpha: AppSize.s0_25),
       ),
     );
   }

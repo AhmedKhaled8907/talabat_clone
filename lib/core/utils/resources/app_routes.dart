@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:talabat_clone/features/account_settings/presentation/views/offers_view.dart';
 import 'package:talabat_clone/features/auth/presentation/views/forgot_password_view.dart';
 import 'package:talabat_clone/features/auth/presentation/views/sign_in_options_view.dart';
 import 'package:talabat_clone/features/auth/presentation/views/sign_in_view.dart';
@@ -28,6 +29,7 @@ abstract class AppRoutes {
   static const kTalabatMartRoute = '/talabat_mart';
   static const kSearchRoute = '/search';
   static const kOrdersRoute = '/orders';
+  static const kOffersRoute = '/offers';
 
   static final routes = GoRouter(
     routes: [
@@ -82,6 +84,10 @@ abstract class AppRoutes {
       GoRoute(
         path: kOrdersRoute,
         builder: (context, state) => const OrdersView(),
+      ),
+      GoRoute(
+        path: kOffersRoute,
+        builder: (context, state) => const OffersView(),
       ),
     ],
   );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:talabat_clone/core/common/widgets/custom_divider.dart';
+import 'package:talabat_clone/core/common/widgets/thick_divider.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/account_settings/domain/entities/account_settings_entity.dart';
 import 'package:talabat_clone/features/account_settings/presentation/views/widgets/account_settings_app_bar.dart';
@@ -17,13 +17,17 @@ class AccountSettingsViewBody extends StatelessWidget {
       child: Column(
         children: [
           AccountSettingsAppBar(),
-          CustomDivider(),
+          ThickDivider(),
           Column(
-            children: accountSettingsList
-                .map((e) => AccountSettingsItem(
-                      settingsEntity: e,
-                    ))
-                .toList(),
+            children: accountSettingsList(context).map((e) {
+              return InkWell(
+                // borderRadius: BorderRadius.circular(AppSize.s10),
+                onTap: e.onTap,
+                child: AccountSettingsItem(
+                  settingsEntity: e,
+                ),
+              );
+            }).toList(),
           ),
         ],
       ),
