@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
@@ -27,10 +26,9 @@ class PopularRestaurantsSection extends StatelessWidget {
           children: restaurantsList
               .map(
                 (e) => Expanded(
-                  child: GestureDetector(
-                    onTap: () {
-                      
-                    },
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(AppSize.s8),
+                    onTap: () {},
                     child: PopularRestaurantsItem(restaurant: e),
                   ),
                 ),

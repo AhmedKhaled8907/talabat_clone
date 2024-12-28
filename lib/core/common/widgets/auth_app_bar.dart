@@ -5,15 +5,19 @@ class AuthAppBar extends StatelessWidget implements PreferredSizeWidget {
   const AuthAppBar({
     super.key,
     this.isTitleShown = true,
+    this.isBackShown = true,
     this.title,
   });
 
   final bool isTitleShown;
+  final bool isBackShown;
   final String? title;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: Colors.white,
+      elevation: 0, 
       title: isTitleShown
           ? Text(
               title ?? '',
@@ -21,12 +25,14 @@ class AuthAppBar extends StatelessWidget implements PreferredSizeWidget {
             )
           : null,
       centerTitle: true,
-      leading: GestureDetector(
-        onTap: () => Navigator.pop(context),
-        child: Icon(
-          Icons.arrow_back_ios_new_rounded,
-        ),
-      ),
+      leading: isBackShown
+          ? GestureDetector(
+              onTap: () => Navigator.pop(context),
+              child: Icon(
+                Icons.arrow_back_ios_new_rounded,
+              ),
+            )
+          : null,
     );
   }
 

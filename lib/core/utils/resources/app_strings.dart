@@ -119,6 +119,14 @@ class AppStrings {
   static const String popularSearch = 'Popular searches';
   static const String featuredRestaurants = 'Featured restaurants';
 
+  // Orders View
+  static const String orders = 'Orders';
+  static const String orderDetails = 'Order details';
+  static const String orderNumber = 'Order number';
+  static const String orderDate = 'Order date';
+  static const String orderStatus = 'Order status';
+
+
   // Locale
   static const String locale = 'ar';
 }

@@ -23,7 +23,7 @@ class PopularRestaurantsItem extends StatelessWidget {
           aspectRatio: 80 / 70,
           child: Container(
             padding: EdgeInsets.all(AppSize.s16),
-            margin: EdgeInsets.only(right: AppSize.s8),
+            margin: EdgeInsets.symmetric(horizontal: AppSize.s4),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(AppSize.s8),
               border: Border.all(

@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/features/account_settings/presentation/views/account_settings_view.dart';
 import 'package:talabat_clone/features/home/presentation/views/home_view.dart';
-import 'package:talabat_clone/features/search/presentation/views/search_view.dart';
+import 'package:talabat_clone/features/orders/presentation/views/orders_view.dart';
 part 'bottom_nav_bar_state.dart';
 
 class BottomNavBarCubit extends Cubit<BottomNavBarState> {
@@ -15,7 +15,7 @@ class BottomNavBarCubit extends Cubit<BottomNavBarState> {
 
   List<Widget> views = [
     const HomeView(),
-    const SearchView(),
+    const OrdersView(),
     const AccountSettingsView(),
   ];
 
