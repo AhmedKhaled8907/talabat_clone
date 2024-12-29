@@ -19,21 +19,23 @@ class RestaurantDetailsHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      clipBehavior: Clip.none,
-      children: [
-        SizedBox(
-          height: context.height * 0.3,
-          child: Image.asset(
-            width: double.infinity,
-            entity.backgroundImage ??
-                AppAssets.imagesFoodRestaurantBackgroundImage,
-            fit: BoxFit.cover,
+    return SizedBox(
+      height: context.height * 0.425,
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          SizedBox(
+            height: context.height * 0.3,
+            child: Image.asset(
+              width: double.infinity,
+              entity.backgroundImage,
+              fit: BoxFit.cover,
+            ),
           ),
-        ),
-        _leadingIcons(context),
-        _title(context),
-      ],
+          _leadingIcons(context),
+          _title(context),
+        ],
+      ),
     );
   }
 

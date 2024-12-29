@@ -134,6 +134,10 @@ class AppStrings {
   static const String freeDelivery = 'Get free delivery with pro';
   static const String pro = 'pro';
   static const String subscribe = 'Subscribe';
+  static const String startAGroupOrder = 'Start a group order';
+  static const String addPeople = 'Add People';
+  static const String off15 = '15% off full menu, Min spend 100 EGP';
+  static const String off10 = '10% off your order Min Spend 75 EGP';
 
   // Locale
   static const String locale = 'ar';

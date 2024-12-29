@@ -12,7 +12,6 @@ class RestaurantDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('Entity received: ${entity.name}');
     return Scaffold(
       body: RestaurantDetailsViewBody(entity: entity),
     );

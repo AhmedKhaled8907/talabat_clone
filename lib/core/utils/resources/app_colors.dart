@@ -20,6 +20,8 @@ class AppColors {
   static final Color tabOverlayColor = Color(0xFF000000).withValues(
     alpha: AppSize.s0_1,
   );
+  static final Color discountColor = Color(0xFFFEF5F8);
+
 
   // Normal Colors
   static final Color white = Color(0xFFFFFFFF);

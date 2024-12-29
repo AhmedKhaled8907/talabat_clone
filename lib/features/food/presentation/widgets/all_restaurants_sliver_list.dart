@@ -17,7 +17,6 @@ class AllRestaurantsSliverList extends StatelessWidget {
         borderRadius: BorderRadius.circular(AppSize.s8),
         onTap: () {
           final restaurant = allRestaurantsList[index];
-          print('Navigating to restaurant: ${restaurant.name}');
           GoRouter.of(context).push(
             AppRoutes.kRestaurantDetailsRoute,
             extra: restaurant,

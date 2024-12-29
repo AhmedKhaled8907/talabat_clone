@@ -5,7 +5,7 @@ import 'package:uuid/uuid.dart';
 
 class AllRestaurantsEntity {
   final String image;
-  final String? backgroundImage;
+  final String backgroundImage;
   final Color? backgroundColor;
   final String name;
   final String description;
@@ -18,7 +18,7 @@ class AllRestaurantsEntity {
 
   AllRestaurantsEntity({
     required this.image,
-    this.backgroundImage = AppAssets.imagesFoodRestaurantBackgroundImage,
+    required this.backgroundImage,
     this.backgroundColor = Colors.white,
     required this.name,
     required this.description,
@@ -122,6 +122,7 @@ List<AllRestaurantsEntity> get popularRestaurantsList => [
         numberOfRatings: 20,
         price: 150,
         rating: 4.7,
+        backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
       ),
       AllRestaurantsEntity(
         name: AppStrings.laffah,
@@ -133,6 +134,7 @@ List<AllRestaurantsEntity> get popularRestaurantsList => [
         numberOfRatings: 20,
         price: 150,
         rating: 4.7,
+        backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
       ),
       AllRestaurantsEntity(
         name: AppStrings.falafil,
@@ -144,6 +146,7 @@ List<AllRestaurantsEntity> get popularRestaurantsList => [
         numberOfRatings: 20,
         price: 150,
         rating: 4.7,
+        backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
       ),
       AllRestaurantsEntity(
         name: AppStrings.barbar,
@@ -155,5 +158,6 @@ List<AllRestaurantsEntity> get popularRestaurantsList => [
         numberOfRatings: 20,
         price: 150,
         rating: 4.7,
+        backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
       ),
     ];

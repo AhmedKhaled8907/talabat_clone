@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:talabat_clone/core/utils/resources/app_strings.dart';
+import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/food/domain/entities/all_restaurants_entity.dart';
+import 'package:talabat_clone/features/restaurant_details/presentation/widgets/discount_widget.dart';
+import 'package:talabat_clone/features/restaurant_details/presentation/widgets/group_order.dart';
 import 'package:talabat_clone/features/restaurant_details/presentation/widgets/restaurant_details_header.dart';
 
 class RestaurantDetailsViewBody extends StatelessWidget {
@@ -13,9 +17,43 @@ class RestaurantDetailsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
+      physics: const BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
           child: RestaurantDetailsHeader(entity: entity),
+        ),
+        SliverToBoxAdapter(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
+                child: Column(
+                  spacing: AppSize.s16,
+                  children: [
+                    SizedBox(),
+                    GroupOrder(),
+                    Row(
+                      spacing: AppSize.s8,
+                      children: [
+                        Expanded(
+                          child: DiscountWidget(
+                            title: AppStrings.off15,
+                            onTap: () {},
+                          ),
+                        ),
+                        Expanded(
+                          child: DiscountWidget(
+                            title: AppStrings.off10,
+                            onTap: () {},
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ],
     );
