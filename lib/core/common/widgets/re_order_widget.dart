@@ -3,15 +3,15 @@ import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 
-class ReOrder extends StatelessWidget {
-  const ReOrder({
+class ReOrderWidget extends StatelessWidget {
+  const ReOrderWidget({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      borderRadius: BorderRadius.circular(AppSize.s10),
+      borderRadius: BorderRadius.circular(AppSize.s4),
       onTap: () {},
       child: Row(
         spacing: AppSize.s4,

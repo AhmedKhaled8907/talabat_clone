@@ -126,6 +126,9 @@ class AppStrings {
   static const String orderDate = 'Order date';
   static const String orderStatus = 'Order status';
 
+  // Rate Orders View
+  static const String rateOrder = 'Rate order';
+
 
   // Locale
   static const String locale = 'ar';

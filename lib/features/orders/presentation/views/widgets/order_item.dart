@@ -3,8 +3,8 @@ import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/orders/domain/entities/order_entity.dart';
-import 'package:talabat_clone/features/orders/presentation/views/widgets/rate_order.dart';
-import 'package:talabat_clone/features/orders/presentation/views/widgets/re_order.dart';
+import 'package:talabat_clone/core/common/widgets/rate_order_widget.dart';
+import 'package:talabat_clone/core/common/widgets/re_order_widget.dart';
 
 class OrderItem extends StatelessWidget {
   const OrderItem({
@@ -88,8 +88,8 @@ class OrderItem extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        ReOrder(),
-                        RateOrder(),
+                        ReOrderWidget(),
+                        RateOrderWidget(),
                       ],
                     ),
                   ],

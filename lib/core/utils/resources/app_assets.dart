@@ -124,6 +124,8 @@ class AppAssets {
 
   static const String imagesOrdersMandarinOak = "assets/images/orders/mandarin_oak.png";
 
+  static const String imagesOrdersMotorcycle = "assets/images/orders/motorcycle.png";
+
   static const String imagesOrdersOrder = "assets/images/orders/order.png";
 
   static const String imagesSearchFlowers = "assets/images/search/flowers.png";
