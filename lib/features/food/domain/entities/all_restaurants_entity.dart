@@ -161,3 +161,118 @@ List<AllRestaurantsEntity> get popularRestaurantsList => [
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
       ),
     ];
+
+List<AllRestaurantsEntity> get trendingList {
+  return [
+    AllRestaurantsEntity(
+      backgroundImage: AppAssets.imagesFoodPartyStarter,
+      image: AppAssets.imagesFoodPartyStarter,
+      name: 'Chicken Fried Rice',
+      description:
+          'Golden fried Chicken pieces wok-tossed with hot and spicy fried rice with vegetables like green',
+      rating: 4.3,
+      numberOfRatings: 19,
+      deliveryTime: 29,
+      price: 175,
+      isExceptional: true,
+      isOffItems: false,
+    ),
+    AllRestaurantsEntity(
+      backgroundImage: AppAssets.imagesFoodMealFor2,
+      image: AppAssets.imagesFoodMealFor2,
+      name: 'Chicken Chilli Basil Noodles',
+      description:
+          'Noodles wok-tossed with fried chicken, egg and vegetables with the added heat of chillies and fragrance of basil',
+      rating: 4.3,
+      numberOfRatings: 19,
+      deliveryTime: 29,
+      price: 150,
+      isExceptional: true,
+      isOffItems: false,
+    ),
+    AllRestaurantsEntity(
+      backgroundImage: AppAssets.imagesFoodPartyStarter,
+      image: AppAssets.imagesFoodPartyStarter,
+      name: 'Chicken Fried Rice',
+      description:
+          'Golden fried Chicken pieces wok-tossed with hot and spicy fried rice with vegetables like green',
+      rating: 4.3,
+      numberOfRatings: 19,
+      deliveryTime: 29,
+      price: 175,
+      isExceptional: true,
+      isOffItems: false,
+    ),
+    AllRestaurantsEntity(
+      backgroundImage: AppAssets.imagesFoodMealFor2,
+      image: AppAssets.imagesFoodMealFor2,
+      name: 'Chicken Chilli Basil Noodles',
+      description:
+          'Noodles wok-tossed with fried chicken, egg and vegetables with the added heat of chillies and fragrance of basil',
+      rating: 4.3,
+      numberOfRatings: 19,
+      deliveryTime: 29,
+      price: 150,
+      isExceptional: true,
+      isOffItems: false,
+    ),
+  ];
+}
+
+
+List<AllRestaurantsEntity> get freeSoupList {
+  return [
+    AllRestaurantsEntity(
+      backgroundImage: AppAssets.imagesFoodPartyStarter,
+      image: AppAssets.imagesFoodPartyStarter,
+      name: 'Chicken Fried Rice',
+      description:
+          'Golden fried Chicken pieces wok-tossed with hot and spicy fried rice with vegetables like green',
+      rating: 4.3,
+      numberOfRatings: 19,
+      deliveryTime: 29,
+      price: 175,
+      isExceptional: true,
+      isOffItems: false,
+    ),
+    AllRestaurantsEntity(
+      backgroundImage: AppAssets.imagesFoodMealFor2,
+      image: AppAssets.imagesFoodMealFor2,
+      name: 'Chicken Chilli Basil Noodles',
+      description:
+          'Noodles wok-tossed with fried chicken, egg and vegetables with the added heat of chillies and fragrance of basil',
+      rating: 4.3,
+      numberOfRatings: 19,
+      deliveryTime: 29,
+      price: 150,
+      isExceptional: true,
+      isOffItems: false,
+    ),
+    AllRestaurantsEntity(
+      backgroundImage: AppAssets.imagesFoodPartyStarter,
+      image: AppAssets.imagesFoodPartyStarter,
+      name: 'Chicken Fried Rice',
+      description:
+          'Golden fried Chicken pieces wok-tossed with hot and spicy fried rice with vegetables like green',
+      rating: 4.3,
+      numberOfRatings: 19,
+      deliveryTime: 29,
+      price: 175,
+      isExceptional: true,
+      isOffItems: false,
+    ),
+    AllRestaurantsEntity(
+      backgroundImage: AppAssets.imagesFoodMealFor2,
+      image: AppAssets.imagesFoodMealFor2,
+      name: 'Chicken Chilli Basil Noodles',
+      description:
+          'Noodles wok-tossed with fried chicken, egg and vegetables with the added heat of chillies and fragrance of basil',
+      rating: 4.3,
+      numberOfRatings: 19,
+      deliveryTime: 29,
+      price: 150,
+      isExceptional: true,
+      isOffItems: false,
+    ),
+  ];
+}

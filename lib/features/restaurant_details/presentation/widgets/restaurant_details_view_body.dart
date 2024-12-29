@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/food/domain/entities/all_restaurants_entity.dart';
-import 'package:talabat_clone/features/restaurant_details/presentation/widgets/discount_widget.dart';
+import 'package:talabat_clone/features/restaurant_details/presentation/widgets/discount_row_items.dart';
 import 'package:talabat_clone/features/restaurant_details/presentation/widgets/group_order.dart';
 import 'package:talabat_clone/features/restaurant_details/presentation/widgets/restaurant_details_header.dart';
+import 'package:talabat_clone/features/restaurant_details/presentation/widgets/restaurant_details_tabs.dart';
 
 class RestaurantDetailsViewBody extends StatelessWidget {
   const RestaurantDetailsViewBody({
@@ -26,35 +26,25 @@ class RestaurantDetailsViewBody extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppPadding.p16,
+                ),
                 child: Column(
                   spacing: AppSize.s16,
                   children: [
                     SizedBox(),
                     GroupOrder(),
-                    Row(
-                      spacing: AppSize.s8,
-                      children: [
-                        Expanded(
-                          child: DiscountWidget(
-                            title: AppStrings.off15,
-                            onTap: () {},
-                          ),
-                        ),
-                        Expanded(
-                          child: DiscountWidget(
-                            title: AppStrings.off10,
-                            onTap: () {},
-                          ),
-                        ),
-                      ],
-                    ),
+                    DiscountRowItems(),
+                    SizedBox(),
                   ],
                 ),
               ),
             ],
           ),
         ),
+        SliverFillRemaining(
+          child: RestaurantDetailsTabs(),
+        )
       ],
     );
   }

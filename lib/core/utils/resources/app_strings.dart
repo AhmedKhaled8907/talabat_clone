@@ -138,6 +138,11 @@ class AppStrings {
   static const String addPeople = 'Add People';
   static const String off15 = '15% off full menu, Min spend 100 EGP';
   static const String off10 = '10% off your order Min Spend 75 EGP';
+  static const String trending = 'Trending 🔥';
+  static const String freeSoup = 'Free Soup with Celebration Combos';
+  static const String freeSoupEclipses = 'Free Soup with Celebrati...';
+  static const String starters = 'Starters';
+
 
   // Locale
   static const String locale = 'ar';
