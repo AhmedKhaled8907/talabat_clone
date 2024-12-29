@@ -143,7 +143,6 @@ class AppStrings {
   static const String freeSoupEclipses = 'Free Soup with Celebrati...';
   static const String starters = 'Starters';
 
-
   // Locale
   static const String locale = 'ar';
 }

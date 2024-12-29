@@ -32,7 +32,7 @@ class RestaurantDetailsTabItem extends StatelessWidget {
                     entity.name,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: AppStyles.styleMedium12(context),
+                    style: AppStyles.styleBold12(context),
                   ),
                   Text(
                     entity.description,
