@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
+import 'package:talabat_clone/core/utils/resources/app_routes.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/food/domain/entities/all_restaurants_entity.dart';
 import 'package:talabat_clone/features/food/presentation/widgets/all_restaurants_item.dart';
@@ -13,7 +15,14 @@ class AllRestaurantsSliverList extends StatelessWidget {
       itemCount: allRestaurantsList.length,
       itemBuilder: (context, index) => InkWell(
         borderRadius: BorderRadius.circular(AppSize.s8),
-        onTap: () {},
+        onTap: () {
+          final restaurant = allRestaurantsList[index];
+          print('Navigating to restaurant: ${restaurant.name}');
+          GoRouter.of(context).push(
+            AppRoutes.kRestaurantDetailsRoute,
+            extra: restaurant,
+          );
+        },
         child: AllRestaurantsItem(
           restaurant: allRestaurantsList[index],
         ),

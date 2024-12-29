@@ -1,4 +1,3 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:talabat_clone/features/account_settings/presentation/views/offers_view.dart';
 import 'package:talabat_clone/features/auth/presentation/views/forgot_password_view.dart';
@@ -6,13 +5,14 @@ import 'package:talabat_clone/features/auth/presentation/views/sign_in_options_v
 import 'package:talabat_clone/features/auth/presentation/views/sign_in_view.dart';
 import 'package:talabat_clone/features/auth/presentation/views/sign_up_view.dart';
 import 'package:talabat_clone/features/account_settings/presentation/views/account_settings_view.dart';
+import 'package:talabat_clone/features/food/domain/entities/all_restaurants_entity.dart';
 import 'package:talabat_clone/features/food/presentation/views/food_view.dart';
 import 'package:talabat_clone/features/home/presentation/views/home_view.dart';
 import 'package:talabat_clone/features/main/presentation/views/main_view.dart';
 import 'package:talabat_clone/features/orders/presentation/views/orders_view.dart';
-import 'package:talabat_clone/features/rate_order/presentation/manager/rate_order_cubit/rate_order_cubit.dart';
 import 'package:talabat_clone/features/rate_order/presentation/views/rate_order_view.dart';
 import 'package:talabat_clone/features/rate_order/presentation/views/more_notes_view.dart';
+import 'package:talabat_clone/features/restaurant_details/presentation/views/restaurant_details_view.dart';
 import 'package:talabat_clone/features/search/presentation/views/search_view.dart';
 import 'package:talabat_clone/features/settings/presentation/views/settings_view.dart';
 import 'package:talabat_clone/features/splash/presentation/views/splash_view.dart';
@@ -36,6 +36,7 @@ abstract class AppRoutes {
   static const kOffersRoute = '/offers';
   static const kRateOrderRoute = '/rate_order';
   static const kMoreNotesRoute = '/more_notes';
+  static const kRestaurantDetailsRoute = '/restaurant_details';
 
   static final routes = GoRouter(
     routes: [
@@ -101,11 +102,16 @@ abstract class AppRoutes {
       ),
       GoRoute(
         path: kMoreNotesRoute,
-        builder: (context, state) => BlocProvider(
-          create: (context) => RateOrderCubit(),
-          child: const MoreNotesView(),
-        ),
-      )
+        builder: (context, state) => const MoreNotesView(),
+      ),
+      GoRoute(
+        path: AppRoutes.kRestaurantDetailsRoute,
+        builder: (context, state) {
+          return RestaurantDetailsView(
+            entity: state.extra as AllRestaurantsEntity,
+          );
+        },
+      ),
     ],
   );
 }

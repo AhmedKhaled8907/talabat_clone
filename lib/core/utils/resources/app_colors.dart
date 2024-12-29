@@ -8,7 +8,9 @@ class AppColors {
       Color(0xFF000000).withValues(alpha: AppSize.s0_5);
   static final Color thirdColor = Color(0xFFEB0669);
   static final Color productColor = Color(0xFFF5F5F5);
-  static final Color proColor = Color(0xFF1D299A);
+  static final Color proColor = Color(0xFFE0EBFD);
+  static final Color proTextColor = Color(0xFF1D299A);
+
   static final Color deliveredColor = Color(0xFF2AA564);
   static final Color starColor = Color(0xFFFF9F00);
   static final Color dividerColor = Color(0xFFF5F5F5);

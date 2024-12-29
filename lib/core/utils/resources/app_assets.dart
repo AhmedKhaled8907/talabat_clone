@@ -42,6 +42,12 @@ class AppAssets {
 
   static const String imagesFood50Off = "assets/images/food/50_off.png";
 
+  static const String imagesFoodAbout = "assets/images/food/about.png";
+
+  static const String imagesFoodArrowForward = "assets/images/food/arrow_forward.png";
+
+  static const String imagesFoodCarbonSearch = "assets/images/food/carbon_search.png";
+
   static const String imagesFoodComputer = "assets/images/food/computer.png";
 
   static const String imagesFoodExceptional = "assets/images/food/exceptional.png";
@@ -52,7 +58,13 @@ class AppAssets {
 
   static const String imagesFoodListedItems = "assets/images/food/listed_Items.png";
 
+  static const String imagesFoodLogo = "assets/images/food/logo.png";
+
+  static const String imagesFoodLogos = "assets/images/food/logos.svg";
+
   static const String imagesFoodMalak = "assets/images/food/malak.png";
+
+  static const String imagesFoodMandarinOak = "assets/images/food/mandarin_oak.png";
 
   static const String imagesFoodMotorcycle = "assets/images/food/motorcycle.png";
 
@@ -65,6 +77,14 @@ class AppAssets {
   static const String imagesFoodPizza2Go = "assets/images/food/pizza_2_go.png";
 
   static const String imagesFoodPoke = "assets/images/food/poke.png";
+
+  static const String imagesFoodPro = "assets/images/food/pro.png";
+
+  static const String imagesFoodRestaurantBackgroundImage = "assets/images/food/restaurant_background_image.png";
+
+  static const String imagesFoodSeeklogo = "assets/images/food/seeklogo.png";
+
+  static const String imagesFoodShare = "assets/images/food/share.png";
 
   static const String imagesFoodSubway = "assets/images/food/subway.png";
 
@@ -121,8 +141,6 @@ class AppAssets {
   static const String imagesNavBarHomeSelected = "assets/images/nav_bar/home_selected.svg";
 
   static const String imagesOrdersAroosDamashq = "assets/images/orders/aroos_damashq.png";
-
-  static const String imagesOrdersMandarinOak = "assets/images/orders/mandarin_oak.png";
 
   static const String imagesOrdersMotorcycle = "assets/images/orders/motorcycle.png";
 

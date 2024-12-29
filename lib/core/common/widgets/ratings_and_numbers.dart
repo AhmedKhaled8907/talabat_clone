@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
@@ -27,13 +26,13 @@ class RatingAndNumbers extends StatelessWidget {
         Text(
           rating.toString(),
           style: AppStyles.styleMedium10(context).copyWith(
-            color: AppColors.grey,
+            color: AppColors.blackWithOpacity,
           ),
         ),
         Text(
           ratingCounts(numberOfRatings),
           style: AppStyles.styleMedium10(context).copyWith(
-            color: AppColors.grey,
+            color: AppColors.blackWithOpacity,
           ),
         ),
       ],

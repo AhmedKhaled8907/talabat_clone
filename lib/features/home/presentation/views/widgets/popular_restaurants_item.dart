@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
-import 'package:talabat_clone/features/home/domain/entities/restaurants_entity.dart';
+import 'package:talabat_clone/features/food/domain/entities/all_restaurants_entity.dart';
 
 class PopularRestaurantsItem extends StatelessWidget {
   const PopularRestaurantsItem({
@@ -10,7 +10,7 @@ class PopularRestaurantsItem extends StatelessWidget {
     required this.restaurant,
   });
 
-  final RestaurantsEntity restaurant;
+  final AllRestaurantsEntity restaurant;
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +57,7 @@ class PopularRestaurantsItem extends StatelessWidget {
             FittedBox(
               fit: BoxFit.scaleDown,
               child: Text(
-                restaurant.time,
+                '${restaurant.deliveryTime} min',
                 textAlign: TextAlign.center,
                 style: AppStyles.styleMedium14(context).copyWith(
                   color: AppColors.grey,

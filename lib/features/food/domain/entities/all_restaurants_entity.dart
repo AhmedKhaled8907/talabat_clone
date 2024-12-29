@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_assets.dart';
+import 'package:talabat_clone/core/utils/resources/app_strings.dart';
+import 'package:uuid/uuid.dart';
 
 class AllRestaurantsEntity {
   final String image;
-  Color? backgroundColor;
+  final String? backgroundImage;
+  final Color? backgroundColor;
   final String name;
   final String description;
   final num rating;
@@ -15,6 +18,7 @@ class AllRestaurantsEntity {
 
   AllRestaurantsEntity({
     required this.image,
+    this.backgroundImage = AppAssets.imagesFoodRestaurantBackgroundImage,
     this.backgroundColor = Colors.white,
     required this.name,
     required this.description,
@@ -27,8 +31,24 @@ class AllRestaurantsEntity {
   });
 }
 
+final Uuid uuid = Uuid();
+
 List<AllRestaurantsEntity> get allRestaurantsList => [
       AllRestaurantsEntity(
+        image: AppAssets.imagesFoodMandarinOak,
+        backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
+        name: 'Mandarin Oak',
+        description: 'Chinese, Thai, Asian, Noodles, Dumplings',
+        rating: 4.7,
+        numberOfRatings: 1666,
+        deliveryTime: 24,
+        price: 250,
+        isExceptional: true,
+        isOffItems: true,
+        backgroundColor: Color(0xffda232b),
+      ),
+      AllRestaurantsEntity(
+        backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
         image: AppAssets.imagesFoodJuniorSeafood,
         name: 'Junior Seafood, Jumeirah 3',
         description: 'Thai, International, Continental',
@@ -40,6 +60,7 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
         isOffItems: false,
       ),
       AllRestaurantsEntity(
+        backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
         image: AppAssets.imagesFoodSushiCounter,
         backgroundColor: Color(0xff4D5A90),
         name: 'Sushi Counter, Business Bay 4',
@@ -52,6 +73,7 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
         isOffItems: true,
       ),
       AllRestaurantsEntity(
+        backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
         image: AppAssets.imagesFoodPizza2Go,
         name: 'Pizza 2 Go',
         description: 'Pizza, Pasta, Healthy',
@@ -63,6 +85,7 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
         isOffItems: false,
       ),
       AllRestaurantsEntity(
+        backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
         image: AppAssets.imagesFoodPapparoti,
         backgroundColor: Color(0xffB7D3A3),
         name: 'Papparoti',
@@ -75,6 +98,7 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
         isOffItems: false,
       ),
       AllRestaurantsEntity(
+        backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
         image: AppAssets.imagesFoodSubway,
         name: 'Subway',
         description: 'Sandwiches, Fast Food',
@@ -84,5 +108,52 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
         price: 75,
         isExceptional: true,
         isOffItems: true,
+      ),
+    ];
+
+List<AllRestaurantsEntity> get popularRestaurantsList => [
+      AllRestaurantsEntity(
+        name: AppStrings.alloBeirut,
+        image: AppAssets.imagesHomeAlloBeirut,
+        deliveryTime: 15,
+        description: '',
+        isExceptional: false,
+        isOffItems: false,
+        numberOfRatings: 20,
+        price: 150,
+        rating: 4.7,
+      ),
+      AllRestaurantsEntity(
+        name: AppStrings.laffah,
+        image: AppAssets.imagesHomeLaffah,
+        deliveryTime: 25,
+        description: '',
+        isExceptional: false,
+        isOffItems: false,
+        numberOfRatings: 20,
+        price: 150,
+        rating: 4.7,
+      ),
+      AllRestaurantsEntity(
+        name: AppStrings.falafil,
+        image: AppAssets.imagesHomeFalafil,
+        deliveryTime: 45,
+        description: '',
+        isExceptional: false,
+        isOffItems: false,
+        numberOfRatings: 20,
+        price: 150,
+        rating: 4.7,
+      ),
+      AllRestaurantsEntity(
+        name: AppStrings.barbar,
+        image: AppAssets.imagesHomeBarbar,
+        deliveryTime: 35,
+        description: '',
+        isExceptional: false,
+        isOffItems: false,
+        numberOfRatings: 20,
+        price: 150,
+        rating: 4.7,
       ),
     ];

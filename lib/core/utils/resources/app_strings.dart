@@ -128,7 +128,12 @@ class AppStrings {
 
   // Rate Orders View
   static const String rateOrder = 'Rate order';
-
+  static const String deliveryFee = 'Delivery fee';
+  static const String deliveryTime = 'Delivery time';
+  static const String deliveryBy = 'Delivery by';
+  static const String freeDelivery = 'Get free delivery with pro';
+  static const String pro = 'pro';
+  static const String subscribe = 'Subscribe';
 
   // Locale
   static const String locale = 'ar';
