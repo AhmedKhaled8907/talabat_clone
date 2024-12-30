@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:talabat_clone/core/common/widgets/app_bar_icon.dart';
 import 'package:talabat_clone/core/common/widgets/ratings_and_numbers.dart';
 import 'package:talabat_clone/core/utils/resources/app_assets.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
+import 'package:talabat_clone/core/utils/resources/app_routes.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/food/domain/entities/all_restaurants_entity.dart';
@@ -39,7 +41,6 @@ class RestaurantDetailsHeader extends StatelessWidget {
             ],
           ),
         ),
-        // SizedBox(height: context.height * 0.12),
       ],
     );
   }
@@ -170,7 +171,12 @@ class RestaurantDetailsHeader extends StatelessWidget {
                   ),
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    GoRouter.of(context).push(
+                      AppRoutes.kRestaurantAboutRoute,
+                      extra: entity,
+                    );
+                  },
                   borderRadius: BorderRadius.circular(AppSize.s10),
                   child: Image.asset(
                     AppAssets.imagesFoodAbout,

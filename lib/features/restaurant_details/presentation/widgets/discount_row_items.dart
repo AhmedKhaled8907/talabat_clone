@@ -3,7 +3,6 @@ import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/restaurant_details/presentation/widgets/discount_widget.dart';
 
-
 class DiscountRowItems extends StatelessWidget {
   const DiscountRowItems({
     super.key,
@@ -12,7 +11,7 @@ class DiscountRowItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      spacing: AppSize.s8,
+      spacing: AppSize.s16,
       children: [
         Expanded(
           child: DiscountWidget(

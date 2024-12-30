@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
-import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/restaurant_details/domain/entities/delivered_by_entity.dart';
 
 class DeliveredByItem extends StatelessWidget {
@@ -15,10 +14,8 @@ class DeliveredByItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       contentPadding: EdgeInsets.zero,
-      leading: Image.asset(
-        entity.image,
-        fit: BoxFit.fill,
-        width: AppSize.s16,
+      leading: Icon(
+        entity.icon,
       ),
       title: Text(
         entity.title,
