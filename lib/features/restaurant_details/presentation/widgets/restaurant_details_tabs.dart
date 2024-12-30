@@ -40,7 +40,6 @@ class _RestaurantDetailsTabsState extends State<RestaurantDetailsTabs>
         // TabBarView
         Expanded(
           child: TabBarView(
-            // physics: const NeverScrollableScrollPhysics(),
             controller: _tabController,
             children: List.generate(
               resTaurantDetailsList.length,

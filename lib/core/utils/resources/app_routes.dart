@@ -8,6 +8,7 @@ import 'package:talabat_clone/features/account_settings/presentation/views/accou
 import 'package:talabat_clone/features/food/domain/entities/all_restaurants_entity.dart';
 import 'package:talabat_clone/features/food/presentation/views/food_view.dart';
 import 'package:talabat_clone/features/home/presentation/views/home_view.dart';
+import 'package:talabat_clone/features/item_details/presentation/views/item_details_view.dart';
 import 'package:talabat_clone/features/main/presentation/views/main_view.dart';
 import 'package:talabat_clone/features/orders/presentation/views/orders_view.dart';
 import 'package:talabat_clone/features/rate_order/presentation/views/rate_order_view.dart';
@@ -39,6 +40,7 @@ abstract class AppRoutes {
   static const kMoreNotesRoute = '/more_notes';
   static const kRestaurantDetailsRoute = '/restaurant_details';
   static const kRestaurantAboutRoute = '/restaurant_about';
+  static const kItemDetailsRoute = '/item_details';
 
   static final routes = GoRouter(
     routes: [
@@ -119,6 +121,14 @@ abstract class AppRoutes {
         builder: (context, state) {
           return RestaurantAboutView(
             restaurantsEntity: state.extra as AllRestaurantsEntity,
+          );
+        },
+      ),
+      GoRoute(
+        path: AppRoutes.kItemDetailsRoute,
+        builder: (context, state) {
+          return ItemDetailsView(
+            itemEntity: state.extra as AllRestaurantsEntity,
           );
         },
       ),

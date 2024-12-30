@@ -58,6 +58,8 @@ class AppAssets {
 
   static const String imagesFoodExceptional = "assets/images/food/exceptional.png";
 
+  static const String imagesFoodFriedRice = "assets/images/food/fried_rice.png";
+
   static const String imagesFoodHeadphones = "assets/images/food/headphones.png";
 
   static const String imagesFoodHealthy = "assets/images/food/healthy.png";
