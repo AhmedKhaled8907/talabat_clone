@@ -47,6 +47,15 @@ class ItemDetailsViewBody extends StatelessWidget {
             child: OftenOrderedSection(),
           ),
         ),
+        SliverToBoxAdapter(
+          child: ThickDivider(height: AppSize.s8),
+        ),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.all(AppPadding.p16),
+            child: OftenOrderedSection(),
+          ),
+        ),
       ],
     );
   }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:talabat_clone/core/utils/resources/app_assets.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
+import 'package:talabat_clone/features/item_details/domain/entities/often_ordered_entity.dart';
 import 'package:talabat_clone/features/item_details/presentation/widgets/often_ordered_item.dart';
 
 class OftenOrderedSection extends StatelessWidget {
@@ -26,25 +26,20 @@ class OftenOrderedSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: AppSize.s8),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          spacing: AppSize.s8,
-          children: [
-            Expanded(
-              child: OftenOrderedItem(
-                image: AppAssets.imagesFoodWater,
-                title: AppStrings.water,
-                price: 10,
-              ),
-            ),
-            Expanded(
-              child: OftenOrderedItem(
-                image: AppAssets.imagesFoodCola,
-                title: AppStrings.coke,
-                price: 15,
-              ),
-            ),
-          ],
+        SizedBox(
+          height: context.height * 0.375,
+          child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            itemCount: oftenOrderedList.length,
+            separatorBuilder: (BuildContext context, int index) {
+              return const SizedBox(width: AppSize.s8);
+            },
+            itemBuilder: (BuildContext context, int index) {
+              return OftenOrderedItem(
+                entity: oftenOrderedList[index],
+              );
+            },
+          ),
         ),
       ],
     );
