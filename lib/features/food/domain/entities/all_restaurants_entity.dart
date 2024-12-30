@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_assets.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
-import 'package:uuid/uuid.dart';
 
 class AllRestaurantsEntity {
   final String image;
@@ -15,6 +14,13 @@ class AllRestaurantsEntity {
   final num price;
   final bool isExceptional;
   final bool isOffItems;
+  final String? restaurantArea;
+  final num? miniumOrder;
+  final num? deliveryFee;
+  final bool preOrder;
+  final String? paymentMethod;
+  final num? opening;
+  final num? closing;
 
   AllRestaurantsEntity({
     required this.image,
@@ -28,10 +34,15 @@ class AllRestaurantsEntity {
     required this.price,
     required this.isExceptional,
     required this.isOffItems,
+    this.restaurantArea = 'Dubai Silicon Oasis',
+    this.miniumOrder = 50,
+    this.deliveryFee = 20,
+    this.preOrder = true,
+    this.paymentMethod = 'cash',
+    this.opening = 10,
+    this.closing = 3,
   });
 }
-
-final Uuid uuid = Uuid();
 
 List<AllRestaurantsEntity> get allRestaurantsList => [
       AllRestaurantsEntity(
@@ -39,25 +50,41 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
         name: 'Mandarin Oak',
         description: 'Chinese, Thai, Asian, Noodles, Dumplings',
-        rating: 4.7,
+        rating: 3.2,
         numberOfRatings: 1666,
         deliveryTime: 24,
         price: 250,
         isExceptional: true,
         isOffItems: true,
         backgroundColor: Color(0xffda232b),
+        restaurantArea: 'Dubai Silicon Oasis',
+        miniumOrder: 50,
+        deliveryFee: 20,
+        preOrder: true,
+        paymentMethod: 'cash',
+        opening: 10,
+        closing: 3,
       ),
       AllRestaurantsEntity(
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
         image: AppAssets.imagesFoodJunior,
         name: 'Junior Seafood, Jumeirah 3',
         description: 'Thai, International, Continental',
-        rating: 4.4,
+        rating: 3.5,
         numberOfRatings: 1000,
         deliveryTime: 40,
         price: 150,
         isExceptional: false,
         isOffItems: false,
+        
+      
+        restaurantArea: 'Jumeirah',
+        miniumOrder: 50,
+        deliveryFee: 20,
+        preOrder: true,
+        paymentMethod: 'cash',
+        opening: 10,
+        closing: 3,
       ),
       AllRestaurantsEntity(
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
@@ -70,18 +97,31 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
         price: 250,
         isExceptional: false,
         isOffItems: true,
+        restaurantArea: 'Business Bay',
+        miniumOrder: 50,
+        deliveryFee: 20,
+        preOrder: true,
+        paymentMethod: 'cash',
+        opening: 10,
+        closing: 3,
       ),
       AllRestaurantsEntity(
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
         image: AppAssets.imagesFoodPizza2Go,
         name: 'Pizza 2 Go',
         description: 'Pizza, Pasta, Healthy',
-        rating: 4.3,
+        rating: 4.0,
         numberOfRatings: 19,
         deliveryTime: 29,
         price: 175,
         isExceptional: true,
         isOffItems: false,
+        restaurantArea: 'Business Bay',
+        miniumOrder: 50,
+        deliveryFee: 20,
+        preOrder: true,
+        paymentMethod: 'cash',
+        opening: 10,
       ),
       AllRestaurantsEntity(
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
@@ -89,12 +129,19 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
         backgroundColor: Color(0xff4e3227),
         name: 'Papparoti',
         description: 'Beverages, Arabic sweets, Desserts',
-        rating: 4.3,
+        rating: 2.3,
         numberOfRatings: 75,
         deliveryTime: 29,
         price: 175,
         isExceptional: false,
         isOffItems: false,
+        restaurantArea: 'Business Bay',
+        miniumOrder: 50,
+        deliveryFee: 20,
+        preOrder: true,
+        paymentMethod: 'cash',
+        opening: 10,
+        closing: 3,
       ),
       AllRestaurantsEntity(
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
@@ -107,6 +154,13 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
         price: 75,
         isExceptional: true,
         isOffItems: true,
+        restaurantArea: 'Business Bay',
+        miniumOrder: 50,
+        deliveryFee: 20,
+        preOrder: true,
+        paymentMethod: 'cash',
+        opening: 10,
+        closing: 3,
       ),
     ];
 
@@ -122,6 +176,14 @@ List<AllRestaurantsEntity> get popularRestaurantsList => [
         price: 150,
         rating: 4.7,
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
+        restaurantArea: 'Business Bay',
+        miniumOrder: 50,
+        deliveryFee: 20,
+        preOrder: true,
+        paymentMethod: 'cash',
+        opening: 10,
+        closing: 3,
+
       ),
       AllRestaurantsEntity(
         name: AppStrings.laffah,
@@ -134,6 +196,13 @@ List<AllRestaurantsEntity> get popularRestaurantsList => [
         price: 150,
         rating: 4.7,
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
+        restaurantArea: 'Business Bay',
+        miniumOrder: 50,
+        deliveryFee: 20,
+        preOrder: true,
+        paymentMethod: 'cash',
+        opening: 10,
+        closing: 3,
       ),
       AllRestaurantsEntity(
         name: AppStrings.falafil,
@@ -146,6 +215,13 @@ List<AllRestaurantsEntity> get popularRestaurantsList => [
         price: 150,
         rating: 4.7,
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
+        restaurantArea: 'Business Bay',
+        miniumOrder: 50,
+        deliveryFee: 20,
+        preOrder: true,
+        paymentMethod: 'cash',
+        opening: 10,
+        closing: 3,
       ),
       AllRestaurantsEntity(
         name: AppStrings.barbar,
@@ -158,6 +234,13 @@ List<AllRestaurantsEntity> get popularRestaurantsList => [
         price: 150,
         rating: 4.7,
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
+        restaurantArea: 'Business Bay',
+        miniumOrder: 50,
+        deliveryFee: 20,
+        preOrder: true,
+        paymentMethod: 'cash',
+        opening: 10,
+        closing: 3,
       ),
     ];
 

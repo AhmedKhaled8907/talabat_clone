@@ -123,17 +123,14 @@ class RestaurantDetailsHeader extends StatelessWidget {
                             )
                           : null,
                     ),
-                    child: Hero(
-                      tag: entity.image,
-                      child: AspectRatio(
-                        aspectRatio: 72 / 65,
-                        child: Center(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(AppSize.s10),
-                            child: Image.asset(
-                              entity.image,
-                              fit: BoxFit.fill,
-                            ),
+                    child: AspectRatio(
+                      aspectRatio: 72 / 65,
+                      child: Center(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(AppSize.s10),
+                          child: Image.asset(
+                            entity.image,
+                            fit: BoxFit.fill,
                           ),
                         ),
                       ),
@@ -159,7 +156,7 @@ class RestaurantDetailsHeader extends StatelessWidget {
                         child: Text(
                           entity.description,
                           style: AppStyles.styleBold10(context).copyWith(
-                            color: AppColors.blackWithOpacity,
+                            color: AppColors.secondaryColor,
                           ),
                         ),
                       ),

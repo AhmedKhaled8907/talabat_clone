@@ -26,7 +26,7 @@ class DeliveryDetailsItem extends StatelessWidget {
           Text(
             title,
             style: AppStyles.styleMedium12(context).copyWith(
-              color: AppColors.blackWithOpacity,
+              color: AppColors.secondaryColor,
             ),
           ),
           subtitle,

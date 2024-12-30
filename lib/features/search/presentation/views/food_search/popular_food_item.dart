@@ -32,7 +32,7 @@ class PopularFoodItem extends StatelessWidget {
           Text(
             title,
             style: AppStyles.styleBold12(context).copyWith(
-              color: AppColors.blackWithOpacity,
+              color: AppColors.secondaryColor,
             ),
           )
         ],

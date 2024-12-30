@@ -40,7 +40,7 @@ class HomeSearch extends StatelessWidget {
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: AppStyles.styleMedium14(context).copyWith(
-                color: AppColors.blackWithOpacity,
+                color: AppColors.secondaryColor,
               ),
             ),
           ],

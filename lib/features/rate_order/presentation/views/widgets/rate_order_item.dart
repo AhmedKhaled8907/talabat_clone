@@ -31,16 +31,14 @@ class RateOrderItem extends StatelessWidget {
         children: [
           Icon(
             Icons.trending_up_rounded,
-            color:
-                isTopicSelected ? AppColors.white : AppColors.blackWithOpacity,
+            color: isTopicSelected ? AppColors.white : AppColors.secondaryColor,
             size: AppSize.s16,
           ),
           Text(
             index.toString(),
             style: AppStyles.styleBold12(context).copyWith(
-              color: isTopicSelected
-                  ? AppColors.white
-                  : AppColors.blackWithOpacity,
+              color:
+                  isTopicSelected ? AppColors.white : AppColors.secondaryColor,
             ),
           ),
         ],

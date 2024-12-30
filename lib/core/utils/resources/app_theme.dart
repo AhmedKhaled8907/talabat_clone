@@ -44,20 +44,20 @@ class AppTheme {
         type: BottomNavigationBarType.fixed,
         elevation: 0,
         selectedItemColor: AppColors.primaryColor,
-        unselectedItemColor: AppColors.blackWithOpacity,
+        unselectedItemColor: AppColors.secondaryColor,
         selectedLabelStyle: AppStyles.styleMedium14(context),
         unselectedLabelStyle: AppStyles.styleMedium14(context).copyWith(
-          color: AppColors.blackWithOpacity,
+          color: AppColors.secondaryColor,
         ),
       ),
       tabBarTheme: TabBarTheme(
         overlayColor: WidgetStateProperty.all(AppColors.tabOverlayColor),
         indicatorSize: TabBarIndicatorSize.label,
         labelColor: AppColors.primaryColor,
-        unselectedLabelColor: AppColors.blackWithOpacity,
+        unselectedLabelColor: AppColors.secondaryColor,
         labelStyle: AppStyles.styleBold14(context),
         unselectedLabelStyle: AppStyles.styleMedium14(context).copyWith(
-          color: AppColors.blackWithOpacity,
+          color: AppColors.secondaryColor,
         ),
         labelPadding: const EdgeInsets.symmetric(
           vertical: AppPadding.p8,

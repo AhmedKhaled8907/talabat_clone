@@ -23,13 +23,13 @@ class SearchTextField extends StatelessWidget {
           fillColor: AppColors.searchColor,
           hintText: AppStrings.searchForGroceries,
           hintStyle: AppStyles.styleMedium14(context).copyWith(
-            color: AppColors.blackWithOpacity,
+            color: AppColors.secondaryColor,
           ),
           prefixIcon: Padding(
             padding: const EdgeInsets.only(left: AppPadding.p8),
             child: Icon(
               Icons.search,
-              color: AppColors.blackWithOpacity,
+              color: AppColors.secondaryColor,
               size: AppSize.s24,
             ),
           ),

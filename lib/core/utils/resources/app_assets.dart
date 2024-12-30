@@ -100,6 +100,8 @@ class AppAssets {
 
   static const String imagesFoodShare = "assets/images/food/share.png";
 
+  static const String imagesFoodStar = "assets/images/food/star.png";
+
   static const String imagesFoodSubway = "assets/images/food/subway.png";
 
   static const String imagesFoodSushi = "assets/images/food/sushi.jpg";

@@ -26,13 +26,13 @@ class RatingAndNumbers extends StatelessWidget {
         Text(
           rating.toString(),
           style: AppStyles.styleMedium10(context).copyWith(
-            color: AppColors.blackWithOpacity,
+            color: AppColors.secondaryColor,
           ),
         ),
         Text(
           ratingCounts(numberOfRatings),
           style: AppStyles.styleMedium10(context).copyWith(
-            color: AppColors.blackWithOpacity,
+            color: AppColors.secondaryColor,
           ),
         ),
       ],

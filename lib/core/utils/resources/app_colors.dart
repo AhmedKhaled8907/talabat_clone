@@ -22,12 +22,11 @@ class AppColors {
   );
   static final Color discountColor = Color(0xFFFEF5F8);
 
-
   // Normal Colors
   static final Color white = Color(0xFFFFFFFF);
   static final Color black = Color(0xFF000000);
   static final Color blackWithOpacity = Color(0xFF000000).withValues(
-    alpha: AppSize.s0_5,
+    alpha: AppSize.s0_75,
   );
   static final Color red = Colors.red;
   static final Color grey = Colors.grey;
