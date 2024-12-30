@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:talabat_clone/features/item_details/presentation/widgets/check_box.dart';
 
 import '../../../../core/utils/resources/app_colors.dart';
 import '../../../../core/utils/resources/app_strings.dart';
@@ -63,16 +64,7 @@ class ExtrasSection extends StatelessWidget {
                 color: AppColors.blackWithOpacity,
               ),
             ),
-            Container(
-              width: 16,
-              height: 16,
-              decoration: ShapeDecoration(
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
-                  side: BorderSide(width: 1),
-                ),
-              ),
-            ),
+            CheckBox(),
           ],
         ),
       ],

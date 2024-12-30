@@ -5,6 +5,7 @@ import 'package:talabat_clone/core/common/widgets/custom_orange_button.dart';
 import 'package:talabat_clone/core/utils/resources/app_assets.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_routes.dart';
+import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/rate_order/domain/entities/rate_order_entity.dart';
@@ -40,7 +41,7 @@ class RateOrderBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'What did you like?',
+                      AppStrings.whatDidYouLike,
                       style: AppStyles.styleBold20(context),
                     ),
                     ratingBar(context),
@@ -61,7 +62,7 @@ class RateOrderBody extends StatelessWidget {
                         GoRouter.of(context).push(AppRoutes.kMoreNotesRoute);
                       },
                       child: Text(
-                        'Any more notes?',
+                        AppStrings.anyMoreNotes,
                         style: AppStyles.styleMedium14(context).copyWith(
                           color: AppColors.primaryColor,
                         ),

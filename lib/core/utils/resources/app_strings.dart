@@ -158,6 +158,10 @@ class AppStrings {
   static const String addToBasket = 'Add to basket';
   static const String water = 'Arwa (water)';
   static const String coke = 'Diet Coke 300 ML';
+  static const String specialRequest = 'Any special requests?';
+  static const String addNote = 'Add note';
+  static const String whatDidYouLike = 'What did you like?';
+  static const String anyMoreNotes = 'Any more notes?';
 
   // Locale
   static const String locale = 'ar';
