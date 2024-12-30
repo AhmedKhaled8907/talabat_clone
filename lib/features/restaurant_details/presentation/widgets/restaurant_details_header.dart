@@ -21,22 +21,25 @@ class RestaurantDetailsHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Stack(
-          clipBehavior: Clip.none,
-          children: [
-            SizedBox(
-              height: context.height * 0.3,
-              child: Image.asset(
-                width: double.infinity,
-                entity.backgroundImage,
-                fit: BoxFit.cover,
+        SizedBox(
+          height: context.height * 0.42,
+          child: Stack(
+            clipBehavior: Clip.none,
+            children: [
+              SizedBox(
+                height: context.height * 0.3,
+                child: Image.asset(
+                  width: double.infinity,
+                  entity.backgroundImage,
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-            _leadingIcons(context),
-            _title(context),
-          ],
+              _leadingIcons(context),
+              _title(context),
+            ],
+          ),
         ),
-        SizedBox(height: context.height * 0.12),
+        // SizedBox(height: context.height * 0.12),
       ],
     );
   }
@@ -83,7 +86,7 @@ class RestaurantDetailsHeader extends StatelessWidget {
       right: AppSize.s16,
       left: AppSize.s16,
       child: Container(
-        height: context.height * 0.275,
+        height: context.height * 0.27,
         padding: const EdgeInsets.symmetric(
           horizontal: AppPadding.p16,
           vertical: AppPadding.p12,

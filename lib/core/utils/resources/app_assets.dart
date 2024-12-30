@@ -50,9 +50,15 @@ class AppAssets {
 
   static const String imagesFoodCarbonSearch = "assets/images/food/carbon_search.png";
 
+  static const String imagesFoodClock = "assets/images/food/clock.png";
+
   static const String imagesFoodComputer = "assets/images/food/computer.png";
 
+  static const String imagesFoodDeliveredByTalabat = "assets/images/food/delivered_by_talabat.png";
+
   static const String imagesFoodExceptional = "assets/images/food/exceptional.png";
+
+  static const String imagesFoodHeadphones = "assets/images/food/headphones.png";
 
   static const String imagesFoodHealthy = "assets/images/food/healthy.png";
 
@@ -67,6 +73,8 @@ class AppAssets {
   static const String imagesFoodMalak = "assets/images/food/malak.png";
 
   static const String imagesFoodMandarinOak = "assets/images/food/mandarin_oak.png";
+
+  static const String imagesFoodMap = "assets/images/food/map.png";
 
   static const String imagesFoodMealFor2 = "assets/images/food/meal_for_2.png";
 

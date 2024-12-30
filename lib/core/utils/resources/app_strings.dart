@@ -142,6 +142,9 @@ class AppStrings {
   static const String freeSoup = 'Free Soup with Celebration Combos';
   static const String freeSoupEclipses = 'Free Soup with Celebrati...';
   static const String starters = 'Starters';
+  static const String deliveredBy = 'Delivered by ';
+  static const String bestExperience =
+      'We always want to deliver the best experience for you. This restaurant uses talabat riders to deliver your food.';
 
   // Locale
   static const String locale = 'ar';
