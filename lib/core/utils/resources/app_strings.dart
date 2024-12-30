@@ -146,6 +146,16 @@ class AppStrings {
   static const String bestExperience =
       'We always want to deliver the best experience for you. This restaurant uses talabat riders to deliver your food.';
 
+  // Item Details View
+  static const String optional = 'Optional';
+  static const String extras = 'Extras';
+  static const String max1 = 'Choose up to 1 items';
+  static const String chili = 'Chili Oil';
+  static const String oftenOrdered = 'Often ordered with';
+  static const String peopleOrderThese = 'People usually order these as well';
+  static const String specialRequests = 'Any special requests?';
+  static const String addToBasket = 'Add to basket';
+
   // Locale
   static const String locale = 'ar';
 }

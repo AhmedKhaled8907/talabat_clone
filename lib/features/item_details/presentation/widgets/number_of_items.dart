@@ -42,6 +42,7 @@ class _NumberOfOrdersState extends State<NumberOfItems> {
         ],
       ),
       child: Row(
+        
         spacing: AppSize.s8,
         children: [
           InkWell(

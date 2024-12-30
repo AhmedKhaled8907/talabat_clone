@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:talabat_clone/core/common/widgets/app_bar_icon.dart';
-import 'package:talabat_clone/core/utils/resources/app_assets.dart';
+import 'package:talabat_clone/core/common/widgets/thick_divider.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/food/domain/entities/all_restaurants_entity.dart';
+import 'package:talabat_clone/features/item_details/presentation/widgets/item_details_view_header.dart';
 import 'package:talabat_clone/features/item_details/presentation/widgets/number_of_items.dart';
+
+import 'extras_section.dart';
 
 class ItemDetailsViewBody extends StatelessWidget {
   const ItemDetailsViewBody({
@@ -53,37 +55,21 @@ class ItemDetailsViewBody extends StatelessWidget {
             ),
           ),
         ),
+        SliverToBoxAdapter(
+          child: ThickDivider(
+            height: AppSize.s8,
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: ExtrasSection(),
+        ),
+        SliverToBoxAdapter(
+          child: ThickDivider(
+            height: AppSize.s8,
+          ),
+        ),
       ],
     );
   }
 }
 
-class ItemDetailsViewHeader extends StatelessWidget {
-  const ItemDetailsViewHeader({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return SliverAppBar(
-      pinned: true,
-      expandedHeight: context.height * 0.35,
-      leading: Padding(
-        padding: const EdgeInsets.only(left: AppPadding.p8),
-        child: AppBarIcon(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          image: AppAssets.imagesFoodArrowForward,
-        ),
-      ),
-      flexibleSpace: FlexibleSpaceBar(
-        background: Image.asset(
-          AppAssets.imagesFoodFriedRice,
-          width: double.infinity,
-          fit: BoxFit.cover,
-        ),
-      ),
-    );
-  }
-}
