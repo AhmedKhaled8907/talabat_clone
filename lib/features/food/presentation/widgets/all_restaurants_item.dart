@@ -40,11 +40,16 @@ class AllRestaurantsItem extends StatelessWidget {
                         )
                       : null,
                 ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(AppSize.s10),
-                  child: Image.asset(
-                    restaurant.image,
-                    fit: BoxFit.fill,
+                child: Hero(
+                  tag: restaurant.image,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(AppSize.s10),
+                    child: Center(
+                      child: Image.asset(
+                        restaurant.image,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
                   ),
                 ),
               ),

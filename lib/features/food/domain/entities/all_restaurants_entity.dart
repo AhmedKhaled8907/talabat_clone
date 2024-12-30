@@ -49,7 +49,7 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
       ),
       AllRestaurantsEntity(
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
-        image: AppAssets.imagesFoodJuniorSeafood,
+        image: AppAssets.imagesFoodJunior,
         name: 'Junior Seafood, Jumeirah 3',
         description: 'Thai, International, Continental',
         rating: 4.4,
@@ -61,8 +61,7 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
       ),
       AllRestaurantsEntity(
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
-        image: AppAssets.imagesFoodSushiCounter,
-        backgroundColor: Color(0xff4D5A90),
+        image: AppAssets.imagesFoodSushi,
         name: 'Sushi Counter, Business Bay 4',
         description: 'Sushi, Japanese, Seafood',
         rating: 4.5,
@@ -87,7 +86,7 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
       AllRestaurantsEntity(
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
         image: AppAssets.imagesFoodPapparoti,
-        backgroundColor: Color(0xffB7D3A3),
+        backgroundColor: Color(0xff4e3227),
         name: 'Papparoti',
         description: 'Beverages, Arabic sweets, Desserts',
         rating: 4.3,

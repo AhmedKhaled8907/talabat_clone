@@ -31,10 +31,15 @@ class PopularRestaurantsItem extends StatelessWidget {
                 width: AppSize.s1,
               ),
             ),
-            child: Image.asset(
-              restaurant.image,
-              height: context.height * 0.085,
-              fit: BoxFit.fill,
+            child: Hero(
+              tag: restaurant.image,
+              child: Center(
+                child: Image.asset(
+                  restaurant.image,
+                  height: context.height * 0.085,
+                  fit: BoxFit.fill,
+                ),
+              ),
             ),
           ),
         ),

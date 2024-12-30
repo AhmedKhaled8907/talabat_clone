@@ -16,7 +16,7 @@ List<FoodOffersEntity> get offersList => [
         name: 'Super Saver',
       ),
       FoodOffersEntity(
-        image: AppAssets.imagesFoodUp30,
+        image: AppAssets.imagesFood30Off,
         name: 'Best Sellers',
       ),
       FoodOffersEntity(

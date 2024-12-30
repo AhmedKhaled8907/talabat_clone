@@ -19,11 +19,6 @@ class AccountSettingsEntity {
 List<AccountSettingsEntity> accountSettingsList(BuildContext context) {
   return [
     AccountSettingsEntity(
-      title: AppStrings.yourOrders,
-      icon: AppAssets.imagesSettingsYourOrders,
-      onTap: () {},
-    ),
-    AccountSettingsEntity(
       title: AppStrings.offers,
       icon: AppAssets.imagesSettingsOffers,
       onTap: () {

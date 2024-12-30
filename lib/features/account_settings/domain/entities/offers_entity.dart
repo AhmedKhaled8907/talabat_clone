@@ -23,13 +23,13 @@ List<OffersEntity> get accountOffersList {
       restaurantName: 'Rose Avenue Flowers & Gifts',
     ),
     OffersEntity(
-      image: AppAssets.imagesFoodJuniorSeafood,
+      image: AppAssets.imagesFoodJunior,
       discountPercent: '10% off on all orders with 200 EGP or above.',
       validUntil: '01 October, 2023',
       restaurantName: 'Junior Seafood, Jumeirah 3',
     ),
     OffersEntity(
-      image: AppAssets.imagesFoodSushiCounter,
+      image: AppAssets.imagesFoodSushi,
       discountPercent: '10% off on all orders with 200 EGP or above.',
       validUntil: '01 October, 2023',
       restaurantName: 'Sushi Counter, Business Bay 4',
@@ -53,13 +53,13 @@ List<OffersEntity> get accountOffersList {
       restaurantName: 'Rose Avenue Flowers & Gifts',
     ),
     OffersEntity(
-      image: AppAssets.imagesFoodJuniorSeafood,
+      image: AppAssets.imagesFoodJunior,
       discountPercent: '10% off on all orders with 200 EGP or above.',
       validUntil: '01 October, 2023',
       restaurantName: 'Junior Seafood, Jumeirah 3',
     ),
     OffersEntity(
-      image: AppAssets.imagesFoodSushiCounter,
+      image: AppAssets.imagesFoodSushi,
       discountPercent: '10% off on all orders with 200 EGP or above.',
       validUntil: '01 October, 2023',
       restaurantName: 'Sushi Counter, Business Bay 4',

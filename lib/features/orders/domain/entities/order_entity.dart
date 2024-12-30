@@ -18,21 +18,21 @@ class OrderEntity {
 
 List<OrderEntity> get ordersList => [
       OrderEntity(
-        image: AppAssets.imagesFoodJuniorSeafood,
+        image: AppAssets.imagesFoodJunior,
         name: 'Mandarin Oak, Jumeirah 1',
         status: 'Delivered',
         time: '24 September 2023 16:17',
         orderId: '1284566612',
       ),
       OrderEntity(
-        image: AppAssets.imagesFoodJuniorSeafood,
+        image: AppAssets.imagesFoodJunior,
         name: 'Junior Seafood, Jumeirah 3',
         status: 'Delivered',
         time: '24 September 2023 16:17',
         orderId: '1284566612',
       ),
       OrderEntity(
-        image: AppAssets.imagesFoodSushiCounter,
+        image: AppAssets.imagesFoodSushi,
         name: 'Sushi Counter, Business Bay 4',
         status: 'Delivered',
         time: '24 September 2023 16:17',
@@ -53,21 +53,21 @@ List<OrderEntity> get ordersList => [
         orderId: '1284566612',
       ),
       OrderEntity(
-        image: AppAssets.imagesFoodJuniorSeafood,
+        image: AppAssets.imagesFoodJunior,
         name: 'Mandarin Oak, Jumeirah 1',
         status: 'Delivered',
         time: '24 September 2023 16:17',
         orderId: '1284566612',
       ),
       OrderEntity(
-        image: AppAssets.imagesFoodJuniorSeafood,
+        image: AppAssets.imagesFoodJunior,
         name: 'Junior Seafood, Jumeirah 3',
         status: 'Delivered',
         time: '24 September 2023 16:17',
         orderId: '1284566612',
       ),
       OrderEntity(
-        image: AppAssets.imagesFoodSushiCounter,
+        image: AppAssets.imagesFoodSushi,
         name: 'Sushi Counter, Business Bay 4',
         status: 'Delivered',
         time: '24 September 2023 16:17',

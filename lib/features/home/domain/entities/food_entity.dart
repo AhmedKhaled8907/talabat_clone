@@ -18,37 +18,37 @@ class FoodEntity {
 
 List<FoodEntity> foodsList(BuildContext context) => [
       FoodEntity(
-        image: AppAssets.imagesHomeFoods,
+        image: AppAssets.imagesHomeFood,
         name: 'Food',
         onTap: () {
           GoRouter.of(context).push(AppRoutes.kFoodRoute);
         },
       ),
       FoodEntity(
-        image: AppAssets.imagesHomeTalabatMarts,
+        image: AppAssets.imagesHomeMarket,
         name: 'Talabat Mart',
         onTap: () {
           GoRouter.of(context).push(AppRoutes.kTalabatMartRoute);
         },
       ),
       FoodEntity(
-        image: AppAssets.imagesHomeGroceries,
+        image: AppAssets.imagesHomeGrocery,
         name: 'Groceries',
       ),
     ];
 
 List<FoodEntity> get drinksList => [
       FoodEntity(
-        image: AppAssets.imagesHomeMedicine,
+        image: AppAssets.imagesHomeHealth,
         name: 'Health & Wellness',
-      ),
-      FoodEntity(
-        image: AppAssets.imagesHomeFlower,
-        name: 'Flowers',
       ),
       FoodEntity(
         image: AppAssets.imagesHomeCoffee,
         name: 'Coffee',
+      ),
+      FoodEntity(
+        image: AppAssets.imagesHomeFlower,
+        name: 'Flowers',
       ),
       FoodEntity(
         image: AppAssets.imagesHomeMoreShops,

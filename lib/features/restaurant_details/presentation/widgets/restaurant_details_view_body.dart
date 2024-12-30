@@ -19,6 +19,7 @@ class RestaurantDetailsViewBody extends StatelessWidget {
     return CustomScrollView(
       physics: const BouncingScrollPhysics(),
       slivers: [
+        
         SliverToBoxAdapter(
           child: RestaurantDetailsHeader(entity: entity),
         ),

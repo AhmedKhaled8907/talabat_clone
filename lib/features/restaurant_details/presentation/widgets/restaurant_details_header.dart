@@ -19,23 +19,25 @@ class RestaurantDetailsHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: context.height * 0.425,
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          SizedBox(
-            height: context.height * 0.3,
-            child: Image.asset(
-              width: double.infinity,
-              entity.backgroundImage,
-              fit: BoxFit.cover,
+    return Column(
+      children: [
+        Stack(
+          clipBehavior: Clip.none,
+          children: [
+            SizedBox(
+              height: context.height * 0.3,
+              child: Image.asset(
+                width: double.infinity,
+                entity.backgroundImage,
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
-          _leadingIcons(context),
-          _title(context),
-        ],
-      ),
+            _leadingIcons(context),
+            _title(context),
+          ],
+        ),
+        SizedBox(height: context.height * 0.12),
+      ],
     );
   }
 
@@ -81,6 +83,7 @@ class RestaurantDetailsHeader extends StatelessWidget {
       right: AppSize.s16,
       left: AppSize.s16,
       child: Container(
+        height: context.height * 0.275,
         padding: const EdgeInsets.symmetric(
           horizontal: AppPadding.p16,
           vertical: AppPadding.p12,
@@ -97,6 +100,7 @@ class RestaurantDetailsHeader extends StatelessWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -115,13 +119,18 @@ class RestaurantDetailsHeader extends StatelessWidget {
                             )
                           : null,
                     ),
-                    child: AspectRatio(
-                      aspectRatio: 72 / 65,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(AppSize.s10),
-                        child: Image.asset(
-                          entity.image,
-                          fit: BoxFit.fill,
+                    child: Hero(
+                      tag: entity.image,
+                      child: AspectRatio(
+                        aspectRatio: 72 / 65,
+                        child: Center(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(AppSize.s10),
+                            child: Image.asset(
+                              entity.image,
+                              fit: BoxFit.fill,
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -134,16 +143,20 @@ class RestaurantDetailsHeader extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     spacing: AppSize.s4,
                     children: [
-                      Text(
-                        entity.name,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        style: AppStyles.styleBold16(context),
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          entity.name,
+                          style: AppStyles.styleBold16(context),
+                        ),
                       ),
-                      Text(
-                        entity.description,
-                        style: AppStyles.styleBold10(context).copyWith(
-                          color: AppColors.blackWithOpacity,
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          entity.description,
+                          style: AppStyles.styleBold10(context).copyWith(
+                            color: AppColors.blackWithOpacity,
+                          ),
                         ),
                       ),
                       RatingAndNumbers(
@@ -162,7 +175,7 @@ class RestaurantDetailsHeader extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: AppSize.s24),
+            const SizedBox(height: AppSize.s12),
             DeliveryDetailsList(entity: entity),
             const SizedBox(height: AppSize.s12),
             // pro

@@ -29,28 +29,26 @@ class _RestaurantDetailsTabsState extends State<RestaurantDetailsTabs>
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        children: [
-          // TabBar
-          TabBar(
+    return Column(
+      children: [
+        // TabBar
+        TabBar(
+          controller: _tabController,
+          isScrollable: true,
+          tabs: restaurantDetailsTextTabs,
+        ),
+        // TabBarView
+        Expanded(
+          child: TabBarView(
+            // physics: const NeverScrollableScrollPhysics(),
             controller: _tabController,
-            isScrollable: true,
-            tabs: restaurantDetailsTextTabs,
-          ),
-          // TabBarView
-          Expanded(
-            child: TabBarView(
-              // physics: const NeverScrollableScrollPhysics(),
-              controller: _tabController,
-              children: List.generate(
-                resTaurantDetailsList.length,
-                (index) => resTaurantDetailsList[index],
-              ),
+            children: List.generate(
+              resTaurantDetailsList.length,
+              (index) => resTaurantDetailsList[index],
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

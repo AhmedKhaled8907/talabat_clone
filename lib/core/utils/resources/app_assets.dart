@@ -40,6 +40,8 @@ class AppAssets {
 
   static const String imagesFlagsUae = "assets/images/flags/uae.svg";
 
+  static const String imagesFood30Off = "assets/images/food/30_off.png";
+
   static const String imagesFood50Off = "assets/images/food/50_off.png";
 
   static const String imagesFoodAbout = "assets/images/food/about.png";
@@ -54,7 +56,7 @@ class AppAssets {
 
   static const String imagesFoodHealthy = "assets/images/food/healthy.png";
 
-  static const String imagesFoodJuniorSeafood = "assets/images/food/junior_seafood.png";
+  static const String imagesFoodJunior = "assets/images/food/junior.png";
 
   static const String imagesFoodListedItems = "assets/images/food/listed_Items.png";
 
@@ -92,7 +94,7 @@ class AppAssets {
 
   static const String imagesFoodSubway = "assets/images/food/subway.png";
 
-  static const String imagesFoodSushiCounter = "assets/images/food/sushi_counter.png";
+  static const String imagesFoodSushi = "assets/images/food/sushi.jpg";
 
   static const String imagesFoodTalabatPro = "assets/images/food/talabat_pro.png";
 
@@ -116,13 +118,21 @@ class AppAssets {
 
   static const String imagesHomeFlower = "assets/images/home/flower.png";
 
+  static const String imagesHomeFood = "assets/images/home/food.png";
+
   static const String imagesHomeFoods = "assets/images/home/foods.png";
 
   static const String imagesHomeGiveBack = "assets/images/home/give_back.png";
 
   static const String imagesHomeGroceries = "assets/images/home/groceries.png";
 
+  static const String imagesHomeGrocery = "assets/images/home/grocery.png";
+
+  static const String imagesHomeHealth = "assets/images/home/health.png";
+
   static const String imagesHomeLaffah = "assets/images/home/laffah.png";
+
+  static const String imagesHomeMarket = "assets/images/home/market.png";
 
   static const String imagesHomeMedicine = "assets/images/home/medicine.png";
 
