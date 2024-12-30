@@ -8,16 +8,18 @@ class CustomOrangeButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     required this.title,
+    this.height = AppSize.s50,
   });
 
   final void Function()? onPressed;
   final String title;
+  final double height;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: AppSize.s50,
+      height: height,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.primaryColor,

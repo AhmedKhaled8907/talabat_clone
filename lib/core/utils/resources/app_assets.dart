@@ -52,9 +52,13 @@ class AppAssets {
 
   static const String imagesFoodClock = "assets/images/food/clock.png";
 
+  static const String imagesFoodCola = "assets/images/food/cola.png";
+
   static const String imagesFoodComputer = "assets/images/food/computer.png";
 
   static const String imagesFoodDeliveredByTalabat = "assets/images/food/delivered_by_talabat.png";
+
+  static const String imagesFoodDiet = "assets/images/food/diet.png";
 
   static const String imagesFoodExceptional = "assets/images/food/exceptional.png";
 
@@ -113,6 +117,10 @@ class AppAssets {
   static const String imagesFoodTimer = "assets/images/food/timer.png";
 
   static const String imagesFoodUp30 = "assets/images/food/up_30.png";
+
+  static const String imagesFoodWater = "assets/images/food/water.png";
+
+  static const String imagesFoodWaters = "assets/images/food/waters.png";
 
   static const String imagesHomeAlloBeirut = "assets/images/home/allo_beirut.png";
 

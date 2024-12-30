@@ -148,6 +148,7 @@ class AppStrings {
 
   // Item Details View
   static const String optional = 'Optional';
+  static const String add = 'Add';
   static const String extras = 'Extras';
   static const String max1 = 'Choose up to 1 items';
   static const String chili = 'Chili Oil';
@@ -155,6 +156,8 @@ class AppStrings {
   static const String peopleOrderThese = 'People usually order these as well';
   static const String specialRequests = 'Any special requests?';
   static const String addToBasket = 'Add to basket';
+  static const String water = 'Arwa (water)';
+  static const String coke = 'Diet Coke 300 ML';
 
   // Locale
   static const String locale = 'ar';
