@@ -5,6 +5,7 @@ import 'package:talabat_clone/features/auth/presentation/views/sign_in_options_v
 import 'package:talabat_clone/features/auth/presentation/views/sign_in_view.dart';
 import 'package:talabat_clone/features/auth/presentation/views/sign_up_view.dart';
 import 'package:talabat_clone/features/account_settings/presentation/views/account_settings_view.dart';
+import 'package:talabat_clone/features/basket/presentation/views/basket_view.dart';
 import 'package:talabat_clone/features/food/domain/entities/all_restaurants_entity.dart';
 import 'package:talabat_clone/features/food/presentation/views/food_view.dart';
 import 'package:talabat_clone/features/home/presentation/views/home_view.dart';
@@ -41,6 +42,7 @@ abstract class AppRoutes {
   static const kRestaurantDetailsRoute = '/restaurant_details';
   static const kRestaurantAboutRoute = '/restaurant_about';
   static const kItemDetailsRoute = '/item_details';
+  static const kBasketRoute = '/basket';
 
   static final routes = GoRouter(
     routes: [
@@ -131,6 +133,12 @@ abstract class AppRoutes {
             itemEntity: state.extra as AllRestaurantsEntity,
           );
         },
+      ),
+      GoRoute(
+        path: AppRoutes.kBasketRoute,
+        builder: (context, state) => BasketView(
+          entity: state.extra as AllRestaurantsEntity,
+        ),
       ),
     ],
   );

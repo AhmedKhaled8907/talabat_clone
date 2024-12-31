@@ -48,6 +48,8 @@ class AppAssets {
 
   static const String imagesFoodArrowForward = "assets/images/food/arrow_forward.png";
 
+  static const String imagesFoodByTalabat = "assets/images/food/by_talabat.png";
+
   static const String imagesFoodCarbonSearch = "assets/images/food/carbon_search.png";
 
   static const String imagesFoodClock = "assets/images/food/clock.png";

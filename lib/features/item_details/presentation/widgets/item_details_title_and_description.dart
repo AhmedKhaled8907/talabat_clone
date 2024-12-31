@@ -39,7 +39,9 @@ class ItemDetailsTitleAndDescription extends StatelessWidget {
               '${itemEntity.price} EGP',
               style: AppStyles.styleBold14(context),
             ),
-            NumberOfItems(),
+            NumberOfItems(
+              onItemCountChanged: (value) {},
+            ),
           ],
         ),
       ],

@@ -7,22 +7,24 @@ import '../../../../core/utils/resources/app_values.dart';
 class NumberOfItems extends StatefulWidget {
   const NumberOfItems({
     super.key,
+    required this.onItemCountChanged,
   });
+
+  final ValueChanged<int> onItemCountChanged;
 
   @override
   State<NumberOfItems> createState() => _NumberOfOrdersState();
 }
 
 class _NumberOfOrdersState extends State<NumberOfItems> {
-  int initialValue = 1;
+  int itemCount = 1;
 
-  int value() {
-    if (initialValue < 1) {
-      setState(() {});
-      return 1;
-    }
-    setState(() {});
-    return initialValue;
+  void _updateItemCount(int newCount) {
+    if (newCount < 1) return;
+    setState(() {
+      itemCount = newCount;
+    });
+    widget.onItemCountChanged(itemCount);
   }
 
   @override
@@ -42,24 +44,23 @@ class _NumberOfOrdersState extends State<NumberOfItems> {
         ],
       ),
       child: Row(
-        
-        spacing: AppSize.s8,
+        spacing: AppSize.s4,
         children: [
           InkWell(
             borderRadius: BorderRadius.circular(AppSize.s4),
-            onTap: () => setState(() => initialValue--),
+            onTap: () => _updateItemCount(itemCount - 1),
             child: Icon(
               Icons.remove,
               color: AppColors.primaryColor,
             ),
           ),
           Text(
-            value().toString(),
+            itemCount.toString(),
             style: AppStyles.styleMedium16(context),
           ),
           InkWell(
             borderRadius: BorderRadius.circular(AppSize.s4),
-            onTap: () => setState(() => initialValue++),
+            onTap: () => _updateItemCount(itemCount + 1),
             child: Icon(
               Icons.add,
               color: AppColors.primaryColor,

@@ -159,9 +159,26 @@ class AppStrings {
   static const String water = 'Arwa (water)';
   static const String coke = 'Diet Coke 300 ML';
   static const String specialRequest = 'Any special requests?';
-  static const String addNote = 'Add note';
+  static const String addANote = 'Add a note';
   static const String whatDidYouLike = 'What did you like?';
   static const String anyMoreNotes = 'Any more notes?';
+
+  // Basket View
+  static const String basket = 'Basket';
+  static const String thirsty = 'Thirsty? We have the solution';
+  static const String softDrinks = 'Soft Drinks';
+  static const String special = 'Special request';
+  static const String noCutlery = 'No cutlery';
+  static const String anythingElse = 'Anything else we need to know ?';
+  static const String saveOnYourOrder = 'Save on your order';
+  static const String submit = 'Submit';
+  static const String paymentSummary = 'Payment summary';
+  static const String subtotal = 'Subtotal';
+  static const String serviceFee = 'Service fee';
+  static const String totalAmount = 'Total amount';
+  static const String readMoreAboutFees = 'Read more about fees';
+  static const String addItems = 'Add items';
+  static const String checkout = 'Checkout';
 
   // Locale
   static const String locale = 'ar';

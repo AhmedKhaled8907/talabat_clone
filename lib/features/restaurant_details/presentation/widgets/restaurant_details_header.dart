@@ -175,8 +175,10 @@ class RestaurantDetailsHeader extends StatelessWidget {
                     );
                   },
                   borderRadius: BorderRadius.circular(AppSize.s10),
-                  child: Image.asset(
-                    AppAssets.imagesFoodAbout,
+                  child: Icon(
+                    Icons.info_outlined,
+                    color: AppColors.secondaryColor,
+                    size: AppSize.s18,
                   ),
                 ),
               ],

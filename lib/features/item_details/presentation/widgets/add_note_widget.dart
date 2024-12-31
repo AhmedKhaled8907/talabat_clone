@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
@@ -29,7 +28,7 @@ class AddNoteWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(AppSize.s4),
           onTap: () {},
           child: Text(
-            AppStrings.addNote,
+            AppStrings.addANote,
             style: AppStyles.styleMedium14(context).copyWith(
               color: AppColors.primaryColor,
             ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:talabat_clone/core/utils/resources/app_assets.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/food/domain/entities/all_restaurants_entity.dart';
@@ -42,7 +41,7 @@ List<RestaurantAboutEntity> restaurantAboutList(
     RestaurantAboutEntity(
       icon: Icon(
         Icons.location_on,
-        color: AppColors.blackWithOpacity,
+        color: AppColors.secondaryColor,
         size: AppSize.s20,
       ),
       title: 'Restaurant area',
@@ -52,7 +51,7 @@ List<RestaurantAboutEntity> restaurantAboutList(
     RestaurantAboutEntity(
       icon: Icon(
         Icons.access_time,
-        color: AppColors.blackWithOpacity,
+        color: AppColors.secondaryColor,
         size: AppSize.s20,
       ),
       title: 'Opening hours',
@@ -64,7 +63,7 @@ List<RestaurantAboutEntity> restaurantAboutList(
     RestaurantAboutEntity(
       icon: Icon(
         Icons.timer,
-        color: AppColors.blackWithOpacity,
+        color: AppColors.secondaryColor,
         size: AppSize.s20,
       ),
       title: 'Delivery time',
@@ -74,7 +73,7 @@ List<RestaurantAboutEntity> restaurantAboutList(
     RestaurantAboutEntity(
       icon: Icon(
         Icons.wallet_rounded,
-        color: AppColors.blackWithOpacity,
+        color: AppColors.secondaryColor,
         size: AppSize.s20,
       ),
       title: 'Minimum order',
@@ -84,7 +83,7 @@ List<RestaurantAboutEntity> restaurantAboutList(
     RestaurantAboutEntity(
       icon: Icon(
         Icons.delivery_dining,
-        color: AppColors.blackWithOpacity,
+        color: AppColors.secondaryColor,
         size: AppSize.s20,
       ),
       title: 'Delivery fee',
@@ -92,10 +91,10 @@ List<RestaurantAboutEntity> restaurantAboutList(
     ),
     // Pre-order
     RestaurantAboutEntity(
-      icon: Center(
-        child: Image.asset(
-          AppAssets.imagesFoodAbout,
-        ),
+      icon: Icon(
+        Icons.info_outlined,
+        color: AppColors.secondaryColor,
+        size: AppSize.s18,
       ),
       title: 'Pre-order',
       subtitle: restaurantsEntity.preOrder == true ? 'True' : 'False',
@@ -104,7 +103,7 @@ List<RestaurantAboutEntity> restaurantAboutList(
     RestaurantAboutEntity(
       icon: Icon(
         Icons.payment,
-        color: AppColors.blackWithOpacity,
+        color: AppColors.secondaryColor,
         size: AppSize.s20,
       ),
       title: 'Payment options',

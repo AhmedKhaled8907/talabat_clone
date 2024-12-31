@@ -99,7 +99,7 @@ GestureDetector _image(BuildContext context) {
         topRight: Radius.circular(AppSize.s24),
       ),
       child: Image.asset(
-        AppAssets.imagesFoodDeliveredByTalabat,
+        AppAssets.imagesFoodByTalabat,
         width: double.infinity,
         fit: BoxFit.fill,
       ),

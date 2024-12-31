@@ -7,6 +7,7 @@ class AllRestaurantsEntity {
   final String backgroundImage;
   final Color? backgroundColor;
   final String name;
+  final String restaurantName;
   final String description;
   final num rating;
   final num numberOfRatings;
@@ -27,6 +28,7 @@ class AllRestaurantsEntity {
     required this.backgroundImage,
     this.backgroundColor = Colors.white,
     required this.name,
+    this.restaurantName = 'Mandarin Oak',
     required this.description,
     required this.rating,
     required this.numberOfRatings,
@@ -49,6 +51,7 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
         image: AppAssets.imagesFoodMandarinOak,
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
         name: 'Mandarin Oak',
+        restaurantName: 'Mandarin Oak',
         description: 'Chinese, Thai, Asian, Noodles, Dumplings',
         rating: 3.2,
         numberOfRatings: 1666,
@@ -76,8 +79,6 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
         price: 150,
         isExceptional: false,
         isOffItems: false,
-        
-      
         restaurantArea: 'Jumeirah',
         miniumOrder: 50,
         deliveryFee: 20,
@@ -90,6 +91,7 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
         image: AppAssets.imagesFoodSushi,
         name: 'Sushi Counter, Business Bay 4',
+        restaurantName: 'Sushi Counter, Business Bay 4',
         description: 'Sushi, Japanese, Seafood',
         rating: 4.5,
         numberOfRatings: 99,
@@ -109,6 +111,7 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
         image: AppAssets.imagesFoodPizza2Go,
         name: 'Pizza 2 Go',
+        restaurantName: 'Pizza 2 Go',
         description: 'Pizza, Pasta, Healthy',
         rating: 4.0,
         numberOfRatings: 19,
@@ -128,6 +131,7 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
         image: AppAssets.imagesFoodPapparoti,
         backgroundColor: Color(0xff4e3227),
         name: 'Papparoti',
+        restaurantName: 'Papparoti',
         description: 'Beverages, Arabic sweets, Desserts',
         rating: 2.3,
         numberOfRatings: 75,
@@ -147,6 +151,7 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
         backgroundImage: AppAssets.imagesFoodRestaurantBackgroundImage,
         image: AppAssets.imagesFoodSubway,
         name: 'Subway',
+        restaurantName: 'Subway',
         description: 'Sandwiches, Fast Food',
         rating: 4.3,
         numberOfRatings: 250,
@@ -167,6 +172,7 @@ List<AllRestaurantsEntity> get allRestaurantsList => [
 List<AllRestaurantsEntity> get popularRestaurantsList => [
       AllRestaurantsEntity(
         name: AppStrings.alloBeirut,
+        restaurantName: AppStrings.alloBeirut,
         image: AppAssets.imagesHomeAlloBeirut,
         deliveryTime: 15,
         description: '',
@@ -183,7 +189,6 @@ List<AllRestaurantsEntity> get popularRestaurantsList => [
         paymentMethod: 'cash',
         opening: 10,
         closing: 3,
-
       ),
       AllRestaurantsEntity(
         name: AppStrings.laffah,
@@ -206,6 +211,7 @@ List<AllRestaurantsEntity> get popularRestaurantsList => [
       ),
       AllRestaurantsEntity(
         name: AppStrings.falafil,
+        restaurantName: AppStrings.falafil,
         image: AppAssets.imagesHomeFalafil,
         deliveryTime: 45,
         description: '',
@@ -225,6 +231,7 @@ List<AllRestaurantsEntity> get popularRestaurantsList => [
       ),
       AllRestaurantsEntity(
         name: AppStrings.barbar,
+        restaurantName: AppStrings.barbar,
         image: AppAssets.imagesHomeBarbar,
         deliveryTime: 35,
         description: '',
@@ -250,6 +257,7 @@ List<AllRestaurantsEntity> get trendingList {
       backgroundImage: AppAssets.imagesFoodPartyStarter,
       image: AppAssets.imagesFoodPartyStarter,
       name: 'Chicken Fried Rice',
+      restaurantName: 'Papparoti',
       description:
           'Golden fried Chicken pieces wok-tossed with hot and spicy fried rice with vegetables like green',
       rating: 4.3,
@@ -307,6 +315,7 @@ List<AllRestaurantsEntity> get freeSoupList {
       backgroundImage: AppAssets.imagesFoodPartyStarter,
       image: AppAssets.imagesFoodPartyStarter,
       name: 'Chicken Fried Rice',
+      restaurantArea: 'Business Bay',
       description:
           'Golden fried Chicken pieces wok-tossed with hot and spicy fried rice with vegetables like green',
       rating: 4.3,
@@ -364,6 +373,7 @@ List<AllRestaurantsEntity> get startersList {
       backgroundImage: AppAssets.imagesFoodPartyStarter,
       image: AppAssets.imagesFoodPartyStarter,
       name: 'Chicken Fried Rice',
+      restaurantName: 'Business Bay',
       description:
           'Golden fried Chicken pieces wok-tossed with hot and spicy fried rice with vegetables like green',
       rating: 4.3,

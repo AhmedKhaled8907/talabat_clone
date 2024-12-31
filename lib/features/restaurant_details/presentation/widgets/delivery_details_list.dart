@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:talabat_clone/core/common/widgets/custom_vertical_divider.dart';
 import 'package:talabat_clone/core/utils/resources/app_assets.dart';
+import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
@@ -53,8 +54,10 @@ class DeliveryDetailsList extends StatelessWidget {
                   AppAssets.imagesFoodLogos,
                   fit: BoxFit.fill,
                 ),
-                Image.asset(
-                  AppAssets.imagesFoodAbout,
+                Icon(
+                  Icons.info_outlined,
+                  color: AppColors.secondaryColor,
+                  size: AppSize.s16,
                 ),
               ],
             ),
