@@ -54,6 +54,10 @@ class AppAssets {
 
   static const String imagesFoodClock = "assets/images/food/clock.png";
 
+  static const String imagesFoodCocacola = "assets/images/food/cocacola.png";
+
+  static const String imagesFoodCocacola2 = "assets/images/food/cocacola_2.png";
+
   static const String imagesFoodCola = "assets/images/food/cola.png";
 
   static const String imagesFoodComputer = "assets/images/food/computer.png";
