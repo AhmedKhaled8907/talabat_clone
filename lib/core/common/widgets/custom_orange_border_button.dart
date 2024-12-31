@@ -3,8 +3,8 @@ import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 
-class CustomOrangeButton extends StatelessWidget {
-  const CustomOrangeButton({
+class CustomOrangeBorderButton extends StatelessWidget {
+  const CustomOrangeBorderButton({
     super.key,
     required this.onPressed,
     required this.title,
@@ -20,9 +20,11 @@ class CustomOrangeButton extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       height: height,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.primaryColor,
+      child: TextButton(
+        style: TextButton.styleFrom(
+          overlayColor: AppColors.secondaryColor,
+          side: BorderSide(color: AppColors.primaryColor),
+          backgroundColor: AppColors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppSize.s10),
           ),
@@ -33,7 +35,7 @@ class CustomOrangeButton extends StatelessWidget {
           child: Text(
             title,
             style: AppStyles.styleBold14(context).copyWith(
-              color: AppColors.white,
+              color: AppColors.primaryColor,
             ),
           ),
         ),

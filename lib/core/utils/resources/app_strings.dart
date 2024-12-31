@@ -179,7 +179,7 @@ class AppStrings {
   static const String serviceFee = 'Service fee';
   static const String totalAmount = 'Total amount';
   static const String readMoreAboutFees = 'Read more about fees';
-  static const String addItems = 'Add items';
+  static const String addItems = 'Add Items';
   static const String checkout = 'Checkout';
   static const String aSpecialRequest = 'Special request';
 
