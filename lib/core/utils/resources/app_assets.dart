@@ -120,11 +120,15 @@ class AppAssets {
 
   static const String imagesFoodTalabatPro = "assets/images/food/talabat_pro.png";
 
+  static const String imagesFoodTicket = "assets/images/food/ticket.png";
+
   static const String imagesFoodTimer = "assets/images/food/timer.png";
 
   static const String imagesFoodUp30 = "assets/images/food/up_30.png";
 
   static const String imagesFoodWater = "assets/images/food/water.png";
+
+  static const String imagesFoodWaterBottle = "assets/images/food/water_bottle.png";
 
   static const String imagesFoodWaters = "assets/images/food/waters.png";
 

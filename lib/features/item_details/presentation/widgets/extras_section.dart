@@ -64,7 +64,7 @@ class ExtrasSection extends StatelessWidget {
                 color: AppColors.blackWithOpacity,
               ),
             ),
-            CheckBox(),
+            CustomCheckBox(),
           ],
         ),
       ],

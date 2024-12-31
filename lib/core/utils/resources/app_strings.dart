@@ -169,6 +169,7 @@ class AppStrings {
   static const String softDrinks = 'Soft Drinks';
   static const String special = 'Special request';
   static const String noCutlery = 'No cutlery';
+  static const String lessPlastic = 'Less plastic is the best plastic';
   static const String anythingElse = 'Anything else we need to know ?';
   static const String saveOnYourOrder = 'Save on your order';
   static const String submit = 'Submit';
@@ -179,6 +180,7 @@ class AppStrings {
   static const String readMoreAboutFees = 'Read more about fees';
   static const String addItems = 'Add items';
   static const String checkout = 'Checkout';
+  static const String aSpecialRequest = 'Special request';
 
   // Locale
   static const String locale = 'ar';
