@@ -172,6 +172,7 @@ class AppStrings {
   static const String lessPlastic = 'Less plastic is the best plastic';
   static const String anythingElse = 'Anything else we need to know ?';
   static const String saveOnYourOrder = 'Save on your order';
+  static const String enterVoucher = 'Enter voucher code';
   static const String submit = 'Submit';
   static const String paymentSummary = 'Payment summary';
   static const String subtotal = 'Subtotal';
