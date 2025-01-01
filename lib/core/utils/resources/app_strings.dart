@@ -153,7 +153,6 @@ class AppStrings {
   static const String date08 = '08 Oct 2023';
   static const String viewTerms = 'View Terms & Conditions';
 
-
   // Item Details View
   static const String optional = 'Optional';
   static const String add = 'Add';
@@ -190,6 +189,25 @@ class AppStrings {
   static const String addItems = 'Add Items';
   static const String checkout = 'Checkout';
   static const String aSpecialRequest = 'Special request';
+
+  // Checkout View
+  static const String cash = 'Cash';
+  static const String change = 'Change';
+  static const String alMuraqqabat = 'House (Al Muraqqabat)';
+  static const String alRigga = 'Al rigga, Green corner, 703, 7';
+  static const String phoneNumber = 'Mobile number: 01024029330';
+  static const String within = 'Within 36 mins ';
+  static const String schedule = 'Schedule';
+  static const String rewardYourRider = 'Reward your rider with a tip ';
+  static const String yourRiderKeeps = 'Your rider keeps 100% of the tips';
+  static const String egp10 = '10 EGP';
+  static const String egp20 = '20 EGP';
+  static const String other = 'Other';
+  static const String payWith = 'Pay with';
+  static const String applePay = 'Apple pay';
+  static const String creditCard = 'Credit Card';
+  static const String disclaimer = 'Disclaimer';
+  static const String deliveredByUs = 'Delivered by us, with live tracking';
 
   // Locale
   static const String locale = 'ar';

@@ -15,7 +15,10 @@ class ItemDetailsViewHeader extends StatelessWidget {
       pinned: true,
       expandedHeight: context.height * 0.3,
       leading: Padding(
-        padding: const EdgeInsets.only(left: AppPadding.p8),
+        padding: const EdgeInsets.only(
+          left: AppPadding.p8,
+          right: AppPadding.p8,
+        ),
         child: AppBarIcon(
           onTap: () {
             Navigator.pop(context);

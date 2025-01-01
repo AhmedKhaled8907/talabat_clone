@@ -48,8 +48,12 @@ class BasketViewBody extends StatelessWidget {
             ),
             const ThickDivider(),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: AppSize.s16),
-              child: BasketTwoButtons(),
+              padding: const EdgeInsets.symmetric(
+                horizontal: AppSize.s16,
+              ),
+              child: BasketTwoButtons(
+                entity: entity,
+              ),
             ),
           ],
         ),

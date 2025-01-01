@@ -41,48 +41,45 @@ Future<dynamic> deliveredByTalabat(BuildContext context) async {
     isScrollControlled: true,
     context: context,
     builder: (context) {
-      return SizedBox(
-        // width: double.infinity,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _image(context),
-            Padding(
-              padding: const EdgeInsets.all(AppPadding.p16),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        AppStrings.deliveredBy,
-                        style: AppStyles.styleBold16(context),
-                      ),
-                      Center(
-                        child: SvgPicture.asset(
-                          AppAssets.imagesSplashLogoOrange,
-                          height: AppSize.s14,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: AppSize.s8),
-                  Text(
-                    AppStrings.bestExperience,
-                    style: AppStyles.styleMedium12(context),
-                  ),
-                  const SizedBox(height: AppSize.s16),
-                  ...deliveredByList.map(
-                    (e) => DeliveredByItem(
-                      entity: e,
+      return Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _image(context),
+          Padding(
+            padding: const EdgeInsets.all(AppPadding.p16),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      AppStrings.deliveredBy,
+                      style: AppStyles.styleBold16(context),
                     ),
+                    Center(
+                      child: SvgPicture.asset(
+                        AppAssets.imagesSplashLogoOrange,
+                        height: AppSize.s14,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: AppSize.s8),
+                Text(
+                  AppStrings.bestExperience,
+                  style: AppStyles.styleMedium12(context),
+                ),
+                const SizedBox(height: AppSize.s16),
+                ...deliveredByList.map(
+                  (e) => DeliveredByItem(
+                    entity: e,
                   ),
-                ],
-              ),
-            )
-          ],
-        ),
+                ),
+              ],
+            ),
+          )
+        ],
       );
     },
   );
