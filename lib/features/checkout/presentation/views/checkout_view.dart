@@ -18,7 +18,9 @@ class CheckoutView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _buildAppBar(context),
-      body: CheckoutViewBody(),
+      body: CheckoutViewBody(
+        entity: entity,
+      ),
     );
   }
 

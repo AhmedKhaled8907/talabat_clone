@@ -5,6 +5,8 @@ import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 
+import '../../../../core/common/widgets/custom_text_button.dart';
+
 class CheckoutLocationSection extends StatelessWidget {
   const CheckoutLocationSection({super.key});
 
@@ -35,7 +37,7 @@ class CheckoutLocationSection extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: AppPadding.p16,
+              horizontal: AppPadding.p8,
             ).copyWith(
               bottom: AppPadding.p8,
             ),
@@ -79,18 +81,8 @@ class CheckoutLocationSection extends StatelessWidget {
                     ],
                   ),
                 ),
-                InkWell(
-                  borderRadius: BorderRadius.circular(AppSize.s4),
-                  onTap: () {},
-                  child: Padding(
-                    padding: const EdgeInsets.all(AppPadding.p4),
-                    child: Text(
-                      AppStrings.change,
-                      style: AppStyles.styleMedium14(context).copyWith(
-                        color: AppColors.primaryColor,
-                      ),
-                    ),
-                  ),
+                CustomTextButton(
+                  title: AppStrings.change,
                 ),
               ],
             ),
@@ -100,3 +92,4 @@ class CheckoutLocationSection extends StatelessWidget {
     );
   }
 }
+

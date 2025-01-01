@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:talabat_clone/core/utils/resources/app_colors.dart';
+import 'package:talabat_clone/core/common/widgets/custom_text_button.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 
@@ -24,15 +24,8 @@ class AddNoteWidget extends StatelessWidget {
           style: AppStyles.styleMedium14(context),
         ),
         const Spacer(),
-        InkWell(
-          borderRadius: BorderRadius.circular(AppSize.s4),
-          onTap: () {},
-          child: Text(
-            AppStrings.addANote,
-            style: AppStyles.styleMedium14(context).copyWith(
-              color: AppColors.primaryColor,
-            ),
-          ),
+        CustomTextButton(
+          title: AppStrings.addANote,
         ),
       ],
     );

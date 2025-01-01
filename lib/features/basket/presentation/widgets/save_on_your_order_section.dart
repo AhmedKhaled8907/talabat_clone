@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:talabat_clone/core/common/widgets/custom_text_button.dart';
 import 'package:talabat_clone/core/utils/resources/app_assets.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
@@ -19,7 +20,11 @@ class SaveOnYourOrderSection extends StatelessWidget {
           style: AppStyles.styleBold16(context),
         ),
         Container(
-          padding: const EdgeInsets.all(AppPadding.p16),
+          padding: const EdgeInsets.only(
+            left: AppPadding.p16,
+            right: AppPadding.p4,
+            // vertical: AppPadding.p4,
+          ),
           decoration: ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(
@@ -43,15 +48,8 @@ class SaveOnYourOrderSection extends StatelessWidget {
                 ),
               ),
               const Spacer(),
-              InkWell(
-                borderRadius: BorderRadius.circular(AppSize.s4),
-                onTap: () {},
-                child: Text(
-                  AppStrings.submit,
-                  style: AppStyles.styleBold14(context).copyWith(
-                    color: AppColors.primaryColor,
-                  ),
-                ),
+              CustomTextButton(
+                title: AppStrings.submit,
               ),
             ],
           ),

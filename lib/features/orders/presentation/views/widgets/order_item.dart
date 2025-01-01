@@ -25,7 +25,6 @@ class OrderItem extends StatelessWidget {
           child: AspectRatio(
             aspectRatio: 70 / 60,
             child: Container(
-              // padding: const EdgeInsets.all(AppSize.s0_5),
               decoration: BoxDecoration(
                 border: Border.all(
                   color: AppColors.black.withValues(

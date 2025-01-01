@@ -76,6 +76,12 @@ class AppTheme {
           ),
         ),
       ),
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          foregroundColor: AppColors.grey,
+          padding: EdgeInsets.all(AppPadding.p2),
+        ),
+      ),
     );
   }
 }

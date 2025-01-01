@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/checkout/presentation/widgets/checkout_location_section.dart';
+import 'package:talabat_clone/features/checkout/presentation/widgets/within_section.dart';
+import 'package:talabat_clone/features/food/domain/entities/all_restaurants_entity.dart';
 
 class CheckoutViewBody extends StatelessWidget {
-  const CheckoutViewBody({super.key});
+  const CheckoutViewBody({super.key, required this.entity,});
+
+  final AllRestaurantsEntity entity;
+
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +22,7 @@ class CheckoutViewBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CheckoutLocationSection(),
-            // CheckoutOrderSummarySection(),
+            WithinSection(entity: entity,),
             // CheckoutPaymentSection(),
             // CheckoutDeliverySection(),
             // CheckoutPromoCodeSection(),

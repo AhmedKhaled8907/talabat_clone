@@ -11,23 +11,26 @@ class ReOrderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      borderRadius: BorderRadius.circular(AppSize.s4),
+      borderRadius: BorderRadius.circular(AppSize.s50),
       onTap: () {},
-      child: Row(
-        spacing: AppSize.s4,
-        children: [
-          Icon(
-            Icons.replay,
-            color: AppColors.primaryColor,
-            size: AppSize.s16,
-          ),
-          Text(
-            "Re-order",
-            style: AppStyles.styleRegular12(context).copyWith(
+      child: Padding(
+        padding: const EdgeInsets.all(AppPadding.p4),
+        child: Row(
+          spacing: AppSize.s4,
+          children: [
+            Icon(
+              Icons.replay,
               color: AppColors.primaryColor,
+              size: AppSize.s16,
             ),
-          ),
-        ],
+            Text(
+              "Re-order",
+              style: AppStyles.styleRegular12(context).copyWith(
+                color: AppColors.primaryColor,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -57,14 +57,17 @@ class RateOrderBody extends StatelessWidget {
                         cubit: cubit,
                       ),
                     InkWell(
-                      borderRadius: BorderRadius.circular(AppSize.s8),
+                      borderRadius: BorderRadius.circular(AppSize.s50),
                       onTap: () {
                         GoRouter.of(context).push(AppRoutes.kMoreNotesRoute);
                       },
-                      child: Text(
-                        AppStrings.anyMoreNotes,
-                        style: AppStyles.styleMedium14(context).copyWith(
-                          color: AppColors.primaryColor,
+                      child: Padding(
+                        padding: const EdgeInsets.all(AppPadding.p8),
+                        child: Text(
+                          AppStrings.anyMoreNotes,
+                          style: AppStyles.styleMedium14(context).copyWith(
+                            color: AppColors.primaryColor,
+                          ),
                         ),
                       ),
                     ),

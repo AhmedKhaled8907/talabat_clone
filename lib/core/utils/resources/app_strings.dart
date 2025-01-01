@@ -125,6 +125,7 @@ class AppStrings {
   static const String orderNumber = 'Order number';
   static const String orderDate = 'Order date';
   static const String orderStatus = 'Order status';
+  static const String reOrder = 'Re-order';
 
   // Rate Orders View
   static const String rateOrder = 'Rate order';
@@ -196,7 +197,7 @@ class AppStrings {
   static const String alMuraqqabat = 'House (Al Muraqqabat)';
   static const String alRigga = 'Al rigga, Green corner, 703, 7';
   static const String phoneNumber = 'Mobile number: 01024029330';
-  static const String within = 'Within 36 mins ';
+  static const String within = 'Within';
   static const String schedule = 'Schedule';
   static const String rewardYourRider = 'Reward your rider with a tip ';
   static const String yourRiderKeeps = 'Your rider keeps 100% of the tips';
