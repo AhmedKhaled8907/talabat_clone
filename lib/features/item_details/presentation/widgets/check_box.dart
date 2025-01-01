@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_colors.dart';
+import 'package:talabat_clone/core/utils/resources/app_values.dart';
 
 class CustomCheckBox extends StatefulWidget {
   const CustomCheckBox({
@@ -16,17 +17,20 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 16,
-      height: 16,
-      child: Checkbox(
-        activeColor: AppColors.primaryColor,
-        checkColor: AppColors.white,
-        value: isChecked,
-        onChanged: (value) {
-          setState(() {
-            isChecked = value!;
-          });
-        },
+      width: AppSize.s24,
+      height: AppSize.s24,
+      child: Transform.scale(
+        scale: 1.25,
+        child: Checkbox(
+          activeColor: AppColors.primaryColor,
+          checkColor: AppColors.white,
+          value: isChecked,
+          onChanged: (value) {
+            setState(() {
+              isChecked = value!;
+            });
+          },
+        ),
       ),
     );
   }
