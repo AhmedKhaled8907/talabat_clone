@@ -46,13 +46,19 @@ class AppAssets {
 
   static const String imagesFoodAbout = "assets/images/food/about.png";
 
+  static const String imagesFoodApplePay = "assets/images/food/apple_pay.png";
+
   static const String imagesFoodArrowForward = "assets/images/food/arrow_forward.png";
 
   static const String imagesFoodByTalabat = "assets/images/food/by_talabat.png";
 
   static const String imagesFoodCarbonSearch = "assets/images/food/carbon_search.png";
 
+  static const String imagesFoodCash = "assets/images/food/cash.png";
+
   static const String imagesFoodClock = "assets/images/food/clock.png";
+
+  static const String imagesFoodClockLight = "assets/images/food/clock_light.png";
 
   static const String imagesFoodCocacola = "assets/images/food/cocacola.png";
 
@@ -62,6 +68,8 @@ class AppAssets {
 
   static const String imagesFoodComputer = "assets/images/food/computer.png";
 
+  static const String imagesFoodCreditCard = "assets/images/food/credit_card.png";
+
   static const String imagesFoodDeliveredByTalabat = "assets/images/food/delivered_by_talabat.png";
 
   static const String imagesFoodDiet = "assets/images/food/diet.png";
@@ -70,13 +78,19 @@ class AppAssets {
 
   static const String imagesFoodFriedRice = "assets/images/food/fried_rice.png";
 
+  static const String imagesFoodFries = "assets/images/food/fries.png";
+
   static const String imagesFoodHeadphones = "assets/images/food/headphones.png";
 
   static const String imagesFoodHealthy = "assets/images/food/healthy.png";
 
+  static const String imagesFoodIcecream = "assets/images/food/icecream.png";
+
   static const String imagesFoodJunior = "assets/images/food/junior.png";
 
   static const String imagesFoodListedItems = "assets/images/food/listed_Items.png";
+
+  static const String imagesFoodLocation = "assets/images/food/location.png";
 
   static const String imagesFoodLogo = "assets/images/food/logo.png";
 
@@ -99,6 +113,12 @@ class AppAssets {
   static const String imagesFoodPapparoti = "assets/images/food/papparoti.png";
 
   static const String imagesFoodPartyStarter = "assets/images/food/party_starter.png";
+
+  static const String imagesFoodPen = "assets/images/food/pen.png";
+
+  static const String imagesFoodPerson = "assets/images/food/person.png";
+
+  static const String imagesFoodPin = "assets/images/food/pin.png";
 
   static const String imagesFoodPizza2Go = "assets/images/food/pizza_2_go.png";
 
