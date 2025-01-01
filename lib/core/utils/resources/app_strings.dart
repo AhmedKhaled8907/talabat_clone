@@ -145,6 +145,14 @@ class AppStrings {
   static const String deliveredBy = 'Delivered by ';
   static const String bestExperience =
       'We always want to deliver the best experience for you. This restaurant uses talabat riders to deliver your food.';
+  static const String minSpend = 'Min. spend';
+  static const String maxSavings = 'Max. savings';
+  static const String validTill = 'Valid till';
+  static const String noUpperLimit = 'No upper limit';
+  static const String price75 = '75 EGP';
+  static const String date08 = '08 Oct 2023';
+  static const String viewTerms = 'View Terms & Conditions';
+
 
   // Item Details View
   static const String optional = 'Optional';

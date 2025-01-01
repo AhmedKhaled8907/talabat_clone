@@ -38,13 +38,11 @@ class DeliveryDetailsItem extends StatelessWidget {
 
 Future<dynamic> deliveredByTalabat(BuildContext context) async {
   return await showModalBottomSheet(
-    backgroundColor: AppColors.white,
     isScrollControlled: true,
-    elevation: 0,
     context: context,
     builder: (context) {
       return SizedBox(
-        width: double.infinity,
+        // width: double.infinity,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.start,

@@ -66,6 +66,16 @@ class AppTheme {
         indicatorColor: AppColors.primaryColor,
         tabAlignment: TabAlignment.start,
       ),
+      bottomSheetTheme: BottomSheetThemeData(
+        backgroundColor: AppColors.white,
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(AppSize.s16),
+            topRight: Radius.circular(AppSize.s16),
+          ),
+        ),
+      ),
     );
   }
 }

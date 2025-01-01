@@ -13,7 +13,7 @@ class ItemDetailsViewHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverAppBar(
       pinned: true,
-      expandedHeight: context.height * 0.35,
+      expandedHeight: context.height * 0.3,
       leading: Padding(
         padding: const EdgeInsets.only(left: AppPadding.p8),
         child: AppBarIcon(

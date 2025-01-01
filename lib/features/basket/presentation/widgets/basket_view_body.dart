@@ -30,6 +30,9 @@ class BasketViewBody extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: AppSize.s16),
               child: Column(
+                spacing: AppSize.s16,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   BasketHeader(entity: entity),
                   SoftDrinksSection(entity: entity),

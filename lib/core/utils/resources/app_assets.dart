@@ -132,6 +132,8 @@ class AppAssets {
 
   static const String imagesFoodWaters = "assets/images/food/waters.png";
 
+  static const String imagesFoodX = "assets/images/food/X.png";
+
   static const String imagesHomeAlloBeirut = "assets/images/home/allo_beirut.png";
 
   static const String imagesHomeBarbar = "assets/images/home/barbar.png";

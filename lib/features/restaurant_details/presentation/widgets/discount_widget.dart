@@ -11,14 +11,14 @@ class DiscountWidget extends StatelessWidget {
     this.onTap,
   });
 
-  final String title;
+  final String title; 
   final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(AppSize.s10),
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         padding: const EdgeInsets.all(AppPadding.p8),
         decoration: BoxDecoration(

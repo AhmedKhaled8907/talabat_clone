@@ -32,7 +32,7 @@ class OftenOrderedItem extends StatelessWidget {
         child: Column(
           spacing: AppSize.s12,
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             AspectRatio(
               aspectRatio: 1,
