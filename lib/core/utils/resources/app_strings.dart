@@ -209,6 +209,8 @@ class AppStrings {
   static const String creditCard = 'Credit Card';
   static const String disclaimer = 'Disclaimer';
   static const String deliveredByUs = 'Delivered by us, with live tracking';
+  static const String payNow = 'Pay now';
+
 
   // Locale
   static const String locale = 'ar';

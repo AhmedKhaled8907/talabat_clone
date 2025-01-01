@@ -11,12 +11,14 @@ class PaymentItem extends StatelessWidget {
     this.icon,
     required this.price,
     this.titleStyle = AppStyles.styleMedium12,
+    this.priceStyle = AppStyles.styleBold12,
   });
 
   final String title;
   final IconData? icon;
   final num price;
   final TextStyle Function(BuildContext context) titleStyle;
+  final TextStyle Function(BuildContext context) priceStyle;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +40,7 @@ class PaymentItem extends StatelessWidget {
         const Spacer(),
         Text(
           '$price EGP',
-          style: AppStyles.styleBold12(context),
+          style: priceStyle(context),
         ),
       ],
     );

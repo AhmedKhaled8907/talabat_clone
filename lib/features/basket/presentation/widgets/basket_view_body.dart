@@ -51,14 +51,6 @@ class BasketViewBody extends StatelessWidget {
               ),
               child: PaymentSection(),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: AppSize.s16,
-              ),
-              child: CustomTextButton(
-                title: AppStrings.readMoreAboutFees,
-              ),
-            ),
             const ThickDivider(
               height: AppSize.s32,
             ),
