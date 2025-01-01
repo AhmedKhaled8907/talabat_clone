@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/checkout/presentation/widgets/checkout_location_section.dart';
+import 'package:talabat_clone/features/checkout/presentation/widgets/reward_your_rider_section.dart';
 import 'package:talabat_clone/features/checkout/presentation/widgets/within_section.dart';
 import 'package:talabat_clone/features/food/domain/entities/all_restaurants_entity.dart';
 
@@ -23,7 +24,7 @@ class CheckoutViewBody extends StatelessWidget {
           children: [
             CheckoutLocationSection(),
             WithinSection(entity: entity,),
-            // CheckoutPaymentSection(),
+            RewardYourRiderSection(),
             // CheckoutDeliverySection(),
             // CheckoutPromoCodeSection(),
             // CheckoutOrderButton(),
