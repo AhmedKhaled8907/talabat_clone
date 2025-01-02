@@ -223,6 +223,7 @@ class AppStrings {
   static const String byPlacingThisOrder =
       'By placing this order you agree to the Credit Card payment terms & conditions.';
   static const String cancel = 'Cancel';
+  static const String selectDeliveryTime = 'Select Delivery Time';
 
   // Locale
   static const String locale = 'ar';

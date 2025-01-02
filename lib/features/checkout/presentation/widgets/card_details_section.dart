@@ -9,6 +9,7 @@ import 'package:talabat_clone/core/utils/resources/app_colors.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_styles.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
+import 'package:talabat_clone/features/checkout/presentation/widgets/select_delivery_time.dart';
 
 Future<dynamic> enterCardDetailsSection(BuildContext context) {
   return showModalBottomSheet(
@@ -62,11 +63,15 @@ Future<dynamic> enterCardDetailsSection(BuildContext context) {
                 ),
               ],
             ),
+
+            // card number textfield
             _cardDetailsTextField(
               context,
               hintText: AppStrings.cardNumber,
               maxLength: 16,
             ),
+
+            // text fields
             Row(
               spacing: AppSize.s8,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -88,6 +93,8 @@ Future<dynamic> enterCardDetailsSection(BuildContext context) {
                 ),
               ],
             ),
+
+            // switch
             Row(
               spacing: AppSize.s8,
               children: [
@@ -102,6 +109,8 @@ Future<dynamic> enterCardDetailsSection(BuildContext context) {
                 CustomSwitch(),
               ],
             ),
+
+            // more about card
             Row(
               spacing: AppSize.s8,
               children: [
@@ -117,31 +126,44 @@ Future<dynamic> enterCardDetailsSection(BuildContext context) {
                 )
               ],
             ),
+
             ThinDivider(height: AppSize.s0_5),
+
+            // payment section
             PaymentSection(
               isReadMoreShown: false,
             ),
+
+            // by placing this order
             Text(
               AppStrings.byPlacingThisOrder,
               style: AppStyles.styleRegular12(context).copyWith(
                 color: AppColors.secondaryColor,
               ),
             ),
+
             ThinDivider(height: AppSize.s0_5),
+
             const SizedBox(),
+
+            // buttons
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               spacing: AppSize.s12,
               children: [
                 Expanded(
                   child: CustomOrangeBorderButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     title: AppStrings.cancel,
                   ),
                 ),
                 Expanded(
                   child: CustomOrangeButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      selectDeliveryTime(context);
+                    },
                     title: AppStrings.pay,
                   ),
                 ),

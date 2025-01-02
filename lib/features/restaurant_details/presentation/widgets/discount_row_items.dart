@@ -58,7 +58,7 @@ Future<dynamic> _showModal(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
-          spacing: AppSize.s24,
+          spacing: AppSize.s16,
           children: [
             InkWell(
               borderRadius: BorderRadius.circular(AppSize.s8),
