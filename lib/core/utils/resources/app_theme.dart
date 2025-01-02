@@ -82,6 +82,15 @@ class AppTheme {
           padding: EdgeInsets.all(AppPadding.p2),
         ),
       ),
+      switchTheme: SwitchThemeData(
+        trackOutlineColor: WidgetStateProperty.all(
+          AppColors.secondaryColor,
+        ),
+        thumbColor: WidgetStateProperty.all(AppColors.white),
+
+        // trackColor: WidgetStateProperty.all(AppColors.primaryColor),
+        // overlayColor: WidgetStateProperty.all(AppColors.secondaryColor),
+      ),
     );
   }
 }

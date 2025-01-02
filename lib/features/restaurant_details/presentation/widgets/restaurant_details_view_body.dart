@@ -21,7 +21,7 @@ class RestaurantDetailsViewBody extends StatelessWidget {
       slivers: [
         
         SliverToBoxAdapter(
-          child: RestaurantDetailsHeader(entity: entity),
+          child: RestaurantDetailsHeader(entity: entity,),
         ),
         SliverToBoxAdapter(
           child: Column(

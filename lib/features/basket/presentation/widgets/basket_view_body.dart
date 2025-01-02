@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:talabat_clone/core/common/widgets/custom_text_button.dart';
 import 'package:talabat_clone/core/common/widgets/thick_divider.dart';
-import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
 import 'package:talabat_clone/features/basket/presentation/widgets/basket_price.dart';
 import 'package:talabat_clone/features/basket/presentation/widgets/basket_two_buttons.dart';
@@ -23,13 +21,17 @@ class BasketViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: AppPadding.p16),
+        padding: const EdgeInsets.symmetric(
+          vertical: AppPadding.p16,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: AppSize.s16),
+              padding: const EdgeInsets.symmetric(
+                horizontal: AppSize.s16,
+              ),
               child: Column(
                 spacing: AppSize.s16,
                 crossAxisAlignment: CrossAxisAlignment.start,

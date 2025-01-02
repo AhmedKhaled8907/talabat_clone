@@ -42,7 +42,8 @@ class AppStrings {
   static const String yourOrders = 'Your orders';
   static const String offers = 'Offers';
   static const String notifications = 'Notifications';
-  static const String pay = 'talabat pay';
+  static const String talabatPay = 'talabat pay';
+  static const String pay = 'Pay';
   static const String help = 'Get help';
   static const String about = 'About app';
 
@@ -211,6 +212,17 @@ class AppStrings {
   static const String deliveredByUs = 'Delivered by us, with live tracking';
   static const String payNow = 'Pay now';
 
+  // card details section
+  static const String enterCardDetails = 'Enter card details';
+  static const String cardNumber = 'Card number';
+  static const String expiryDate = 'Expiry Date (mm/yy)';
+  static const String securityCods = 'Security cods';
+  static const String forFaster =
+      'For faster and more secure checkout save your card details';
+  static const String moreAboutCardSecurity = 'More about card security';
+  static const String byPlacingThisOrder =
+      'By placing this order you agree to the Credit Card payment terms & conditions.';
+  static const String cancel = 'Cancel';
 
   // Locale
   static const String locale = 'ar';

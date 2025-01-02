@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:talabat_clone/core/common/widgets/custom_orange_button.dart';
-import 'package:talabat_clone/core/common/widgets/custom_text_button.dart';
 import 'package:talabat_clone/core/common/widgets/payment_section.dart';
 import 'package:talabat_clone/core/utils/resources/app_strings.dart';
 import 'package:talabat_clone/core/utils/resources/app_values.dart';
+import 'package:talabat_clone/features/checkout/presentation/widgets/card_details_section.dart';
 import 'package:talabat_clone/features/checkout/presentation/widgets/checkout_location_section.dart';
 import 'package:talabat_clone/features/checkout/presentation/widgets/disclaimer_section.dart';
 import 'package:talabat_clone/features/checkout/presentation/widgets/pay_with_section.dart';
@@ -39,8 +39,10 @@ class CheckoutViewBody extends StatelessWidget {
             PaymentSection(),
             DisclaimerSection(),
             CustomOrangeButton(
-              onPressed: () {},
               title: AppStrings.payNow,
+              onPressed: () {
+                enterCardDetailsSection(context);
+              },
             ),
           ],
         ),

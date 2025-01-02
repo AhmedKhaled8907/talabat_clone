@@ -31,7 +31,7 @@ List<AccountSettingsEntity> accountSettingsList(BuildContext context) {
       onTap: () {},
     ),
     AccountSettingsEntity(
-      title: AppStrings.pay,
+      title: AppStrings.talabatPay,
       icon: AppAssets.imagesSettingsTalabatPay,
       onTap: () {},
     ),

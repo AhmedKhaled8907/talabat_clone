@@ -9,7 +9,10 @@ import '../../utils/resources/app_values.dart';
 class PaymentSection extends StatelessWidget {
   const PaymentSection({
     super.key,
+    this.isReadMoreShown = true,
   });
+
+  final bool isReadMoreShown;
 
   @override
   Widget build(BuildContext context) {
@@ -52,9 +55,10 @@ class PaymentSection extends StatelessWidget {
               priceStyle: AppStyles.styleBold14,
               price: 220,
             ),
-            CustomTextButton(
-              title: AppStrings.readMoreAboutFees,
-            ),
+            if (isReadMoreShown)
+              CustomTextButton(
+                title: AppStrings.readMoreAboutFees,
+              ),
           ],
         ),
       ],

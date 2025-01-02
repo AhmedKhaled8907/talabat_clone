@@ -128,6 +128,10 @@ class AppAssets {
 
   static const String imagesFoodRestaurantBackgroundImage = "assets/images/food/restaurant_background_image.png";
 
+  static const String imagesFoodScanCard = "assets/images/food/scan_card.png";
+
+  static const String imagesFoodSecurityCods = "assets/images/food/security_cods.png";
+
   static const String imagesFoodSeeklogo = "assets/images/food/seeklogo.png";
 
   static const String imagesFoodShare = "assets/images/food/share.png";
