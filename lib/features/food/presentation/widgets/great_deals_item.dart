@@ -19,12 +19,13 @@ class GreatDealsItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       spacing: AppSize.s4,
       children: [
-        SizedBox(
-          height: context.height * 0.175,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(AppSize.s10),
-            child: AspectRatio(
-              aspectRatio: 145 / 110,
+        Flexible(
+          child: AspectRatio(
+            aspectRatio: 145 / 110,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(
+                AppSize.s10,
+              ),
               child: Image.asset(
                 greatDealsEntity.image,
                 fit: BoxFit.fill,

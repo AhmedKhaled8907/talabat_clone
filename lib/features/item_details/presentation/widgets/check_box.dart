@@ -20,7 +20,7 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
       width: AppSize.s24,
       height: AppSize.s24,
       child: Transform.scale(
-        scale: 1.25,
+        scale: 1,
         child: Checkbox(
           activeColor: AppColors.primaryColor,
           checkColor: AppColors.white,

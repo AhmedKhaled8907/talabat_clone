@@ -23,47 +23,21 @@ class BasketViewBody extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(
           vertical: AppPadding.p16,
+          horizontal: AppSize.s16,
         ),
         child: Column(
+          spacing: AppSize.s16,
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: AppSize.s16,
-              ),
-              child: Column(
-                spacing: AppSize.s16,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  BasketHeader(entity: entity),
-                  SoftDrinksSection(entity: entity),
-                  SpecialRequestSection(),
-                  SaveOnYourOrderSection(),
-                ],
-              ),
-            ),
-            const ThickDivider(
-              height: AppSize.s32,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: AppSize.s16,
-              ),
-              child: PaymentSection(),
-            ),
-            const ThickDivider(
-              height: AppSize.s32,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: AppSize.s16,
-              ),
-              child: BasketTwoButtons(
-                entity: entity,
-              ),
-            ),
+            BasketHeader(entity: entity),
+            SoftDrinksSection(entity: entity),
+            SpecialRequestSection(),
+            SaveOnYourOrderSection(),
+            const ThickDivider(height: AppSize.s16),
+            PaymentSection(),
+            const ThickDivider(height: AppSize.s0),
+            BasketTwoButtons(entity: entity),
           ],
         ),
       ),

@@ -16,7 +16,9 @@ class FoodViewBody extends StatelessWidget {
       slivers: [
         SliverToBoxAdapter(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppPadding.p16,
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               spacing: AppSize.s16,

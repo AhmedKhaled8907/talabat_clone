@@ -18,7 +18,7 @@ class OftenOrderedItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 130 / 235,
+      aspectRatio: 1 / 2,
       child: Container(
         padding: const EdgeInsets.all(AppPadding.p8),
         decoration: BoxDecoration(
@@ -32,7 +32,7 @@ class OftenOrderedItem extends StatelessWidget {
         child: Column(
           spacing: AppSize.s12,
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             AspectRatio(
               aspectRatio: 1,

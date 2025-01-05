@@ -26,38 +26,20 @@ class ItemDetailsViewBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: Padding(
             padding: const EdgeInsets.all(AppPadding.p16),
-            child: ItemDetailsTitleAndDescription(
-              itemEntity: itemEntity,
+            child: Column(
+              spacing: AppSize.s16,
+              children: [
+                ItemDetailsTitleAndDescription(
+                  itemEntity: itemEntity,
+                ),
+                ThickDivider(height: AppSize.s6),
+                ExtrasSection(),
+                ThickDivider(height: AppSize.s6),
+                OftenOrderedSection(),
+                AddNoteWidget(),
+                ThinDivider(height: AppSize.s8),
+              ],
             ),
-          ),
-        ),
-        SliverToBoxAdapter(
-          child: ThickDivider(height: AppSize.s8),
-        ),
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: const EdgeInsets.all(AppPadding.p16),
-            child: ExtrasSection(),
-          ),
-        ),
-        SliverToBoxAdapter(
-          child: ThickDivider(height: AppSize.s8),
-        ),
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: const EdgeInsets.all(AppPadding.p16),
-            child: OftenOrderedSection(),
-          ),
-        ),
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
-            child: AddNoteWidget(),
-          ),
-        ),
-        SliverToBoxAdapter(
-          child: ThinDivider(
-            height: AppSize.s8,
           ),
         ),
       ],

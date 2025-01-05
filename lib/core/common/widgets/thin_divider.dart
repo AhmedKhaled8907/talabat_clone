@@ -12,10 +12,13 @@ class ThinDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Divider(
-      height: height,
-      thickness: AppSize.s0_5,
-      color: AppColors.black.withValues(alpha: AppSize.s0_25),
+    return FractionallySizedBox(
+      widthFactor: AppSize.s1_5,
+      child: Divider(
+        height: height,
+        thickness: AppSize.s0_5,
+        color: AppColors.black.withValues(alpha: AppSize.s0_25),
+      ),
     );
   }
 }
