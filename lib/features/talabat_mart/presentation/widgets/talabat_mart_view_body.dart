@@ -18,13 +18,13 @@ class TalabatMartViewBody extends StatelessWidget {
       child: Column(
         children: [
           TalabatMartHeader(),
-          _body(),
+          _body(context),
         ],
       ),
     );
   }
 
-  Widget _body() {
+  Widget _body(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
         horizontal: AppPadding.p16,
@@ -38,6 +38,7 @@ class TalabatMartViewBody extends StatelessWidget {
           ShopByCategorySection(),
           TopSaverSection(),
           CasserolePageView(
+            height: context.height * 0.2,
             child: CasseroleItem(
               image: AppAssets.imagesTalabatMartMartCasserole,
             ),

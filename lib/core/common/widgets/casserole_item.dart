@@ -13,12 +13,9 @@ class CasseroleItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: AppSize.s4),
-      child: AspectRatio(
-        aspectRatio: 343 / 180,
-        child: Image.asset(
-          image,
-          fit: BoxFit.fill,
-        ),
+      child: Image.asset(
+        image,
+        fit: BoxFit.fill,
       ),
     );
   }

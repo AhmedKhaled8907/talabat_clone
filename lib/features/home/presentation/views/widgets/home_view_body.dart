@@ -32,8 +32,10 @@ class HomeViewBody extends StatelessWidget {
                 CodeBanner(),
                 ShortcutsListItem(),
                 CasserolePageView(
+                  height: context.height * 0.3,
                   child: CasseroleItem(
                     image: AppAssets.imagesHomeCasserole,
+
                   ),
                 ),
                 PopularRestaurantsSection(),
